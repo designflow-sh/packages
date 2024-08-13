@@ -9,6 +9,10 @@ const _kiPadEnabled = true;
 class AdvancediOSSettings with _$AdvancediOSSettings {
   const factory AdvancediOSSettings({
     @Default(_kiPadEnabled) bool iPadEnabled,
+    @Default('') String iOSBundleID,
+    @Default(false) bool overrideVersion,
+    String? customVersion,
+    int? customBuildNumber,
   }) = _AdvancediOSSettings;
 
   factory AdvancediOSSettings.fromJson(Map<String, dynamic> json) =>

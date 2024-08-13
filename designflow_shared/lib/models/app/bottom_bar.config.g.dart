@@ -9,15 +9,19 @@ part of 'bottom_bar.config.dart';
 _$BottomBarConfigImpl _$$BottomBarConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$BottomBarConfigImpl(
-      bottomBarEnabled: json['bottomBarEnabled'] as bool,
-      showSelectedLabels: json['showSelectedLabels'] as bool,
-      showUnselectedLabels: json['showUnselectedLabels'] as bool,
-      backgroundColor:
-          CColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),
-      selectedItemColor:
-          CColor.fromJson(json['selectedItemColor'] as Map<String, dynamic>),
-      unselectedItemColor:
-          CColor.fromJson(json['unselectedItemColor'] as Map<String, dynamic>),
+      bottomBarEnabled: json['bottomBarEnabled'] as bool? ?? false,
+      showSelectedLabels: json['showSelectedLabels'] as bool? ?? true,
+      showUnselectedLabels: json['showUnselectedLabels'] as bool? ?? true,
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : CColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      selectedItemColor: json['selectedItemColor'] == null
+          ? null
+          : CColor.fromJson(json['selectedItemColor'] as Map<String, dynamic>),
+      unselectedItemColor: json['unselectedItemColor'] == null
+          ? null
+          : CColor.fromJson(
+              json['unselectedItemColor'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$BottomBarConfigImplToJson(

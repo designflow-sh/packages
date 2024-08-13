@@ -8,9 +8,10 @@ part of 'canvas.config.dart';
 
 _$CanvasConfigImpl _$$CanvasConfigImplFromJson(Map<String, dynamic> json) =>
     _$CanvasConfigImpl(
-      backgroundColor:
-          CColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),
-      showGrid: json['showGrid'] as bool,
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : CColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      showGrid: json['showGrid'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$$CanvasConfigImplToJson(_$CanvasConfigImpl instance) =>

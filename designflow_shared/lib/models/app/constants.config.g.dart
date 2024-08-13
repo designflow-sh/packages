@@ -9,7 +9,7 @@ part of 'constants.config.dart';
 _$GlobalConstantsConfigImpl _$$GlobalConstantsConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$GlobalConstantsConfigImpl(
-      constants: json['constants'] as Map<String, dynamic>,
+      constants: json['constants'] as Map<String, dynamic>? ?? const {},
     );
 
 Map<String, dynamic> _$$GlobalConstantsConfigImplToJson(

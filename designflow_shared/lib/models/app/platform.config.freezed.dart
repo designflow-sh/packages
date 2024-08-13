@@ -241,9 +241,9 @@ class __$$PlatformsConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PlatformsConfigImpl implements _PlatformsConfig {
   const _$PlatformsConfigImpl(
-      {required this.androidSettings,
-      required this.iosSettings,
-      required this.webSettings,
+      {this.androidSettings = const AdvancedAndroidSettings(),
+      this.iosSettings = const AdvancediOSSettings(),
+      this.webSettings = const AdvancedWebSettings(),
       this.iosEnabled = _kiOSEnabled,
       this.androidEnabled = _kAndroidEnabled,
       this.webEnabled = _kWebEnabled,
@@ -255,10 +255,13 @@ class _$PlatformsConfigImpl implements _PlatformsConfig {
       _$$PlatformsConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final AdvancedAndroidSettings androidSettings;
   @override
+  @JsonKey()
   final AdvancediOSSettings iosSettings;
   @override
+  @JsonKey()
   final AdvancedWebSettings webSettings;
   @override
   @JsonKey()
@@ -340,9 +343,9 @@ class _$PlatformsConfigImpl implements _PlatformsConfig {
 
 abstract class _PlatformsConfig implements PlatformsConfig {
   const factory _PlatformsConfig(
-      {required final AdvancedAndroidSettings androidSettings,
-      required final AdvancediOSSettings iosSettings,
-      required final AdvancedWebSettings webSettings,
+      {final AdvancedAndroidSettings androidSettings,
+      final AdvancediOSSettings iosSettings,
+      final AdvancedWebSettings webSettings,
       final bool iosEnabled,
       final bool androidEnabled,
       final bool webEnabled,

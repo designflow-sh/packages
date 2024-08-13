@@ -23,9 +23,9 @@ mixin _$BottomBarConfig {
   bool get bottomBarEnabled => throw _privateConstructorUsedError;
   bool get showSelectedLabels => throw _privateConstructorUsedError;
   bool get showUnselectedLabels => throw _privateConstructorUsedError;
-  CColor get backgroundColor => throw _privateConstructorUsedError;
-  CColor get selectedItemColor => throw _privateConstructorUsedError;
-  CColor get unselectedItemColor => throw _privateConstructorUsedError;
+  CColor? get backgroundColor => throw _privateConstructorUsedError;
+  CColor? get selectedItemColor => throw _privateConstructorUsedError;
+  CColor? get unselectedItemColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,9 +43,9 @@ abstract class $BottomBarConfigCopyWith<$Res> {
       {bool bottomBarEnabled,
       bool showSelectedLabels,
       bool showUnselectedLabels,
-      CColor backgroundColor,
-      CColor selectedItemColor,
-      CColor unselectedItemColor});
+      CColor? backgroundColor,
+      CColor? selectedItemColor,
+      CColor? unselectedItemColor});
 }
 
 /// @nodoc
@@ -64,9 +64,9 @@ class _$BottomBarConfigCopyWithImpl<$Res, $Val extends BottomBarConfig>
     Object? bottomBarEnabled = null,
     Object? showSelectedLabels = null,
     Object? showUnselectedLabels = null,
-    Object? backgroundColor = null,
-    Object? selectedItemColor = null,
-    Object? unselectedItemColor = null,
+    Object? backgroundColor = freezed,
+    Object? selectedItemColor = freezed,
+    Object? unselectedItemColor = freezed,
   }) {
     return _then(_value.copyWith(
       bottomBarEnabled: null == bottomBarEnabled
@@ -81,18 +81,18 @@ class _$BottomBarConfigCopyWithImpl<$Res, $Val extends BottomBarConfig>
           ? _value.showUnselectedLabels
           : showUnselectedLabels // ignore: cast_nullable_to_non_nullable
               as bool,
-      backgroundColor: null == backgroundColor
+      backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
-      selectedItemColor: null == selectedItemColor
+              as CColor?,
+      selectedItemColor: freezed == selectedItemColor
           ? _value.selectedItemColor
           : selectedItemColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
-      unselectedItemColor: null == unselectedItemColor
+              as CColor?,
+      unselectedItemColor: freezed == unselectedItemColor
           ? _value.unselectedItemColor
           : unselectedItemColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
     ) as $Val);
   }
 }
@@ -109,9 +109,9 @@ abstract class _$$BottomBarConfigImplCopyWith<$Res>
       {bool bottomBarEnabled,
       bool showSelectedLabels,
       bool showUnselectedLabels,
-      CColor backgroundColor,
-      CColor selectedItemColor,
-      CColor unselectedItemColor});
+      CColor? backgroundColor,
+      CColor? selectedItemColor,
+      CColor? unselectedItemColor});
 }
 
 /// @nodoc
@@ -128,9 +128,9 @@ class __$$BottomBarConfigImplCopyWithImpl<$Res>
     Object? bottomBarEnabled = null,
     Object? showSelectedLabels = null,
     Object? showUnselectedLabels = null,
-    Object? backgroundColor = null,
-    Object? selectedItemColor = null,
-    Object? unselectedItemColor = null,
+    Object? backgroundColor = freezed,
+    Object? selectedItemColor = freezed,
+    Object? unselectedItemColor = freezed,
   }) {
     return _then(_$BottomBarConfigImpl(
       bottomBarEnabled: null == bottomBarEnabled
@@ -145,18 +145,18 @@ class __$$BottomBarConfigImplCopyWithImpl<$Res>
           ? _value.showUnselectedLabels
           : showUnselectedLabels // ignore: cast_nullable_to_non_nullable
               as bool,
-      backgroundColor: null == backgroundColor
+      backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
-      selectedItemColor: null == selectedItemColor
+              as CColor?,
+      selectedItemColor: freezed == selectedItemColor
           ? _value.selectedItemColor
           : selectedItemColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
-      unselectedItemColor: null == unselectedItemColor
+              as CColor?,
+      unselectedItemColor: freezed == unselectedItemColor
           ? _value.unselectedItemColor
           : unselectedItemColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
     ));
   }
 }
@@ -165,28 +165,31 @@ class __$$BottomBarConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BottomBarConfigImpl implements _BottomBarConfig {
   const _$BottomBarConfigImpl(
-      {required this.bottomBarEnabled,
-      required this.showSelectedLabels,
-      required this.showUnselectedLabels,
-      required this.backgroundColor,
-      required this.selectedItemColor,
-      required this.unselectedItemColor});
+      {this.bottomBarEnabled = false,
+      this.showSelectedLabels = true,
+      this.showUnselectedLabels = true,
+      this.backgroundColor,
+      this.selectedItemColor,
+      this.unselectedItemColor});
 
   factory _$BottomBarConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$BottomBarConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool bottomBarEnabled;
   @override
+  @JsonKey()
   final bool showSelectedLabels;
   @override
+  @JsonKey()
   final bool showUnselectedLabels;
   @override
-  final CColor backgroundColor;
+  final CColor? backgroundColor;
   @override
-  final CColor selectedItemColor;
+  final CColor? selectedItemColor;
   @override
-  final CColor unselectedItemColor;
+  final CColor? unselectedItemColor;
 
   @override
   String toString() {
@@ -240,12 +243,12 @@ class _$BottomBarConfigImpl implements _BottomBarConfig {
 
 abstract class _BottomBarConfig implements BottomBarConfig {
   const factory _BottomBarConfig(
-      {required final bool bottomBarEnabled,
-      required final bool showSelectedLabels,
-      required final bool showUnselectedLabels,
-      required final CColor backgroundColor,
-      required final CColor selectedItemColor,
-      required final CColor unselectedItemColor}) = _$BottomBarConfigImpl;
+      {final bool bottomBarEnabled,
+      final bool showSelectedLabels,
+      final bool showUnselectedLabels,
+      final CColor? backgroundColor,
+      final CColor? selectedItemColor,
+      final CColor? unselectedItemColor}) = _$BottomBarConfigImpl;
 
   factory _BottomBarConfig.fromJson(Map<String, dynamic> json) =
       _$BottomBarConfigImpl.fromJson;
@@ -257,11 +260,11 @@ abstract class _BottomBarConfig implements BottomBarConfig {
   @override
   bool get showUnselectedLabels;
   @override
-  CColor get backgroundColor;
+  CColor? get backgroundColor;
   @override
-  CColor get selectedItemColor;
+  CColor? get selectedItemColor;
   @override
-  CColor get unselectedItemColor;
+  CColor? get unselectedItemColor;
   @override
   @JsonKey(ignore: true)
   _$$BottomBarConfigImplCopyWith<_$BottomBarConfigImpl> get copyWith =>

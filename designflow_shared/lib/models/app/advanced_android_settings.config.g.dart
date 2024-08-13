@@ -14,6 +14,10 @@ _$AdvancedAndroidSettingsImpl _$$AdvancedAndroidSettingsImplFromJson(
           (json['compileSdkVersion'] as num?)?.toInt() ?? _kCompileSdkVersion,
       targetSdkVersion:
           (json['targetSdkVersion'] as num?)?.toInt() ?? _kTargetSdkVersion,
+      packageName: json['packageName'] as String? ?? '',
+      overrideVersion: json['overrideVersion'] as bool? ?? false,
+      versionCode: json['versionCode'] as String?,
+      buildNumber: (json['buildNumber'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$AdvancedAndroidSettingsImplToJson(
@@ -22,4 +26,8 @@ Map<String, dynamic> _$$AdvancedAndroidSettingsImplToJson(
       'kotlinVersion': instance.kotlinVersion,
       'compileSdkVersion': instance.compileSdkVersion,
       'targetSdkVersion': instance.targetSdkVersion,
+      'packageName': instance.packageName,
+      'overrideVersion': instance.overrideVersion,
+      'versionCode': instance.versionCode,
+      'buildNumber': instance.buildNumber,
     };

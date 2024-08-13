@@ -116,15 +116,17 @@ class __$$FirebaseAnalyticsConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FirebaseAnalyticsConfigImpl implements _FirebaseAnalyticsConfig {
   const _$FirebaseAnalyticsConfigImpl(
-      {required this.firebaseAnalyticsEnabled,
-      required this.firebaseRouterObserverEnabled});
+      {this.firebaseAnalyticsEnabled = false,
+      this.firebaseRouterObserverEnabled = false});
 
   factory _$FirebaseAnalyticsConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$FirebaseAnalyticsConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool firebaseAnalyticsEnabled;
   @override
+  @JsonKey()
   final bool firebaseRouterObserverEnabled;
 
   @override
@@ -168,8 +170,8 @@ class _$FirebaseAnalyticsConfigImpl implements _FirebaseAnalyticsConfig {
 
 abstract class _FirebaseAnalyticsConfig implements FirebaseAnalyticsConfig {
   const factory _FirebaseAnalyticsConfig(
-          {required final bool firebaseAnalyticsEnabled,
-          required final bool firebaseRouterObserverEnabled}) =
+          {final bool firebaseAnalyticsEnabled,
+          final bool firebaseRouterObserverEnabled}) =
       _$FirebaseAnalyticsConfigImpl;
 
   factory _FirebaseAnalyticsConfig.fromJson(Map<String, dynamic> json) =

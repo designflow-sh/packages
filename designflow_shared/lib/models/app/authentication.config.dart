@@ -12,9 +12,9 @@ enum AuthenticationService {
 @freezed
 class AuthenticationConfig with _$AuthenticationConfig {
   const factory AuthenticationConfig({
-    required AuthenticationService service,
-    required String initialPageID,
-    required String loggedInPageID,
+    @Default(AuthenticationService.none) AuthenticationService service,
+    String? initialPageID,
+    String? loggedInPageID,
   }) = _AuthenticationConfig;
 
   factory AuthenticationConfig.fromJson(Map<String, dynamic> json) =>

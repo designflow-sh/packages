@@ -9,8 +9,8 @@ part of 'revenuecat.config.dart';
 _$RevenueCatConfigImpl _$$RevenueCatConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$RevenueCatConfigImpl(
-      iOSEnabled: json['iOSEnabled'] as bool,
-      androidEnabled: json['androidEnabled'] as bool,
+      iOSEnabled: json['iOSEnabled'] as bool? ?? false,
+      androidEnabled: json['androidEnabled'] as bool? ?? false,
       appleKey: json['appleKey'] as String?,
       androidKey: json['androidKey'] as String?,
       defaultEntitlement: json['defaultEntitlement'] as String?,

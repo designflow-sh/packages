@@ -21,7 +21,7 @@ CircularProgressIndicatorConfig _$CircularProgressIndicatorConfigFromJson(
 
 /// @nodoc
 mixin _$CircularProgressIndicatorConfig {
-  CColor get color => throw _privateConstructorUsedError;
+  CColor? get color => throw _privateConstructorUsedError;
   CircularProgressIndicatorTypes get type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $CircularProgressIndicatorConfigCopyWith<$Res> {
       _$CircularProgressIndicatorConfigCopyWithImpl<$Res,
           CircularProgressIndicatorConfig>;
   @useResult
-  $Res call({CColor color, CircularProgressIndicatorTypes type});
+  $Res call({CColor? color, CircularProgressIndicatorTypes type});
 }
 
 /// @nodoc
@@ -55,14 +55,14 @@ class _$CircularProgressIndicatorConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? color = null,
+    Object? color = freezed,
     Object? type = null,
   }) {
     return _then(_value.copyWith(
-      color: null == color
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -80,7 +80,7 @@ abstract class _$$CircularProgressIndicatorConfigImplCopyWith<$Res>
       __$$CircularProgressIndicatorConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({CColor color, CircularProgressIndicatorTypes type});
+  $Res call({CColor? color, CircularProgressIndicatorTypes type});
 }
 
 /// @nodoc
@@ -96,14 +96,14 @@ class __$$CircularProgressIndicatorConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? color = null,
+    Object? color = freezed,
     Object? type = null,
   }) {
     return _then(_$CircularProgressIndicatorConfigImpl(
-      color: null == color
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -117,15 +117,14 @@ class __$$CircularProgressIndicatorConfigImplCopyWithImpl<$Res>
 class _$CircularProgressIndicatorConfigImpl
     implements _CircularProgressIndicatorConfig {
   const _$CircularProgressIndicatorConfigImpl(
-      {required this.color,
-      this.type = CircularProgressIndicatorTypes.material});
+      {this.color, this.type = CircularProgressIndicatorTypes.material});
 
   factory _$CircularProgressIndicatorConfigImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$CircularProgressIndicatorConfigImplFromJson(json);
 
   @override
-  final CColor color;
+  final CColor? color;
   @override
   @JsonKey()
   final CircularProgressIndicatorTypes type;
@@ -167,15 +166,14 @@ class _$CircularProgressIndicatorConfigImpl
 abstract class _CircularProgressIndicatorConfig
     implements CircularProgressIndicatorConfig {
   const factory _CircularProgressIndicatorConfig(
-          {required final CColor color,
-          final CircularProgressIndicatorTypes type}) =
+          {final CColor? color, final CircularProgressIndicatorTypes type}) =
       _$CircularProgressIndicatorConfigImpl;
 
   factory _CircularProgressIndicatorConfig.fromJson(Map<String, dynamic> json) =
       _$CircularProgressIndicatorConfigImpl.fromJson;
 
   @override
-  CColor get color;
+  CColor? get color;
   @override
   CircularProgressIndicatorTypes get type;
   @override

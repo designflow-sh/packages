@@ -14,9 +14,9 @@ const _kLinuxEnabled = false;
 @freezed
 class PlatformsConfig with _$PlatformsConfig {
   const factory PlatformsConfig({
-    required AdvancedAndroidSettings androidSettings,
-    required AdvancediOSSettings iosSettings,
-    required AdvancedWebSettings webSettings,
+    @Default(AdvancedAndroidSettings()) AdvancedAndroidSettings androidSettings,
+    @Default(AdvancediOSSettings()) AdvancediOSSettings iosSettings,
+    @Default(AdvancedWebSettings()) AdvancedWebSettings webSettings,
     @Default(_kiOSEnabled) bool iosEnabled,
     @Default(_kAndroidEnabled) bool androidEnabled,
     @Default(_kWebEnabled) bool webEnabled,

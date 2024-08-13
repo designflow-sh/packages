@@ -102,7 +102,7 @@ class __$$GlobalConstantsConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GlobalConstantsConfigImpl implements _GlobalConstantsConfig {
   const _$GlobalConstantsConfigImpl(
-      {required final Map<String, dynamic> constants})
+      {final Map<String, dynamic> constants = const {}})
       : _constants = constants;
 
   factory _$GlobalConstantsConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -110,6 +110,7 @@ class _$GlobalConstantsConfigImpl implements _GlobalConstantsConfig {
 
   final Map<String, dynamic> _constants;
   @override
+  @JsonKey()
   Map<String, dynamic> get constants {
     if (_constants is EqualUnmodifiableMapView) return _constants;
     // ignore: implicit_dynamic_type
@@ -151,8 +152,7 @@ class _$GlobalConstantsConfigImpl implements _GlobalConstantsConfig {
 }
 
 abstract class _GlobalConstantsConfig implements GlobalConstantsConfig {
-  const factory _GlobalConstantsConfig(
-          {required final Map<String, dynamic> constants}) =
+  const factory _GlobalConstantsConfig({final Map<String, dynamic> constants}) =
       _$GlobalConstantsConfigImpl;
 
   factory _GlobalConstantsConfig.fromJson(Map<String, dynamic> json) =

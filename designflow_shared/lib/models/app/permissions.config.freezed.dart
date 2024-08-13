@@ -99,7 +99,7 @@ class __$$PermissionConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PermissionConfigImpl implements _PermissionConfig {
   const _$PermissionConfigImpl(
-      {required final List<SinglePermissionConfig> permissions})
+      {final List<SinglePermissionConfig> permissions = const []})
       : _permissions = permissions;
 
   factory _$PermissionConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -107,6 +107,7 @@ class _$PermissionConfigImpl implements _PermissionConfig {
 
   final List<SinglePermissionConfig> _permissions;
   @override
+  @JsonKey()
   List<SinglePermissionConfig> get permissions {
     if (_permissions is EqualUnmodifiableListView) return _permissions;
     // ignore: implicit_dynamic_type
@@ -149,7 +150,7 @@ class _$PermissionConfigImpl implements _PermissionConfig {
 
 abstract class _PermissionConfig implements PermissionConfig {
   const factory _PermissionConfig(
-          {required final List<SinglePermissionConfig> permissions}) =
+          {final List<SinglePermissionConfig> permissions}) =
       _$PermissionConfigImpl;
 
   factory _PermissionConfig.fromJson(Map<String, dynamic> json) =

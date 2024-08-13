@@ -6,7 +6,7 @@ part 'web_deployment.config.g.dart';
 
 @freezed
 class WebDeploymentConfig with _$WebDeploymentConfig {
-  const factory WebDeploymentConfig({
+  const factory WebDeploymentConfig.enabled({
     required String siteUrl,
     required String seoTitle,
     required String siteDescription,
@@ -21,7 +21,8 @@ class WebDeploymentConfig with _$WebDeploymentConfig {
     required bool enablePWA,
     required String customHeadCode,
     required String customDomain,
-  }) = _WebDeploymentConfig;
+  }) = _Enabled;
+  const factory WebDeploymentConfig.disabled() = _Disabled;
 
   factory WebDeploymentConfig.fromJson(Map<String, dynamic> json) =>
       _$WebDeploymentConfigFromJson(json);

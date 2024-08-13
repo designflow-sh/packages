@@ -24,6 +24,10 @@ mixin _$AdvancedAndroidSettings {
   String get kotlinVersion => throw _privateConstructorUsedError;
   int get compileSdkVersion => throw _privateConstructorUsedError;
   int get targetSdkVersion => throw _privateConstructorUsedError;
+  String get packageName => throw _privateConstructorUsedError;
+  bool get overrideVersion => throw _privateConstructorUsedError;
+  String? get versionCode => throw _privateConstructorUsedError;
+  int? get buildNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +42,13 @@ abstract class $AdvancedAndroidSettingsCopyWith<$Res> {
       _$AdvancedAndroidSettingsCopyWithImpl<$Res, AdvancedAndroidSettings>;
   @useResult
   $Res call(
-      {String kotlinVersion, int compileSdkVersion, int targetSdkVersion});
+      {String kotlinVersion,
+      int compileSdkVersion,
+      int targetSdkVersion,
+      String packageName,
+      bool overrideVersion,
+      String? versionCode,
+      int? buildNumber});
 }
 
 /// @nodoc
@@ -58,6 +68,10 @@ class _$AdvancedAndroidSettingsCopyWithImpl<$Res,
     Object? kotlinVersion = null,
     Object? compileSdkVersion = null,
     Object? targetSdkVersion = null,
+    Object? packageName = null,
+    Object? overrideVersion = null,
+    Object? versionCode = freezed,
+    Object? buildNumber = freezed,
   }) {
     return _then(_value.copyWith(
       kotlinVersion: null == kotlinVersion
@@ -72,6 +86,22 @@ class _$AdvancedAndroidSettingsCopyWithImpl<$Res,
           ? _value.targetSdkVersion
           : targetSdkVersion // ignore: cast_nullable_to_non_nullable
               as int,
+      packageName: null == packageName
+          ? _value.packageName
+          : packageName // ignore: cast_nullable_to_non_nullable
+              as String,
+      overrideVersion: null == overrideVersion
+          ? _value.overrideVersion
+          : overrideVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
+      versionCode: freezed == versionCode
+          ? _value.versionCode
+          : versionCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      buildNumber: freezed == buildNumber
+          ? _value.buildNumber
+          : buildNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -86,7 +116,13 @@ abstract class _$$AdvancedAndroidSettingsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String kotlinVersion, int compileSdkVersion, int targetSdkVersion});
+      {String kotlinVersion,
+      int compileSdkVersion,
+      int targetSdkVersion,
+      String packageName,
+      bool overrideVersion,
+      String? versionCode,
+      int? buildNumber});
 }
 
 /// @nodoc
@@ -105,6 +141,10 @@ class __$$AdvancedAndroidSettingsImplCopyWithImpl<$Res>
     Object? kotlinVersion = null,
     Object? compileSdkVersion = null,
     Object? targetSdkVersion = null,
+    Object? packageName = null,
+    Object? overrideVersion = null,
+    Object? versionCode = freezed,
+    Object? buildNumber = freezed,
   }) {
     return _then(_$AdvancedAndroidSettingsImpl(
       kotlinVersion: null == kotlinVersion
@@ -119,6 +159,22 @@ class __$$AdvancedAndroidSettingsImplCopyWithImpl<$Res>
           ? _value.targetSdkVersion
           : targetSdkVersion // ignore: cast_nullable_to_non_nullable
               as int,
+      packageName: null == packageName
+          ? _value.packageName
+          : packageName // ignore: cast_nullable_to_non_nullable
+              as String,
+      overrideVersion: null == overrideVersion
+          ? _value.overrideVersion
+          : overrideVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
+      versionCode: freezed == versionCode
+          ? _value.versionCode
+          : versionCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      buildNumber: freezed == buildNumber
+          ? _value.buildNumber
+          : buildNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -129,7 +185,11 @@ class _$AdvancedAndroidSettingsImpl implements _AdvancedAndroidSettings {
   const _$AdvancedAndroidSettingsImpl(
       {this.kotlinVersion = _kKotlinVersion,
       this.compileSdkVersion = _kCompileSdkVersion,
-      this.targetSdkVersion = _kTargetSdkVersion});
+      this.targetSdkVersion = _kTargetSdkVersion,
+      this.packageName = '',
+      this.overrideVersion = false,
+      this.versionCode,
+      this.buildNumber});
 
   factory _$AdvancedAndroidSettingsImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdvancedAndroidSettingsImplFromJson(json);
@@ -143,10 +203,20 @@ class _$AdvancedAndroidSettingsImpl implements _AdvancedAndroidSettings {
   @override
   @JsonKey()
   final int targetSdkVersion;
+  @override
+  @JsonKey()
+  final String packageName;
+  @override
+  @JsonKey()
+  final bool overrideVersion;
+  @override
+  final String? versionCode;
+  @override
+  final int? buildNumber;
 
   @override
   String toString() {
-    return 'AdvancedAndroidSettings(kotlinVersion: $kotlinVersion, compileSdkVersion: $compileSdkVersion, targetSdkVersion: $targetSdkVersion)';
+    return 'AdvancedAndroidSettings(kotlinVersion: $kotlinVersion, compileSdkVersion: $compileSdkVersion, targetSdkVersion: $targetSdkVersion, packageName: $packageName, overrideVersion: $overrideVersion, versionCode: $versionCode, buildNumber: $buildNumber)';
   }
 
   @override
@@ -159,13 +229,21 @@ class _$AdvancedAndroidSettingsImpl implements _AdvancedAndroidSettings {
             (identical(other.compileSdkVersion, compileSdkVersion) ||
                 other.compileSdkVersion == compileSdkVersion) &&
             (identical(other.targetSdkVersion, targetSdkVersion) ||
-                other.targetSdkVersion == targetSdkVersion));
+                other.targetSdkVersion == targetSdkVersion) &&
+            (identical(other.packageName, packageName) ||
+                other.packageName == packageName) &&
+            (identical(other.overrideVersion, overrideVersion) ||
+                other.overrideVersion == overrideVersion) &&
+            (identical(other.versionCode, versionCode) ||
+                other.versionCode == versionCode) &&
+            (identical(other.buildNumber, buildNumber) ||
+                other.buildNumber == buildNumber));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, kotlinVersion, compileSdkVersion, targetSdkVersion);
+  int get hashCode => Object.hash(runtimeType, kotlinVersion, compileSdkVersion,
+      targetSdkVersion, packageName, overrideVersion, versionCode, buildNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -186,7 +264,11 @@ abstract class _AdvancedAndroidSettings implements AdvancedAndroidSettings {
   const factory _AdvancedAndroidSettings(
       {final String kotlinVersion,
       final int compileSdkVersion,
-      final int targetSdkVersion}) = _$AdvancedAndroidSettingsImpl;
+      final int targetSdkVersion,
+      final String packageName,
+      final bool overrideVersion,
+      final String? versionCode,
+      final int? buildNumber}) = _$AdvancedAndroidSettingsImpl;
 
   factory _AdvancedAndroidSettings.fromJson(Map<String, dynamic> json) =
       _$AdvancedAndroidSettingsImpl.fromJson;
@@ -197,6 +279,14 @@ abstract class _AdvancedAndroidSettings implements AdvancedAndroidSettings {
   int get compileSdkVersion;
   @override
   int get targetSdkVersion;
+  @override
+  String get packageName;
+  @override
+  bool get overrideVersion;
+  @override
+  String? get versionCode;
+  @override
+  int? get buildNumber;
   @override
   @JsonKey(ignore: true)
   _$$AdvancedAndroidSettingsImplCopyWith<_$AdvancedAndroidSettingsImpl>

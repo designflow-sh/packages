@@ -13,6 +13,7 @@ _$ViewModelImpl _$$ViewModelImplFromJson(Map<String, dynamic> json) =>
       route: json['route'] as String,
       redirect: $enumDecode(_$ViewRedirectsEnumMap, json['redirect']),
       isPage: json['isPage'] as bool,
+      initialUINode: json['initialUINode'] as String,
     );
 
 Map<String, dynamic> _$$ViewModelImplToJson(_$ViewModelImpl instance) =>
@@ -22,6 +23,7 @@ Map<String, dynamic> _$$ViewModelImplToJson(_$ViewModelImpl instance) =>
       'route': instance.route,
       'redirect': _$ViewRedirectsEnumMap[instance.redirect]!,
       'isPage': instance.isPage,
+      'initialUINode': instance.initialUINode,
     };
 
 const _$ViewRedirectsEnumMap = {

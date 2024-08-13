@@ -5,12 +5,11 @@ part 'deep_link.config.g.dart';
 
 @freezed
 class DeepLinkConfig with _$DeepLinkConfig {
-  const factory DeepLinkConfig({
+  const factory DeepLinkConfig.enabled({
     required String scheme,
     required String host,
-  }) = _DeepLinkConfig;
-
-  //String get url => '$scheme://$host';
+  }) = _Enabled;
+  const factory DeepLinkConfig.disabled() = _Disabled;
 
   factory DeepLinkConfig.fromJson(Map<String, dynamic> json) =>
       _$DeepLinkConfigFromJson(json);

@@ -21,7 +21,7 @@ DrawerConfig _$DrawerConfigFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DrawerConfig {
   bool get drawerEnabled => throw _privateConstructorUsedError;
-  CColor get backgroundColor => throw _privateConstructorUsedError;
+  CColor? get backgroundColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $DrawerConfigCopyWith<$Res> {
           DrawerConfig value, $Res Function(DrawerConfig) then) =
       _$DrawerConfigCopyWithImpl<$Res, DrawerConfig>;
   @useResult
-  $Res call({bool drawerEnabled, CColor backgroundColor});
+  $Res call({bool drawerEnabled, CColor? backgroundColor});
 }
 
 /// @nodoc
@@ -52,17 +52,17 @@ class _$DrawerConfigCopyWithImpl<$Res, $Val extends DrawerConfig>
   @override
   $Res call({
     Object? drawerEnabled = null,
-    Object? backgroundColor = null,
+    Object? backgroundColor = freezed,
   }) {
     return _then(_value.copyWith(
       drawerEnabled: null == drawerEnabled
           ? _value.drawerEnabled
           : drawerEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      backgroundColor: null == backgroundColor
+      backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
     ) as $Val);
   }
 }
@@ -75,7 +75,7 @@ abstract class _$$DrawerConfigImplCopyWith<$Res>
       __$$DrawerConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool drawerEnabled, CColor backgroundColor});
+  $Res call({bool drawerEnabled, CColor? backgroundColor});
 }
 
 /// @nodoc
@@ -90,17 +90,17 @@ class __$$DrawerConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? drawerEnabled = null,
-    Object? backgroundColor = null,
+    Object? backgroundColor = freezed,
   }) {
     return _then(_$DrawerConfigImpl(
       drawerEnabled: null == drawerEnabled
           ? _value.drawerEnabled
           : drawerEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      backgroundColor: null == backgroundColor
+      backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
     ));
   }
 }
@@ -108,16 +108,16 @@ class __$$DrawerConfigImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$DrawerConfigImpl implements _DrawerConfig {
-  const _$DrawerConfigImpl(
-      {required this.drawerEnabled, required this.backgroundColor});
+  const _$DrawerConfigImpl({this.drawerEnabled = false, this.backgroundColor});
 
   factory _$DrawerConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$DrawerConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool drawerEnabled;
   @override
-  final CColor backgroundColor;
+  final CColor? backgroundColor;
 
   @override
   String toString() {
@@ -155,8 +155,8 @@ class _$DrawerConfigImpl implements _DrawerConfig {
 
 abstract class _DrawerConfig implements DrawerConfig {
   const factory _DrawerConfig(
-      {required final bool drawerEnabled,
-      required final CColor backgroundColor}) = _$DrawerConfigImpl;
+      {final bool drawerEnabled,
+      final CColor? backgroundColor}) = _$DrawerConfigImpl;
 
   factory _DrawerConfig.fromJson(Map<String, dynamic> json) =
       _$DrawerConfigImpl.fromJson;
@@ -164,7 +164,7 @@ abstract class _DrawerConfig implements DrawerConfig {
   @override
   bool get drawerEnabled;
   @override
-  CColor get backgroundColor;
+  CColor? get backgroundColor;
   @override
   @JsonKey(ignore: true)
   _$$DrawerConfigImplCopyWith<_$DrawerConfigImpl> get copyWith =>

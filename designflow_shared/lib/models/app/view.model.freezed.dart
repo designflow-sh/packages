@@ -25,6 +25,7 @@ mixin _$ViewModel {
   String get route => throw _privateConstructorUsedError;
   ViewRedirects get redirect => throw _privateConstructorUsedError;
   bool get isPage => throw _privateConstructorUsedError;
+  String get initialUINode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +43,8 @@ abstract class $ViewModelCopyWith<$Res> {
       String name,
       String route,
       ViewRedirects redirect,
-      bool isPage});
+      bool isPage,
+      String initialUINode});
 }
 
 /// @nodoc
@@ -63,6 +65,7 @@ class _$ViewModelCopyWithImpl<$Res, $Val extends ViewModel>
     Object? route = null,
     Object? redirect = null,
     Object? isPage = null,
+    Object? initialUINode = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -85,6 +88,10 @@ class _$ViewModelCopyWithImpl<$Res, $Val extends ViewModel>
           ? _value.isPage
           : isPage // ignore: cast_nullable_to_non_nullable
               as bool,
+      initialUINode: null == initialUINode
+          ? _value.initialUINode
+          : initialUINode // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -102,7 +109,8 @@ abstract class _$$ViewModelImplCopyWith<$Res>
       String name,
       String route,
       ViewRedirects redirect,
-      bool isPage});
+      bool isPage,
+      String initialUINode});
 }
 
 /// @nodoc
@@ -121,6 +129,7 @@ class __$$ViewModelImplCopyWithImpl<$Res>
     Object? route = null,
     Object? redirect = null,
     Object? isPage = null,
+    Object? initialUINode = null,
   }) {
     return _then(_$ViewModelImpl(
       id: null == id
@@ -143,6 +152,10 @@ class __$$ViewModelImplCopyWithImpl<$Res>
           ? _value.isPage
           : isPage // ignore: cast_nullable_to_non_nullable
               as bool,
+      initialUINode: null == initialUINode
+          ? _value.initialUINode
+          : initialUINode // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -155,7 +168,8 @@ class _$ViewModelImpl implements _ViewModel {
       required this.name,
       required this.route,
       required this.redirect,
-      required this.isPage});
+      required this.isPage,
+      required this.initialUINode});
 
   factory _$ViewModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ViewModelImplFromJson(json);
@@ -170,10 +184,12 @@ class _$ViewModelImpl implements _ViewModel {
   final ViewRedirects redirect;
   @override
   final bool isPage;
+  @override
+  final String initialUINode;
 
   @override
   String toString() {
-    return 'ViewModel(id: $id, name: $name, route: $route, redirect: $redirect, isPage: $isPage)';
+    return 'ViewModel(id: $id, name: $name, route: $route, redirect: $redirect, isPage: $isPage, initialUINode: $initialUINode)';
   }
 
   @override
@@ -186,13 +202,15 @@ class _$ViewModelImpl implements _ViewModel {
             (identical(other.route, route) || other.route == route) &&
             (identical(other.redirect, redirect) ||
                 other.redirect == redirect) &&
-            (identical(other.isPage, isPage) || other.isPage == isPage));
+            (identical(other.isPage, isPage) || other.isPage == isPage) &&
+            (identical(other.initialUINode, initialUINode) ||
+                other.initialUINode == initialUINode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, route, redirect, isPage);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, route, redirect, isPage, initialUINode);
 
   @JsonKey(ignore: true)
   @override
@@ -214,7 +232,8 @@ abstract class _ViewModel implements ViewModel {
       required final String name,
       required final String route,
       required final ViewRedirects redirect,
-      required final bool isPage}) = _$ViewModelImpl;
+      required final bool isPage,
+      required final String initialUINode}) = _$ViewModelImpl;
 
   factory _ViewModel.fromJson(Map<String, dynamic> json) =
       _$ViewModelImpl.fromJson;
@@ -229,6 +248,8 @@ abstract class _ViewModel implements ViewModel {
   ViewRedirects get redirect;
   @override
   bool get isPage;
+  @override
+  String get initialUINode;
   @override
   @JsonKey(ignore: true)
   _$$ViewModelImplCopyWith<_$ViewModelImpl> get copyWith =>

@@ -9,7 +9,9 @@ part of 'circular_progress_indicator.config.dart';
 _$CircularProgressIndicatorConfigImpl
     _$$CircularProgressIndicatorConfigImplFromJson(Map<String, dynamic> json) =>
         _$CircularProgressIndicatorConfigImpl(
-          color: CColor.fromJson(json['color'] as Map<String, dynamic>),
+          color: json['color'] == null
+              ? null
+              : CColor.fromJson(json['color'] as Map<String, dynamic>),
           type: $enumDecodeNullable(
                   _$CircularProgressIndicatorTypesEnumMap, json['type']) ??
               CircularProgressIndicatorTypes.material,

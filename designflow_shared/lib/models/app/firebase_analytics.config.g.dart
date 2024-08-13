@@ -9,9 +9,10 @@ part of 'firebase_analytics.config.dart';
 _$FirebaseAnalyticsConfigImpl _$$FirebaseAnalyticsConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$FirebaseAnalyticsConfigImpl(
-      firebaseAnalyticsEnabled: json['firebaseAnalyticsEnabled'] as bool,
+      firebaseAnalyticsEnabled:
+          json['firebaseAnalyticsEnabled'] as bool? ?? false,
       firebaseRouterObserverEnabled:
-          json['firebaseRouterObserverEnabled'] as bool,
+          json['firebaseRouterObserverEnabled'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$FirebaseAnalyticsConfigImplToJson(

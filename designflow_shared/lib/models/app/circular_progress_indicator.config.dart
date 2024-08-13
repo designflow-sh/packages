@@ -13,7 +13,7 @@ enum CircularProgressIndicatorTypes {
 @freezed
 class CircularProgressIndicatorConfig with _$CircularProgressIndicatorConfig {
   const factory CircularProgressIndicatorConfig({
-    required CColor color,
+    CColor? color,
     @Default(CircularProgressIndicatorTypes.material)
     CircularProgressIndicatorTypes type,
   }) = _CircularProgressIndicatorConfig;

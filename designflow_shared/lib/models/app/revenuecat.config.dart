@@ -6,10 +6,10 @@ part 'revenuecat.config.g.dart';
 @freezed
 class RevenueCatConfig with _$RevenueCatConfig {
   const factory RevenueCatConfig({
-    required bool iOSEnabled,
-    required bool androidEnabled,
-    required String? appleKey,
-    required String? androidKey,
+    @Default(false) bool iOSEnabled,
+    @Default(false) bool androidEnabled,
+    String? appleKey,
+    String? androidKey,
     String? defaultEntitlement,
   }) = _RevenueCatConfig;
 

@@ -15,30 +15,104 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WebDeploymentConfig _$WebDeploymentConfigFromJson(Map<String, dynamic> json) {
-  return _WebDeploymentConfig.fromJson(json);
+  switch (json['runtimeType']) {
+    case 'enabled':
+      return _Enabled.fromJson(json);
+    case 'disabled':
+      return _Disabled.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'WebDeploymentConfig',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
 }
 
 /// @nodoc
 mixin _$WebDeploymentConfig {
-  String get siteUrl => throw _privateConstructorUsedError;
-  String get seoTitle => throw _privateConstructorUsedError;
-  String get siteDescription => throw _privateConstructorUsedError;
-  String get siteKeywords => throw _privateConstructorUsedError;
-  String? get faviconUrl => throw _privateConstructorUsedError;
-  CColor get statusBarColor => throw _privateConstructorUsedError;
-  String? get socialShareImage => throw _privateConstructorUsedError;
-  bool get individualPageTitles => throw _privateConstructorUsedError;
-  bool get showWatermark => throw _privateConstructorUsedError;
-  bool get allowShowcasing => throw _privateConstructorUsedError;
-  bool get allowSearchEngineIndexing => throw _privateConstructorUsedError;
-  bool get enablePWA => throw _privateConstructorUsedError;
-  String get customHeadCode => throw _privateConstructorUsedError;
-  String get customDomain => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $WebDeploymentConfigCopyWith<WebDeploymentConfig> get copyWith =>
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)
+        enabled,
+    required TResult Function() disabled,
+  }) =>
       throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)?
+        enabled,
+    TResult? Function()? disabled,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)?
+        enabled,
+    TResult Function()? disabled,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Enabled value) enabled,
+    required TResult Function(_Disabled value) disabled,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Enabled value)? enabled,
+    TResult? Function(_Disabled value)? disabled,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Enabled value)? enabled,
+    TResult Function(_Disabled value)? disabled,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -46,22 +120,6 @@ abstract class $WebDeploymentConfigCopyWith<$Res> {
   factory $WebDeploymentConfigCopyWith(
           WebDeploymentConfig value, $Res Function(WebDeploymentConfig) then) =
       _$WebDeploymentConfigCopyWithImpl<$Res, WebDeploymentConfig>;
-  @useResult
-  $Res call(
-      {String siteUrl,
-      String seoTitle,
-      String siteDescription,
-      String siteKeywords,
-      String? faviconUrl,
-      CColor statusBarColor,
-      String? socialShareImage,
-      bool individualPageTitles,
-      bool showWatermark,
-      bool allowShowcasing,
-      bool allowSearchEngineIndexing,
-      bool enablePWA,
-      String customHeadCode,
-      String customDomain});
 }
 
 /// @nodoc
@@ -73,93 +131,13 @@ class _$WebDeploymentConfigCopyWithImpl<$Res, $Val extends WebDeploymentConfig>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? siteUrl = null,
-    Object? seoTitle = null,
-    Object? siteDescription = null,
-    Object? siteKeywords = null,
-    Object? faviconUrl = freezed,
-    Object? statusBarColor = null,
-    Object? socialShareImage = freezed,
-    Object? individualPageTitles = null,
-    Object? showWatermark = null,
-    Object? allowShowcasing = null,
-    Object? allowSearchEngineIndexing = null,
-    Object? enablePWA = null,
-    Object? customHeadCode = null,
-    Object? customDomain = null,
-  }) {
-    return _then(_value.copyWith(
-      siteUrl: null == siteUrl
-          ? _value.siteUrl
-          : siteUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      seoTitle: null == seoTitle
-          ? _value.seoTitle
-          : seoTitle // ignore: cast_nullable_to_non_nullable
-              as String,
-      siteDescription: null == siteDescription
-          ? _value.siteDescription
-          : siteDescription // ignore: cast_nullable_to_non_nullable
-              as String,
-      siteKeywords: null == siteKeywords
-          ? _value.siteKeywords
-          : siteKeywords // ignore: cast_nullable_to_non_nullable
-              as String,
-      faviconUrl: freezed == faviconUrl
-          ? _value.faviconUrl
-          : faviconUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      statusBarColor: null == statusBarColor
-          ? _value.statusBarColor
-          : statusBarColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
-      socialShareImage: freezed == socialShareImage
-          ? _value.socialShareImage
-          : socialShareImage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      individualPageTitles: null == individualPageTitles
-          ? _value.individualPageTitles
-          : individualPageTitles // ignore: cast_nullable_to_non_nullable
-              as bool,
-      showWatermark: null == showWatermark
-          ? _value.showWatermark
-          : showWatermark // ignore: cast_nullable_to_non_nullable
-              as bool,
-      allowShowcasing: null == allowShowcasing
-          ? _value.allowShowcasing
-          : allowShowcasing // ignore: cast_nullable_to_non_nullable
-              as bool,
-      allowSearchEngineIndexing: null == allowSearchEngineIndexing
-          ? _value.allowSearchEngineIndexing
-          : allowSearchEngineIndexing // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enablePWA: null == enablePWA
-          ? _value.enablePWA
-          : enablePWA // ignore: cast_nullable_to_non_nullable
-              as bool,
-      customHeadCode: null == customHeadCode
-          ? _value.customHeadCode
-          : customHeadCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      customDomain: null == customDomain
-          ? _value.customDomain
-          : customDomain // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$WebDeploymentConfigImplCopyWith<$Res>
-    implements $WebDeploymentConfigCopyWith<$Res> {
-  factory _$$WebDeploymentConfigImplCopyWith(_$WebDeploymentConfigImpl value,
-          $Res Function(_$WebDeploymentConfigImpl) then) =
-      __$$WebDeploymentConfigImplCopyWithImpl<$Res>;
-  @override
+abstract class _$$EnabledImplCopyWith<$Res> {
+  factory _$$EnabledImplCopyWith(
+          _$EnabledImpl value, $Res Function(_$EnabledImpl) then) =
+      __$$EnabledImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
       {String siteUrl,
@@ -179,11 +157,11 @@ abstract class _$$WebDeploymentConfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$WebDeploymentConfigImplCopyWithImpl<$Res>
-    extends _$WebDeploymentConfigCopyWithImpl<$Res, _$WebDeploymentConfigImpl>
-    implements _$$WebDeploymentConfigImplCopyWith<$Res> {
-  __$$WebDeploymentConfigImplCopyWithImpl(_$WebDeploymentConfigImpl _value,
-      $Res Function(_$WebDeploymentConfigImpl) _then)
+class __$$EnabledImplCopyWithImpl<$Res>
+    extends _$WebDeploymentConfigCopyWithImpl<$Res, _$EnabledImpl>
+    implements _$$EnabledImplCopyWith<$Res> {
+  __$$EnabledImplCopyWithImpl(
+      _$EnabledImpl _value, $Res Function(_$EnabledImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -204,7 +182,7 @@ class __$$WebDeploymentConfigImplCopyWithImpl<$Res>
     Object? customHeadCode = null,
     Object? customDomain = null,
   }) {
-    return _then(_$WebDeploymentConfigImpl(
+    return _then(_$EnabledImpl(
       siteUrl: null == siteUrl
           ? _value.siteUrl
           : siteUrl // ignore: cast_nullable_to_non_nullable
@@ -267,8 +245,8 @@ class __$$WebDeploymentConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WebDeploymentConfigImpl implements _WebDeploymentConfig {
-  const _$WebDeploymentConfigImpl(
+class _$EnabledImpl implements _Enabled {
+  const _$EnabledImpl(
       {required this.siteUrl,
       required this.seoTitle,
       required this.siteDescription,
@@ -282,10 +260,12 @@ class _$WebDeploymentConfigImpl implements _WebDeploymentConfig {
       required this.allowSearchEngineIndexing,
       required this.enablePWA,
       required this.customHeadCode,
-      required this.customDomain});
+      required this.customDomain,
+      final String? $type})
+      : $type = $type ?? 'enabled';
 
-  factory _$WebDeploymentConfigImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WebDeploymentConfigImplFromJson(json);
+  factory _$EnabledImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnabledImplFromJson(json);
 
   @override
   final String siteUrl;
@@ -316,16 +296,19 @@ class _$WebDeploymentConfigImpl implements _WebDeploymentConfig {
   @override
   final String customDomain;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
-    return 'WebDeploymentConfig(siteUrl: $siteUrl, seoTitle: $seoTitle, siteDescription: $siteDescription, siteKeywords: $siteKeywords, faviconUrl: $faviconUrl, statusBarColor: $statusBarColor, socialShareImage: $socialShareImage, individualPageTitles: $individualPageTitles, showWatermark: $showWatermark, allowShowcasing: $allowShowcasing, allowSearchEngineIndexing: $allowSearchEngineIndexing, enablePWA: $enablePWA, customHeadCode: $customHeadCode, customDomain: $customDomain)';
+    return 'WebDeploymentConfig.enabled(siteUrl: $siteUrl, seoTitle: $seoTitle, siteDescription: $siteDescription, siteKeywords: $siteKeywords, faviconUrl: $faviconUrl, statusBarColor: $statusBarColor, socialShareImage: $socialShareImage, individualPageTitles: $individualPageTitles, showWatermark: $showWatermark, allowShowcasing: $allowShowcasing, allowSearchEngineIndexing: $allowSearchEngineIndexing, enablePWA: $enablePWA, customHeadCode: $customHeadCode, customDomain: $customDomain)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WebDeploymentConfigImpl &&
+            other is _$EnabledImpl &&
             (identical(other.siteUrl, siteUrl) || other.siteUrl == siteUrl) &&
             (identical(other.seoTitle, seoTitle) ||
                 other.seoTitle == seoTitle) &&
@@ -378,20 +361,168 @@ class _$WebDeploymentConfigImpl implements _WebDeploymentConfig {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WebDeploymentConfigImplCopyWith<_$WebDeploymentConfigImpl> get copyWith =>
-      __$$WebDeploymentConfigImplCopyWithImpl<_$WebDeploymentConfigImpl>(
-          this, _$identity);
+  _$$EnabledImplCopyWith<_$EnabledImpl> get copyWith =>
+      __$$EnabledImplCopyWithImpl<_$EnabledImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)
+        enabled,
+    required TResult Function() disabled,
+  }) {
+    return enabled(
+        siteUrl,
+        seoTitle,
+        siteDescription,
+        siteKeywords,
+        faviconUrl,
+        statusBarColor,
+        socialShareImage,
+        individualPageTitles,
+        showWatermark,
+        allowShowcasing,
+        allowSearchEngineIndexing,
+        enablePWA,
+        customHeadCode,
+        customDomain);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)?
+        enabled,
+    TResult? Function()? disabled,
+  }) {
+    return enabled?.call(
+        siteUrl,
+        seoTitle,
+        siteDescription,
+        siteKeywords,
+        faviconUrl,
+        statusBarColor,
+        socialShareImage,
+        individualPageTitles,
+        showWatermark,
+        allowShowcasing,
+        allowSearchEngineIndexing,
+        enablePWA,
+        customHeadCode,
+        customDomain);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)?
+        enabled,
+    TResult Function()? disabled,
+    required TResult orElse(),
+  }) {
+    if (enabled != null) {
+      return enabled(
+          siteUrl,
+          seoTitle,
+          siteDescription,
+          siteKeywords,
+          faviconUrl,
+          statusBarColor,
+          socialShareImage,
+          individualPageTitles,
+          showWatermark,
+          allowShowcasing,
+          allowSearchEngineIndexing,
+          enablePWA,
+          customHeadCode,
+          customDomain);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Enabled value) enabled,
+    required TResult Function(_Disabled value) disabled,
+  }) {
+    return enabled(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Enabled value)? enabled,
+    TResult? Function(_Disabled value)? disabled,
+  }) {
+    return enabled?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Enabled value)? enabled,
+    TResult Function(_Disabled value)? disabled,
+    required TResult orElse(),
+  }) {
+    if (enabled != null) {
+      return enabled(this);
+    }
+    return orElse();
+  }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WebDeploymentConfigImplToJson(
+    return _$$EnabledImplToJson(
       this,
     );
   }
 }
 
-abstract class _WebDeploymentConfig implements WebDeploymentConfig {
-  const factory _WebDeploymentConfig(
+abstract class _Enabled implements WebDeploymentConfig {
+  const factory _Enabled(
       {required final String siteUrl,
       required final String seoTitle,
       required final String siteDescription,
@@ -405,41 +536,189 @@ abstract class _WebDeploymentConfig implements WebDeploymentConfig {
       required final bool allowSearchEngineIndexing,
       required final bool enablePWA,
       required final String customHeadCode,
-      required final String customDomain}) = _$WebDeploymentConfigImpl;
+      required final String customDomain}) = _$EnabledImpl;
 
-  factory _WebDeploymentConfig.fromJson(Map<String, dynamic> json) =
-      _$WebDeploymentConfigImpl.fromJson;
+  factory _Enabled.fromJson(Map<String, dynamic> json) = _$EnabledImpl.fromJson;
 
-  @override
   String get siteUrl;
-  @override
   String get seoTitle;
-  @override
   String get siteDescription;
-  @override
   String get siteKeywords;
-  @override
   String? get faviconUrl;
-  @override
   CColor get statusBarColor;
-  @override
   String? get socialShareImage;
-  @override
   bool get individualPageTitles;
-  @override
   bool get showWatermark;
-  @override
   bool get allowShowcasing;
-  @override
   bool get allowSearchEngineIndexing;
-  @override
   bool get enablePWA;
-  @override
   String get customHeadCode;
-  @override
   String get customDomain;
-  @override
   @JsonKey(ignore: true)
-  _$$WebDeploymentConfigImplCopyWith<_$WebDeploymentConfigImpl> get copyWith =>
+  _$$EnabledImplCopyWith<_$EnabledImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DisabledImplCopyWith<$Res> {
+  factory _$$DisabledImplCopyWith(
+          _$DisabledImpl value, $Res Function(_$DisabledImpl) then) =
+      __$$DisabledImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DisabledImplCopyWithImpl<$Res>
+    extends _$WebDeploymentConfigCopyWithImpl<$Res, _$DisabledImpl>
+    implements _$$DisabledImplCopyWith<$Res> {
+  __$$DisabledImplCopyWithImpl(
+      _$DisabledImpl _value, $Res Function(_$DisabledImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DisabledImpl implements _Disabled {
+  const _$DisabledImpl({final String? $type}) : $type = $type ?? 'disabled';
+
+  factory _$DisabledImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DisabledImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'WebDeploymentConfig.disabled()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DisabledImpl);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)
+        enabled,
+    required TResult Function() disabled,
+  }) {
+    return disabled();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)?
+        enabled,
+    TResult? Function()? disabled,
+  }) {
+    return disabled?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            String siteUrl,
+            String seoTitle,
+            String siteDescription,
+            String siteKeywords,
+            String? faviconUrl,
+            CColor statusBarColor,
+            String? socialShareImage,
+            bool individualPageTitles,
+            bool showWatermark,
+            bool allowShowcasing,
+            bool allowSearchEngineIndexing,
+            bool enablePWA,
+            String customHeadCode,
+            String customDomain)?
+        enabled,
+    TResult Function()? disabled,
+    required TResult orElse(),
+  }) {
+    if (disabled != null) {
+      return disabled();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Enabled value) enabled,
+    required TResult Function(_Disabled value) disabled,
+  }) {
+    return disabled(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Enabled value)? enabled,
+    TResult? Function(_Disabled value)? disabled,
+  }) {
+    return disabled?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Enabled value)? enabled,
+    TResult Function(_Disabled value)? disabled,
+    required TResult orElse(),
+  }) {
+    if (disabled != null) {
+      return disabled(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DisabledImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Disabled implements WebDeploymentConfig {
+  const factory _Disabled() = _$DisabledImpl;
+
+  factory _Disabled.fromJson(Map<String, dynamic> json) =
+      _$DisabledImpl.fromJson;
 }

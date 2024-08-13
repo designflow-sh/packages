@@ -9,9 +9,11 @@ part of 'authentication.config.dart';
 _$AuthenticationConfigImpl _$$AuthenticationConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$AuthenticationConfigImpl(
-      service: $enumDecode(_$AuthenticationServiceEnumMap, json['service']),
-      initialPageID: json['initialPageID'] as String,
-      loggedInPageID: json['loggedInPageID'] as String,
+      service: $enumDecodeNullable(
+              _$AuthenticationServiceEnumMap, json['service']) ??
+          AuthenticationService.none,
+      initialPageID: json['initialPageID'] as String?,
+      loggedInPageID: json['loggedInPageID'] as String?,
     );
 
 Map<String, dynamic> _$$AuthenticationConfigImplToJson(

@@ -109,17 +109,19 @@ class __$$LanguagesConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$LanguagesConfigImpl implements _LanguagesConfig {
   const _$LanguagesConfigImpl(
-      {required this.defaultLanguage,
-      required final List<String> supportedLanguages})
+      {this.defaultLanguage = 'en',
+      final List<String> supportedLanguages = const ['en']})
       : _supportedLanguages = supportedLanguages;
 
   factory _$LanguagesConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$LanguagesConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final String defaultLanguage;
   final List<String> _supportedLanguages;
   @override
+  @JsonKey()
   List<String> get supportedLanguages {
     if (_supportedLanguages is EqualUnmodifiableListView)
       return _supportedLanguages;
@@ -165,8 +167,8 @@ class _$LanguagesConfigImpl implements _LanguagesConfig {
 
 abstract class _LanguagesConfig implements LanguagesConfig {
   const factory _LanguagesConfig(
-      {required final String defaultLanguage,
-      required final List<String> supportedLanguages}) = _$LanguagesConfigImpl;
+      {final String defaultLanguage,
+      final List<String> supportedLanguages}) = _$LanguagesConfigImpl;
 
   factory _LanguagesConfig.fromJson(Map<String, dynamic> json) =
       _$LanguagesConfigImpl.fromJson;

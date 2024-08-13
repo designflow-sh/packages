@@ -6,8 +6,8 @@ part 'languages.config.g.dart';
 @freezed
 class LanguagesConfig with _$LanguagesConfig {
   const factory LanguagesConfig({
-    required String defaultLanguage,
-    required List<String> supportedLanguages,
+    @Default('en') String defaultLanguage,
+    @Default(['en']) List<String> supportedLanguages,
   }) = _LanguagesConfig;
 
   factory LanguagesConfig.fromJson(Map<String, dynamic> json) =>

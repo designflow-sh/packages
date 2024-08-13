@@ -7,8 +7,8 @@ part 'drawer.config.g.dart';
 @freezed
 class DrawerConfig with _$DrawerConfig {
   const factory DrawerConfig({
-    required bool drawerEnabled,
-    required CColor backgroundColor,
+    @Default(false) bool drawerEnabled,
+    CColor? backgroundColor,
   }) = _DrawerConfig;
 
   factory DrawerConfig.fromJson(Map<String, dynamic> json) =>

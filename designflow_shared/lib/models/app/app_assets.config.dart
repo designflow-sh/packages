@@ -6,9 +6,9 @@ part 'app_assets.config.g.dart';
 @freezed
 class AppAssets with _$AppAssets {
   const factory AppAssets({
-    required String icon,
-    required String splashID,
-    required String page404ID,
+    String? icon,
+    String? splashID,
+    String? page404ID,
   }) = _AppAssets;
 
   factory AppAssets.fromJson(Map<String, dynamic> json) =>

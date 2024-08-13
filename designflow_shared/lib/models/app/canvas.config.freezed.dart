@@ -20,7 +20,7 @@ CanvasConfig _$CanvasConfigFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CanvasConfig {
-  CColor get backgroundColor => throw _privateConstructorUsedError;
+  CColor? get backgroundColor => throw _privateConstructorUsedError;
   bool get showGrid => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $CanvasConfigCopyWith<$Res> {
           CanvasConfig value, $Res Function(CanvasConfig) then) =
       _$CanvasConfigCopyWithImpl<$Res, CanvasConfig>;
   @useResult
-  $Res call({CColor backgroundColor, bool showGrid});
+  $Res call({CColor? backgroundColor, bool showGrid});
 }
 
 /// @nodoc
@@ -51,14 +51,14 @@ class _$CanvasConfigCopyWithImpl<$Res, $Val extends CanvasConfig>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? backgroundColor = null,
+    Object? backgroundColor = freezed,
     Object? showGrid = null,
   }) {
     return _then(_value.copyWith(
-      backgroundColor: null == backgroundColor
+      backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
       showGrid: null == showGrid
           ? _value.showGrid
           : showGrid // ignore: cast_nullable_to_non_nullable
@@ -75,7 +75,7 @@ abstract class _$$CanvasConfigImplCopyWith<$Res>
       __$$CanvasConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({CColor backgroundColor, bool showGrid});
+  $Res call({CColor? backgroundColor, bool showGrid});
 }
 
 /// @nodoc
@@ -89,14 +89,14 @@ class __$$CanvasConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? backgroundColor = null,
+    Object? backgroundColor = freezed,
     Object? showGrid = null,
   }) {
     return _then(_$CanvasConfigImpl(
-      backgroundColor: null == backgroundColor
+      backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as CColor,
+              as CColor?,
       showGrid: null == showGrid
           ? _value.showGrid
           : showGrid // ignore: cast_nullable_to_non_nullable
@@ -108,15 +108,15 @@ class __$$CanvasConfigImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CanvasConfigImpl implements _CanvasConfig {
-  const _$CanvasConfigImpl(
-      {required this.backgroundColor, required this.showGrid});
+  const _$CanvasConfigImpl({this.backgroundColor, this.showGrid = true});
 
   factory _$CanvasConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$CanvasConfigImplFromJson(json);
 
   @override
-  final CColor backgroundColor;
+  final CColor? backgroundColor;
   @override
+  @JsonKey()
   final bool showGrid;
 
   @override
@@ -155,14 +155,14 @@ class _$CanvasConfigImpl implements _CanvasConfig {
 
 abstract class _CanvasConfig implements CanvasConfig {
   const factory _CanvasConfig(
-      {required final CColor backgroundColor,
-      required final bool showGrid}) = _$CanvasConfigImpl;
+      {final CColor? backgroundColor,
+      final bool showGrid}) = _$CanvasConfigImpl;
 
   factory _CanvasConfig.fromJson(Map<String, dynamic> json) =
       _$CanvasConfigImpl.fromJson;
 
   @override
-  CColor get backgroundColor;
+  CColor? get backgroundColor;
   @override
   bool get showGrid;
   @override

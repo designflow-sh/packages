@@ -15,18 +15,59 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DeepLinkConfig _$DeepLinkConfigFromJson(Map<String, dynamic> json) {
-  return _DeepLinkConfig.fromJson(json);
+  switch (json['runtimeType']) {
+    case 'enabled':
+      return _Enabled.fromJson(json);
+    case 'disabled':
+      return _Disabled.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'DeepLinkConfig',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
 }
 
 /// @nodoc
 mixin _$DeepLinkConfig {
-  String get scheme => throw _privateConstructorUsedError;
-  String get host => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DeepLinkConfigCopyWith<DeepLinkConfig> get copyWith =>
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String scheme, String host) enabled,
+    required TResult Function() disabled,
+  }) =>
       throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String scheme, String host)? enabled,
+    TResult? Function()? disabled,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String scheme, String host)? enabled,
+    TResult Function()? disabled,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Enabled value) enabled,
+    required TResult Function(_Disabled value) disabled,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Enabled value)? enabled,
+    TResult? Function(_Disabled value)? disabled,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Enabled value)? enabled,
+    TResult Function(_Disabled value)? disabled,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -34,8 +75,6 @@ abstract class $DeepLinkConfigCopyWith<$Res> {
   factory $DeepLinkConfigCopyWith(
           DeepLinkConfig value, $Res Function(DeepLinkConfig) then) =
       _$DeepLinkConfigCopyWithImpl<$Res, DeepLinkConfig>;
-  @useResult
-  $Res call({String scheme, String host});
 }
 
 /// @nodoc
@@ -47,43 +86,23 @@ class _$DeepLinkConfigCopyWithImpl<$Res, $Val extends DeepLinkConfig>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? scheme = null,
-    Object? host = null,
-  }) {
-    return _then(_value.copyWith(
-      scheme: null == scheme
-          ? _value.scheme
-          : scheme // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: null == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$DeepLinkConfigImplCopyWith<$Res>
-    implements $DeepLinkConfigCopyWith<$Res> {
-  factory _$$DeepLinkConfigImplCopyWith(_$DeepLinkConfigImpl value,
-          $Res Function(_$DeepLinkConfigImpl) then) =
-      __$$DeepLinkConfigImplCopyWithImpl<$Res>;
-  @override
+abstract class _$$EnabledImplCopyWith<$Res> {
+  factory _$$EnabledImplCopyWith(
+          _$EnabledImpl value, $Res Function(_$EnabledImpl) then) =
+      __$$EnabledImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String scheme, String host});
 }
 
 /// @nodoc
-class __$$DeepLinkConfigImplCopyWithImpl<$Res>
-    extends _$DeepLinkConfigCopyWithImpl<$Res, _$DeepLinkConfigImpl>
-    implements _$$DeepLinkConfigImplCopyWith<$Res> {
-  __$$DeepLinkConfigImplCopyWithImpl(
-      _$DeepLinkConfigImpl _value, $Res Function(_$DeepLinkConfigImpl) _then)
+class __$$EnabledImplCopyWithImpl<$Res>
+    extends _$DeepLinkConfigCopyWithImpl<$Res, _$EnabledImpl>
+    implements _$$EnabledImplCopyWith<$Res> {
+  __$$EnabledImplCopyWithImpl(
+      _$EnabledImpl _value, $Res Function(_$EnabledImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +111,7 @@ class __$$DeepLinkConfigImplCopyWithImpl<$Res>
     Object? scheme = null,
     Object? host = null,
   }) {
-    return _then(_$DeepLinkConfigImpl(
+    return _then(_$EnabledImpl(
       scheme: null == scheme
           ? _value.scheme
           : scheme // ignore: cast_nullable_to_non_nullable
@@ -107,27 +126,32 @@ class __$$DeepLinkConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$DeepLinkConfigImpl implements _DeepLinkConfig {
-  const _$DeepLinkConfigImpl({required this.scheme, required this.host});
+class _$EnabledImpl implements _Enabled {
+  const _$EnabledImpl(
+      {required this.scheme, required this.host, final String? $type})
+      : $type = $type ?? 'enabled';
 
-  factory _$DeepLinkConfigImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeepLinkConfigImplFromJson(json);
+  factory _$EnabledImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnabledImplFromJson(json);
 
   @override
   final String scheme;
   @override
   final String host;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
-    return 'DeepLinkConfig(scheme: $scheme, host: $host)';
+    return 'DeepLinkConfig.enabled(scheme: $scheme, host: $host)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeepLinkConfigImpl &&
+            other is _$EnabledImpl &&
             (identical(other.scheme, scheme) || other.scheme == scheme) &&
             (identical(other.host, host) || other.host == host));
   }
@@ -139,32 +163,208 @@ class _$DeepLinkConfigImpl implements _DeepLinkConfig {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeepLinkConfigImplCopyWith<_$DeepLinkConfigImpl> get copyWith =>
-      __$$DeepLinkConfigImplCopyWithImpl<_$DeepLinkConfigImpl>(
-          this, _$identity);
+  _$$EnabledImplCopyWith<_$EnabledImpl> get copyWith =>
+      __$$EnabledImplCopyWithImpl<_$EnabledImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String scheme, String host) enabled,
+    required TResult Function() disabled,
+  }) {
+    return enabled(scheme, host);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String scheme, String host)? enabled,
+    TResult? Function()? disabled,
+  }) {
+    return enabled?.call(scheme, host);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String scheme, String host)? enabled,
+    TResult Function()? disabled,
+    required TResult orElse(),
+  }) {
+    if (enabled != null) {
+      return enabled(scheme, host);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Enabled value) enabled,
+    required TResult Function(_Disabled value) disabled,
+  }) {
+    return enabled(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Enabled value)? enabled,
+    TResult? Function(_Disabled value)? disabled,
+  }) {
+    return enabled?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Enabled value)? enabled,
+    TResult Function(_Disabled value)? disabled,
+    required TResult orElse(),
+  }) {
+    if (enabled != null) {
+      return enabled(this);
+    }
+    return orElse();
+  }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeepLinkConfigImplToJson(
+    return _$$EnabledImplToJson(
       this,
     );
   }
 }
 
-abstract class _DeepLinkConfig implements DeepLinkConfig {
-  const factory _DeepLinkConfig(
+abstract class _Enabled implements DeepLinkConfig {
+  const factory _Enabled(
       {required final String scheme,
-      required final String host}) = _$DeepLinkConfigImpl;
+      required final String host}) = _$EnabledImpl;
 
-  factory _DeepLinkConfig.fromJson(Map<String, dynamic> json) =
-      _$DeepLinkConfigImpl.fromJson;
+  factory _Enabled.fromJson(Map<String, dynamic> json) = _$EnabledImpl.fromJson;
 
-  @override
   String get scheme;
-  @override
   String get host;
-  @override
   @JsonKey(ignore: true)
-  _$$DeepLinkConfigImplCopyWith<_$DeepLinkConfigImpl> get copyWith =>
+  _$$EnabledImplCopyWith<_$EnabledImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DisabledImplCopyWith<$Res> {
+  factory _$$DisabledImplCopyWith(
+          _$DisabledImpl value, $Res Function(_$DisabledImpl) then) =
+      __$$DisabledImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DisabledImplCopyWithImpl<$Res>
+    extends _$DeepLinkConfigCopyWithImpl<$Res, _$DisabledImpl>
+    implements _$$DisabledImplCopyWith<$Res> {
+  __$$DisabledImplCopyWithImpl(
+      _$DisabledImpl _value, $Res Function(_$DisabledImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DisabledImpl implements _Disabled {
+  const _$DisabledImpl({final String? $type}) : $type = $type ?? 'disabled';
+
+  factory _$DisabledImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DisabledImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'DeepLinkConfig.disabled()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DisabledImpl);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String scheme, String host) enabled,
+    required TResult Function() disabled,
+  }) {
+    return disabled();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String scheme, String host)? enabled,
+    TResult? Function()? disabled,
+  }) {
+    return disabled?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String scheme, String host)? enabled,
+    TResult Function()? disabled,
+    required TResult orElse(),
+  }) {
+    if (disabled != null) {
+      return disabled();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Enabled value) enabled,
+    required TResult Function(_Disabled value) disabled,
+  }) {
+    return disabled(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Enabled value)? enabled,
+    TResult? Function(_Disabled value)? disabled,
+  }) {
+    return disabled?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Enabled value)? enabled,
+    TResult Function(_Disabled value)? disabled,
+    required TResult orElse(),
+  }) {
+    if (disabled != null) {
+      return disabled(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DisabledImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Disabled implements DeepLinkConfig {
+  const factory _Disabled() = _$DisabledImpl;
+
+  factory _Disabled.fromJson(Map<String, dynamic> json) =
+      _$DisabledImpl.fromJson;
 }

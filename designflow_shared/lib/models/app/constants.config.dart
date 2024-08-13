@@ -6,7 +6,7 @@ part 'constants.config.g.dart';
 @freezed
 class GlobalConstantsConfig with _$GlobalConstantsConfig {
   const factory GlobalConstantsConfig({
-    required Map<String, dynamic> constants,
+    @Default({}) Map<String, dynamic> constants,
   }) = _GlobalConstantsConfig;
 
   factory GlobalConstantsConfig.fromJson(Map<String, dynamic> json) =>

@@ -8,9 +8,10 @@ part of 'drawer.config.dart';
 
 _$DrawerConfigImpl _$$DrawerConfigImplFromJson(Map<String, dynamic> json) =>
     _$DrawerConfigImpl(
-      drawerEnabled: json['drawerEnabled'] as bool,
-      backgroundColor:
-          CColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      drawerEnabled: json['drawerEnabled'] as bool? ?? false,
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : CColor.fromJson(json['backgroundColor'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$DrawerConfigImplToJson(_$DrawerConfigImpl instance) =>

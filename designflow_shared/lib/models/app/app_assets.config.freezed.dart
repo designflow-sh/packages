@@ -20,9 +20,9 @@ AppAssets _$AppAssetsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AppAssets {
-  String get icon => throw _privateConstructorUsedError;
-  String get splashID => throw _privateConstructorUsedError;
-  String get page404ID => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get splashID => throw _privateConstructorUsedError;
+  String? get page404ID => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $AppAssetsCopyWith<$Res> {
   factory $AppAssetsCopyWith(AppAssets value, $Res Function(AppAssets) then) =
       _$AppAssetsCopyWithImpl<$Res, AppAssets>;
   @useResult
-  $Res call({String icon, String splashID, String page404ID});
+  $Res call({String? icon, String? splashID, String? page404ID});
 }
 
 /// @nodoc
@@ -51,23 +51,23 @@ class _$AppAssetsCopyWithImpl<$Res, $Val extends AppAssets>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? icon = null,
-    Object? splashID = null,
-    Object? page404ID = null,
+    Object? icon = freezed,
+    Object? splashID = freezed,
+    Object? page404ID = freezed,
   }) {
     return _then(_value.copyWith(
-      icon: null == icon
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      splashID: null == splashID
+              as String?,
+      splashID: freezed == splashID
           ? _value.splashID
           : splashID // ignore: cast_nullable_to_non_nullable
-              as String,
-      page404ID: null == page404ID
+              as String?,
+      page404ID: freezed == page404ID
           ? _value.page404ID
           : page404ID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -80,7 +80,7 @@ abstract class _$$AppAssetsImplCopyWith<$Res>
       __$$AppAssetsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String icon, String splashID, String page404ID});
+  $Res call({String? icon, String? splashID, String? page404ID});
 }
 
 /// @nodoc
@@ -94,23 +94,23 @@ class __$$AppAssetsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? icon = null,
-    Object? splashID = null,
-    Object? page404ID = null,
+    Object? icon = freezed,
+    Object? splashID = freezed,
+    Object? page404ID = freezed,
   }) {
     return _then(_$AppAssetsImpl(
-      icon: null == icon
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      splashID: null == splashID
+              as String?,
+      splashID: freezed == splashID
           ? _value.splashID
           : splashID // ignore: cast_nullable_to_non_nullable
-              as String,
-      page404ID: null == page404ID
+              as String?,
+      page404ID: freezed == page404ID
           ? _value.page404ID
           : page404ID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -118,18 +118,17 @@ class __$$AppAssetsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AppAssetsImpl implements _AppAssets {
-  const _$AppAssetsImpl(
-      {required this.icon, required this.splashID, required this.page404ID});
+  const _$AppAssetsImpl({this.icon, this.splashID, this.page404ID});
 
   factory _$AppAssetsImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppAssetsImplFromJson(json);
 
   @override
-  final String icon;
+  final String? icon;
   @override
-  final String splashID;
+  final String? splashID;
   @override
-  final String page404ID;
+  final String? page404ID;
 
   @override
   String toString() {
@@ -168,19 +167,19 @@ class _$AppAssetsImpl implements _AppAssets {
 
 abstract class _AppAssets implements AppAssets {
   const factory _AppAssets(
-      {required final String icon,
-      required final String splashID,
-      required final String page404ID}) = _$AppAssetsImpl;
+      {final String? icon,
+      final String? splashID,
+      final String? page404ID}) = _$AppAssetsImpl;
 
   factory _AppAssets.fromJson(Map<String, dynamic> json) =
       _$AppAssetsImpl.fromJson;
 
   @override
-  String get icon;
+  String? get icon;
   @override
-  String get splashID;
+  String? get splashID;
   @override
-  String get page404ID;
+  String? get page404ID;
   @override
   @JsonKey(ignore: true)
   _$$AppAssetsImplCopyWith<_$AppAssetsImpl> get copyWith =>

@@ -80,7 +80,7 @@ final kDefaultPermissions = [
 @freezed
 class PermissionConfig with _$PermissionConfig {
   const factory PermissionConfig({
-    required List<SinglePermissionConfig> permissions,
+    @Default([]) List<SinglePermissionConfig> permissions,
   }) = _PermissionConfig;
 
   factory PermissionConfig.fromJson(Map<String, dynamic> json) =>

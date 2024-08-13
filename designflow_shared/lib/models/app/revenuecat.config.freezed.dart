@@ -152,18 +152,20 @@ class __$$RevenueCatConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RevenueCatConfigImpl implements _RevenueCatConfig {
   const _$RevenueCatConfigImpl(
-      {required this.iOSEnabled,
-      required this.androidEnabled,
-      required this.appleKey,
-      required this.androidKey,
+      {this.iOSEnabled = false,
+      this.androidEnabled = false,
+      this.appleKey,
+      this.androidKey,
       this.defaultEntitlement});
 
   factory _$RevenueCatConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$RevenueCatConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool iOSEnabled;
   @override
+  @JsonKey()
   final bool androidEnabled;
   @override
   final String? appleKey;
@@ -216,10 +218,10 @@ class _$RevenueCatConfigImpl implements _RevenueCatConfig {
 
 abstract class _RevenueCatConfig implements RevenueCatConfig {
   const factory _RevenueCatConfig(
-      {required final bool iOSEnabled,
-      required final bool androidEnabled,
-      required final String? appleKey,
-      required final String? androidKey,
+      {final bool iOSEnabled,
+      final bool androidEnabled,
+      final String? appleKey,
+      final String? androidKey,
       final String? defaultEntitlement}) = _$RevenueCatConfigImpl;
 
   factory _RevenueCatConfig.fromJson(Map<String, dynamic> json) =

@@ -6,9 +6,8 @@ part of 'web_deployment.config.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$WebDeploymentConfigImpl _$$WebDeploymentConfigImplFromJson(
-        Map<String, dynamic> json) =>
-    _$WebDeploymentConfigImpl(
+_$EnabledImpl _$$EnabledImplFromJson(Map<String, dynamic> json) =>
+    _$EnabledImpl(
       siteUrl: json['siteUrl'] as String,
       seoTitle: json['seoTitle'] as String,
       siteDescription: json['siteDescription'] as String,
@@ -24,10 +23,10 @@ _$WebDeploymentConfigImpl _$$WebDeploymentConfigImplFromJson(
       enablePWA: json['enablePWA'] as bool,
       customHeadCode: json['customHeadCode'] as String,
       customDomain: json['customDomain'] as String,
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$WebDeploymentConfigImplToJson(
-        _$WebDeploymentConfigImpl instance) =>
+Map<String, dynamic> _$$EnabledImplToJson(_$EnabledImpl instance) =>
     <String, dynamic>{
       'siteUrl': instance.siteUrl,
       'seoTitle': instance.seoTitle,
@@ -43,4 +42,15 @@ Map<String, dynamic> _$$WebDeploymentConfigImplToJson(
       'enablePWA': instance.enablePWA,
       'customHeadCode': instance.customHeadCode,
       'customDomain': instance.customDomain,
+      'runtimeType': instance.$type,
+    };
+
+_$DisabledImpl _$$DisabledImplFromJson(Map<String, dynamic> json) =>
+    _$DisabledImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$DisabledImplToJson(_$DisabledImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
     };

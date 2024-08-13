@@ -21,8 +21,8 @@ AuthenticationConfig _$AuthenticationConfigFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AuthenticationConfig {
   AuthenticationService get service => throw _privateConstructorUsedError;
-  String get initialPageID => throw _privateConstructorUsedError;
-  String get loggedInPageID => throw _privateConstructorUsedError;
+  String? get initialPageID => throw _privateConstructorUsedError;
+  String? get loggedInPageID => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,8 +38,8 @@ abstract class $AuthenticationConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {AuthenticationService service,
-      String initialPageID,
-      String loggedInPageID});
+      String? initialPageID,
+      String? loggedInPageID});
 }
 
 /// @nodoc
@@ -57,22 +57,22 @@ class _$AuthenticationConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? service = null,
-    Object? initialPageID = null,
-    Object? loggedInPageID = null,
+    Object? initialPageID = freezed,
+    Object? loggedInPageID = freezed,
   }) {
     return _then(_value.copyWith(
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
               as AuthenticationService,
-      initialPageID: null == initialPageID
+      initialPageID: freezed == initialPageID
           ? _value.initialPageID
           : initialPageID // ignore: cast_nullable_to_non_nullable
-              as String,
-      loggedInPageID: null == loggedInPageID
+              as String?,
+      loggedInPageID: freezed == loggedInPageID
           ? _value.loggedInPageID
           : loggedInPageID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -87,8 +87,8 @@ abstract class _$$AuthenticationConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {AuthenticationService service,
-      String initialPageID,
-      String loggedInPageID});
+      String? initialPageID,
+      String? loggedInPageID});
 }
 
 /// @nodoc
@@ -103,22 +103,22 @@ class __$$AuthenticationConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? service = null,
-    Object? initialPageID = null,
-    Object? loggedInPageID = null,
+    Object? initialPageID = freezed,
+    Object? loggedInPageID = freezed,
   }) {
     return _then(_$AuthenticationConfigImpl(
       service: null == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
               as AuthenticationService,
-      initialPageID: null == initialPageID
+      initialPageID: freezed == initialPageID
           ? _value.initialPageID
           : initialPageID // ignore: cast_nullable_to_non_nullable
-              as String,
-      loggedInPageID: null == loggedInPageID
+              as String?,
+      loggedInPageID: freezed == loggedInPageID
           ? _value.loggedInPageID
           : loggedInPageID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -127,19 +127,20 @@ class __$$AuthenticationConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AuthenticationConfigImpl implements _AuthenticationConfig {
   const _$AuthenticationConfigImpl(
-      {required this.service,
-      required this.initialPageID,
-      required this.loggedInPageID});
+      {this.service = AuthenticationService.none,
+      this.initialPageID,
+      this.loggedInPageID});
 
   factory _$AuthenticationConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$AuthenticationConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final AuthenticationService service;
   @override
-  final String initialPageID;
+  final String? initialPageID;
   @override
-  final String loggedInPageID;
+  final String? loggedInPageID;
 
   @override
   String toString() {
@@ -181,9 +182,9 @@ class _$AuthenticationConfigImpl implements _AuthenticationConfig {
 
 abstract class _AuthenticationConfig implements AuthenticationConfig {
   const factory _AuthenticationConfig(
-      {required final AuthenticationService service,
-      required final String initialPageID,
-      required final String loggedInPageID}) = _$AuthenticationConfigImpl;
+      {final AuthenticationService service,
+      final String? initialPageID,
+      final String? loggedInPageID}) = _$AuthenticationConfigImpl;
 
   factory _AuthenticationConfig.fromJson(Map<String, dynamic> json) =
       _$AuthenticationConfigImpl.fromJson;
@@ -191,9 +192,9 @@ abstract class _AuthenticationConfig implements AuthenticationConfig {
   @override
   AuthenticationService get service;
   @override
-  String get initialPageID;
+  String? get initialPageID;
   @override
-  String get loggedInPageID;
+  String? get loggedInPageID;
   @override
   @JsonKey(ignore: true)
   _$$AuthenticationConfigImplCopyWith<_$AuthenticationConfigImpl>

@@ -18,6 +18,7 @@ class ViewModel with _$ViewModel {
     required String route,
     required ViewRedirects redirect,
     required bool isPage,
+    required String initialUINode,
   }) = _ViewModel;
 
   factory ViewModel.fromJson(Map<String, dynamic> json) =>

@@ -9,10 +9,11 @@ part of 'languages.config.dart';
 _$LanguagesConfigImpl _$$LanguagesConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$LanguagesConfigImpl(
-      defaultLanguage: json['defaultLanguage'] as String,
-      supportedLanguages: (json['supportedLanguages'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
+      defaultLanguage: json['defaultLanguage'] as String? ?? 'en',
+      supportedLanguages: (json['supportedLanguages'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const ['en'],
     );
 
 Map<String, dynamic> _$$LanguagesConfigImplToJson(

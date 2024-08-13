@@ -21,14 +21,12 @@ AppBarConfig _$AppBarConfigFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AppBarConfig {
   bool get appBarEnabled => throw _privateConstructorUsedError;
-  bool get bottomBarEnabled => throw _privateConstructorUsedError;
-  bool get drawerEnabled => throw _privateConstructorUsedError;
   bool get appBarCenterTitle => throw _privateConstructorUsedError;
   bool get appBarBackButton => throw _privateConstructorUsedError;
-  String get appBarBackButtonIcon => throw _privateConstructorUsedError;
-  String get backgroundColorID => throw _privateConstructorUsedError;
-  String get titleColorID => throw _privateConstructorUsedError;
-  String get iconColorID => throw _privateConstructorUsedError;
+  String? get appBarBackButtonIcon => throw _privateConstructorUsedError;
+  CColor? get backgroundColor => throw _privateConstructorUsedError;
+  CColor? get titleColor => throw _privateConstructorUsedError;
+  CColor? get iconColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,14 +42,12 @@ abstract class $AppBarConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {bool appBarEnabled,
-      bool bottomBarEnabled,
-      bool drawerEnabled,
       bool appBarCenterTitle,
       bool appBarBackButton,
-      String appBarBackButtonIcon,
-      String backgroundColorID,
-      String titleColorID,
-      String iconColorID});
+      String? appBarBackButtonIcon,
+      CColor? backgroundColor,
+      CColor? titleColor,
+      CColor? iconColor});
 }
 
 /// @nodoc
@@ -68,27 +64,17 @@ class _$AppBarConfigCopyWithImpl<$Res, $Val extends AppBarConfig>
   @override
   $Res call({
     Object? appBarEnabled = null,
-    Object? bottomBarEnabled = null,
-    Object? drawerEnabled = null,
     Object? appBarCenterTitle = null,
     Object? appBarBackButton = null,
-    Object? appBarBackButtonIcon = null,
-    Object? backgroundColorID = null,
-    Object? titleColorID = null,
-    Object? iconColorID = null,
+    Object? appBarBackButtonIcon = freezed,
+    Object? backgroundColor = freezed,
+    Object? titleColor = freezed,
+    Object? iconColor = freezed,
   }) {
     return _then(_value.copyWith(
       appBarEnabled: null == appBarEnabled
           ? _value.appBarEnabled
           : appBarEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      bottomBarEnabled: null == bottomBarEnabled
-          ? _value.bottomBarEnabled
-          : bottomBarEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      drawerEnabled: null == drawerEnabled
-          ? _value.drawerEnabled
-          : drawerEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
       appBarCenterTitle: null == appBarCenterTitle
           ? _value.appBarCenterTitle
@@ -98,22 +84,22 @@ class _$AppBarConfigCopyWithImpl<$Res, $Val extends AppBarConfig>
           ? _value.appBarBackButton
           : appBarBackButton // ignore: cast_nullable_to_non_nullable
               as bool,
-      appBarBackButtonIcon: null == appBarBackButtonIcon
+      appBarBackButtonIcon: freezed == appBarBackButtonIcon
           ? _value.appBarBackButtonIcon
           : appBarBackButtonIcon // ignore: cast_nullable_to_non_nullable
-              as String,
-      backgroundColorID: null == backgroundColorID
-          ? _value.backgroundColorID
-          : backgroundColorID // ignore: cast_nullable_to_non_nullable
-              as String,
-      titleColorID: null == titleColorID
-          ? _value.titleColorID
-          : titleColorID // ignore: cast_nullable_to_non_nullable
-              as String,
-      iconColorID: null == iconColorID
-          ? _value.iconColorID
-          : iconColorID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as CColor?,
+      titleColor: freezed == titleColor
+          ? _value.titleColor
+          : titleColor // ignore: cast_nullable_to_non_nullable
+              as CColor?,
+      iconColor: freezed == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as CColor?,
     ) as $Val);
   }
 }
@@ -128,14 +114,12 @@ abstract class _$$AppBarConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool appBarEnabled,
-      bool bottomBarEnabled,
-      bool drawerEnabled,
       bool appBarCenterTitle,
       bool appBarBackButton,
-      String appBarBackButtonIcon,
-      String backgroundColorID,
-      String titleColorID,
-      String iconColorID});
+      String? appBarBackButtonIcon,
+      CColor? backgroundColor,
+      CColor? titleColor,
+      CColor? iconColor});
 }
 
 /// @nodoc
@@ -150,27 +134,17 @@ class __$$AppBarConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? appBarEnabled = null,
-    Object? bottomBarEnabled = null,
-    Object? drawerEnabled = null,
     Object? appBarCenterTitle = null,
     Object? appBarBackButton = null,
-    Object? appBarBackButtonIcon = null,
-    Object? backgroundColorID = null,
-    Object? titleColorID = null,
-    Object? iconColorID = null,
+    Object? appBarBackButtonIcon = freezed,
+    Object? backgroundColor = freezed,
+    Object? titleColor = freezed,
+    Object? iconColor = freezed,
   }) {
     return _then(_$AppBarConfigImpl(
       appBarEnabled: null == appBarEnabled
           ? _value.appBarEnabled
           : appBarEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      bottomBarEnabled: null == bottomBarEnabled
-          ? _value.bottomBarEnabled
-          : bottomBarEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      drawerEnabled: null == drawerEnabled
-          ? _value.drawerEnabled
-          : drawerEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
       appBarCenterTitle: null == appBarCenterTitle
           ? _value.appBarCenterTitle
@@ -180,22 +154,22 @@ class __$$AppBarConfigImplCopyWithImpl<$Res>
           ? _value.appBarBackButton
           : appBarBackButton // ignore: cast_nullable_to_non_nullable
               as bool,
-      appBarBackButtonIcon: null == appBarBackButtonIcon
+      appBarBackButtonIcon: freezed == appBarBackButtonIcon
           ? _value.appBarBackButtonIcon
           : appBarBackButtonIcon // ignore: cast_nullable_to_non_nullable
-              as String,
-      backgroundColorID: null == backgroundColorID
-          ? _value.backgroundColorID
-          : backgroundColorID // ignore: cast_nullable_to_non_nullable
-              as String,
-      titleColorID: null == titleColorID
-          ? _value.titleColorID
-          : titleColorID // ignore: cast_nullable_to_non_nullable
-              as String,
-      iconColorID: null == iconColorID
-          ? _value.iconColorID
-          : iconColorID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as CColor?,
+      titleColor: freezed == titleColor
+          ? _value.titleColor
+          : titleColor // ignore: cast_nullable_to_non_nullable
+              as CColor?,
+      iconColor: freezed == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as CColor?,
     ));
   }
 }
@@ -204,41 +178,38 @@ class __$$AppBarConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AppBarConfigImpl implements _AppBarConfig {
   const _$AppBarConfigImpl(
-      {required this.appBarEnabled,
-      required this.bottomBarEnabled,
-      required this.drawerEnabled,
-      required this.appBarCenterTitle,
-      required this.appBarBackButton,
-      required this.appBarBackButtonIcon,
-      required this.backgroundColorID,
-      required this.titleColorID,
-      required this.iconColorID});
+      {this.appBarEnabled = true,
+      this.appBarCenterTitle = true,
+      this.appBarBackButton = true,
+      this.appBarBackButtonIcon,
+      this.backgroundColor,
+      this.titleColor,
+      this.iconColor});
 
   factory _$AppBarConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppBarConfigImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool appBarEnabled;
   @override
-  final bool bottomBarEnabled;
-  @override
-  final bool drawerEnabled;
-  @override
+  @JsonKey()
   final bool appBarCenterTitle;
   @override
+  @JsonKey()
   final bool appBarBackButton;
   @override
-  final String appBarBackButtonIcon;
+  final String? appBarBackButtonIcon;
   @override
-  final String backgroundColorID;
+  final CColor? backgroundColor;
   @override
-  final String titleColorID;
+  final CColor? titleColor;
   @override
-  final String iconColorID;
+  final CColor? iconColor;
 
   @override
   String toString() {
-    return 'AppBarConfig(appBarEnabled: $appBarEnabled, bottomBarEnabled: $bottomBarEnabled, drawerEnabled: $drawerEnabled, appBarCenterTitle: $appBarCenterTitle, appBarBackButton: $appBarBackButton, appBarBackButtonIcon: $appBarBackButtonIcon, backgroundColorID: $backgroundColorID, titleColorID: $titleColorID, iconColorID: $iconColorID)';
+    return 'AppBarConfig(appBarEnabled: $appBarEnabled, appBarCenterTitle: $appBarCenterTitle, appBarBackButton: $appBarBackButton, appBarBackButtonIcon: $appBarBackButtonIcon, backgroundColor: $backgroundColor, titleColor: $titleColor, iconColor: $iconColor)';
   }
 
   @override
@@ -248,22 +219,18 @@ class _$AppBarConfigImpl implements _AppBarConfig {
             other is _$AppBarConfigImpl &&
             (identical(other.appBarEnabled, appBarEnabled) ||
                 other.appBarEnabled == appBarEnabled) &&
-            (identical(other.bottomBarEnabled, bottomBarEnabled) ||
-                other.bottomBarEnabled == bottomBarEnabled) &&
-            (identical(other.drawerEnabled, drawerEnabled) ||
-                other.drawerEnabled == drawerEnabled) &&
             (identical(other.appBarCenterTitle, appBarCenterTitle) ||
                 other.appBarCenterTitle == appBarCenterTitle) &&
             (identical(other.appBarBackButton, appBarBackButton) ||
                 other.appBarBackButton == appBarBackButton) &&
             (identical(other.appBarBackButtonIcon, appBarBackButtonIcon) ||
                 other.appBarBackButtonIcon == appBarBackButtonIcon) &&
-            (identical(other.backgroundColorID, backgroundColorID) ||
-                other.backgroundColorID == backgroundColorID) &&
-            (identical(other.titleColorID, titleColorID) ||
-                other.titleColorID == titleColorID) &&
-            (identical(other.iconColorID, iconColorID) ||
-                other.iconColorID == iconColorID));
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.titleColor, titleColor) ||
+                other.titleColor == titleColor) &&
+            (identical(other.iconColor, iconColor) ||
+                other.iconColor == iconColor));
   }
 
   @JsonKey(ignore: true)
@@ -271,14 +238,12 @@ class _$AppBarConfigImpl implements _AppBarConfig {
   int get hashCode => Object.hash(
       runtimeType,
       appBarEnabled,
-      bottomBarEnabled,
-      drawerEnabled,
       appBarCenterTitle,
       appBarBackButton,
       appBarBackButtonIcon,
-      backgroundColorID,
-      titleColorID,
-      iconColorID);
+      backgroundColor,
+      titleColor,
+      iconColor);
 
   @JsonKey(ignore: true)
   @override
@@ -296,15 +261,13 @@ class _$AppBarConfigImpl implements _AppBarConfig {
 
 abstract class _AppBarConfig implements AppBarConfig {
   const factory _AppBarConfig(
-      {required final bool appBarEnabled,
-      required final bool bottomBarEnabled,
-      required final bool drawerEnabled,
-      required final bool appBarCenterTitle,
-      required final bool appBarBackButton,
-      required final String appBarBackButtonIcon,
-      required final String backgroundColorID,
-      required final String titleColorID,
-      required final String iconColorID}) = _$AppBarConfigImpl;
+      {final bool appBarEnabled,
+      final bool appBarCenterTitle,
+      final bool appBarBackButton,
+      final String? appBarBackButtonIcon,
+      final CColor? backgroundColor,
+      final CColor? titleColor,
+      final CColor? iconColor}) = _$AppBarConfigImpl;
 
   factory _AppBarConfig.fromJson(Map<String, dynamic> json) =
       _$AppBarConfigImpl.fromJson;
@@ -312,21 +275,17 @@ abstract class _AppBarConfig implements AppBarConfig {
   @override
   bool get appBarEnabled;
   @override
-  bool get bottomBarEnabled;
-  @override
-  bool get drawerEnabled;
-  @override
   bool get appBarCenterTitle;
   @override
   bool get appBarBackButton;
   @override
-  String get appBarBackButtonIcon;
+  String? get appBarBackButtonIcon;
   @override
-  String get backgroundColorID;
+  CColor? get backgroundColor;
   @override
-  String get titleColorID;
+  CColor? get titleColor;
   @override
-  String get iconColorID;
+  CColor? get iconColor;
   @override
   @JsonKey(ignore: true)
   _$$AppBarConfigImplCopyWith<_$AppBarConfigImpl> get copyWith =>

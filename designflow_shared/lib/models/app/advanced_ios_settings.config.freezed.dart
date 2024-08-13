@@ -21,6 +21,10 @@ AdvancediOSSettings _$AdvancediOSSettingsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AdvancediOSSettings {
   bool get iPadEnabled => throw _privateConstructorUsedError;
+  String get iOSBundleID => throw _privateConstructorUsedError;
+  bool get overrideVersion => throw _privateConstructorUsedError;
+  String? get customVersion => throw _privateConstructorUsedError;
+  int? get customBuildNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +38,12 @@ abstract class $AdvancediOSSettingsCopyWith<$Res> {
           AdvancediOSSettings value, $Res Function(AdvancediOSSettings) then) =
       _$AdvancediOSSettingsCopyWithImpl<$Res, AdvancediOSSettings>;
   @useResult
-  $Res call({bool iPadEnabled});
+  $Res call(
+      {bool iPadEnabled,
+      String iOSBundleID,
+      bool overrideVersion,
+      String? customVersion,
+      int? customBuildNumber});
 }
 
 /// @nodoc
@@ -51,12 +60,32 @@ class _$AdvancediOSSettingsCopyWithImpl<$Res, $Val extends AdvancediOSSettings>
   @override
   $Res call({
     Object? iPadEnabled = null,
+    Object? iOSBundleID = null,
+    Object? overrideVersion = null,
+    Object? customVersion = freezed,
+    Object? customBuildNumber = freezed,
   }) {
     return _then(_value.copyWith(
       iPadEnabled: null == iPadEnabled
           ? _value.iPadEnabled
           : iPadEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      iOSBundleID: null == iOSBundleID
+          ? _value.iOSBundleID
+          : iOSBundleID // ignore: cast_nullable_to_non_nullable
+              as String,
+      overrideVersion: null == overrideVersion
+          ? _value.overrideVersion
+          : overrideVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
+      customVersion: freezed == customVersion
+          ? _value.customVersion
+          : customVersion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customBuildNumber: freezed == customBuildNumber
+          ? _value.customBuildNumber
+          : customBuildNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -69,7 +98,12 @@ abstract class _$$AdvancediOSSettingsImplCopyWith<$Res>
       __$$AdvancediOSSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool iPadEnabled});
+  $Res call(
+      {bool iPadEnabled,
+      String iOSBundleID,
+      bool overrideVersion,
+      String? customVersion,
+      int? customBuildNumber});
 }
 
 /// @nodoc
@@ -84,12 +118,32 @@ class __$$AdvancediOSSettingsImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? iPadEnabled = null,
+    Object? iOSBundleID = null,
+    Object? overrideVersion = null,
+    Object? customVersion = freezed,
+    Object? customBuildNumber = freezed,
   }) {
     return _then(_$AdvancediOSSettingsImpl(
       iPadEnabled: null == iPadEnabled
           ? _value.iPadEnabled
           : iPadEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      iOSBundleID: null == iOSBundleID
+          ? _value.iOSBundleID
+          : iOSBundleID // ignore: cast_nullable_to_non_nullable
+              as String,
+      overrideVersion: null == overrideVersion
+          ? _value.overrideVersion
+          : overrideVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
+      customVersion: freezed == customVersion
+          ? _value.customVersion
+          : customVersion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customBuildNumber: freezed == customBuildNumber
+          ? _value.customBuildNumber
+          : customBuildNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -97,7 +151,12 @@ class __$$AdvancediOSSettingsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AdvancediOSSettingsImpl implements _AdvancediOSSettings {
-  const _$AdvancediOSSettingsImpl({this.iPadEnabled = _kiPadEnabled});
+  const _$AdvancediOSSettingsImpl(
+      {this.iPadEnabled = _kiPadEnabled,
+      this.iOSBundleID = '',
+      this.overrideVersion = false,
+      this.customVersion,
+      this.customBuildNumber});
 
   factory _$AdvancediOSSettingsImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdvancediOSSettingsImplFromJson(json);
@@ -105,10 +164,20 @@ class _$AdvancediOSSettingsImpl implements _AdvancediOSSettings {
   @override
   @JsonKey()
   final bool iPadEnabled;
+  @override
+  @JsonKey()
+  final String iOSBundleID;
+  @override
+  @JsonKey()
+  final bool overrideVersion;
+  @override
+  final String? customVersion;
+  @override
+  final int? customBuildNumber;
 
   @override
   String toString() {
-    return 'AdvancediOSSettings(iPadEnabled: $iPadEnabled)';
+    return 'AdvancediOSSettings(iPadEnabled: $iPadEnabled, iOSBundleID: $iOSBundleID, overrideVersion: $overrideVersion, customVersion: $customVersion, customBuildNumber: $customBuildNumber)';
   }
 
   @override
@@ -117,12 +186,21 @@ class _$AdvancediOSSettingsImpl implements _AdvancediOSSettings {
         (other.runtimeType == runtimeType &&
             other is _$AdvancediOSSettingsImpl &&
             (identical(other.iPadEnabled, iPadEnabled) ||
-                other.iPadEnabled == iPadEnabled));
+                other.iPadEnabled == iPadEnabled) &&
+            (identical(other.iOSBundleID, iOSBundleID) ||
+                other.iOSBundleID == iOSBundleID) &&
+            (identical(other.overrideVersion, overrideVersion) ||
+                other.overrideVersion == overrideVersion) &&
+            (identical(other.customVersion, customVersion) ||
+                other.customVersion == customVersion) &&
+            (identical(other.customBuildNumber, customBuildNumber) ||
+                other.customBuildNumber == customBuildNumber));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, iPadEnabled);
+  int get hashCode => Object.hash(runtimeType, iPadEnabled, iOSBundleID,
+      overrideVersion, customVersion, customBuildNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -140,14 +218,26 @@ class _$AdvancediOSSettingsImpl implements _AdvancediOSSettings {
 }
 
 abstract class _AdvancediOSSettings implements AdvancediOSSettings {
-  const factory _AdvancediOSSettings({final bool iPadEnabled}) =
-      _$AdvancediOSSettingsImpl;
+  const factory _AdvancediOSSettings(
+      {final bool iPadEnabled,
+      final String iOSBundleID,
+      final bool overrideVersion,
+      final String? customVersion,
+      final int? customBuildNumber}) = _$AdvancediOSSettingsImpl;
 
   factory _AdvancediOSSettings.fromJson(Map<String, dynamic> json) =
       _$AdvancediOSSettingsImpl.fromJson;
 
   @override
   bool get iPadEnabled;
+  @override
+  String get iOSBundleID;
+  @override
+  bool get overrideVersion;
+  @override
+  String? get customVersion;
+  @override
+  int? get customBuildNumber;
   @override
   @JsonKey(ignore: true)
   _$$AdvancediOSSettingsImplCopyWith<_$AdvancediOSSettingsImpl> get copyWith =>

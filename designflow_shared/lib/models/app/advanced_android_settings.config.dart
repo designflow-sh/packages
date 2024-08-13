@@ -13,6 +13,10 @@ class AdvancedAndroidSettings with _$AdvancedAndroidSettings {
     @Default(_kKotlinVersion) String kotlinVersion,
     @Default(_kCompileSdkVersion) int compileSdkVersion,
     @Default(_kTargetSdkVersion) int targetSdkVersion,
+    @Default('') String packageName,
+    @Default(false) bool overrideVersion,
+    String? versionCode,
+    int? buildNumber,
   }) = _AdvancedAndroidSettings;
 
   factory AdvancedAndroidSettings.fromJson(Map<String, dynamic> json) =>

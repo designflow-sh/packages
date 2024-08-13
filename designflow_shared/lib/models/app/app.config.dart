@@ -8,27 +8,29 @@ part 'app.config.g.dart';
 class AppConfig with _$AppConfig {
   const factory AppConfig({
     required String id,
-    required String displayName,
-    required String packageName,
-    required String versionCode,
-    required int versionNumber,
-    required bool overrideDefaultTransition,
-    required bool enableDeepLink,
-    required String customKotlinVersion,
-    required DeepLinkConfig deepLinkConfig,
-    required AppBarConfig appBarConfig,
-    required BottomBarConfig bottomBarConfig,
-    required DrawerConfig drawerConfig,
-    required AppAssets appAssets,
-    required AuthenticationConfig authenticationConfig,
-    required LanguagesConfig languagesConfig,
-    required PlatformsConfig platformsConfig,
-    required PermissionConfig permissionConfig,
-    required WebDeploymentConfig webDeploymentConfig,
-    required RevenueCatConfig revenueCatConfig,
-    required GlobalConstantsConfig globalConstantsConfig,
-    required FirebaseAnalyticsConfig firebaseConfig,
-    required CircularProgressIndicatorConfig circularProgressIndicatorConfig,
+    @Default('My App') String displayName,
+    @Default('com.example.myapp') String packageName,
+    @Default('0.0.1') String versionCode,
+    @Default(1) int versionNumber,
+    @Default(false) bool overrideDefaultTransition,
+    @Default(DeepLinkConfig.disabled()) DeepLinkConfig deepLinkConfig,
+    @Default(AppBarConfig()) AppBarConfig appBarConfig,
+    @Default(BottomBarConfig()) BottomBarConfig bottomBarConfig,
+    @Default(DrawerConfig()) DrawerConfig drawerConfig,
+    @Default(AppAssets()) AppAssets appAssets,
+    @Default(AuthenticationConfig()) AuthenticationConfig authenticationConfig,
+    @Default(LanguagesConfig()) LanguagesConfig languagesConfig,
+    @Default(PlatformsConfig()) PlatformsConfig platformsConfig,
+    @Default(PermissionConfig()) PermissionConfig permissionConfig,
+    @Default(WebDeploymentConfig.disabled())
+    WebDeploymentConfig webDeploymentConfig,
+    @Default(RevenueCatConfig()) RevenueCatConfig revenueCatConfig,
+    @Default(GlobalConstantsConfig())
+    GlobalConstantsConfig globalConstantsConfig,
+    @Default(FirebaseAnalyticsConfig())
+    FirebaseAnalyticsConfig firebaseAnalyticsConfig,
+    @Default(CircularProgressIndicatorConfig())
+    CircularProgressIndicatorConfig circularProgressIndicatorConfig,
   }) = _AppConfig;
 
   factory AppConfig.fromJson(Map<String, dynamic> json) =>

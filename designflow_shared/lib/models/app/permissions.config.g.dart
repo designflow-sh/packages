@@ -9,10 +9,11 @@ part of 'permissions.config.dart';
 _$PermissionConfigImpl _$$PermissionConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$PermissionConfigImpl(
-      permissions: (json['permissions'] as List<dynamic>)
-          .map(
-              (e) => SinglePermissionConfig.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      permissions: (json['permissions'] as List<dynamic>?)
+              ?.map((e) =>
+                  SinglePermissionConfig.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$PermissionConfigImplToJson(

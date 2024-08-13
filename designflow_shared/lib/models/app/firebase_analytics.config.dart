@@ -6,8 +6,8 @@ part 'firebase_analytics.config.g.dart';
 @freezed
 class FirebaseAnalyticsConfig with _$FirebaseAnalyticsConfig {
   const factory FirebaseAnalyticsConfig({
-    required bool firebaseAnalyticsEnabled,
-    required bool firebaseRouterObserverEnabled,
+    @Default(false) bool firebaseAnalyticsEnabled,
+    @Default(false) bool firebaseRouterObserverEnabled,
   }) = _FirebaseAnalyticsConfig;
 
   factory FirebaseAnalyticsConfig.fromJson(Map<String, dynamic> json) =>

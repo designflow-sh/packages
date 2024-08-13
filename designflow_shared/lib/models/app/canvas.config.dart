@@ -7,8 +7,8 @@ part 'canvas.config.g.dart';
 @freezed
 class CanvasConfig with _$CanvasConfig {
   const factory CanvasConfig({
-    required CColor backgroundColor,
-    required bool showGrid,
+    CColor? backgroundColor,
+    @Default(true) bool showGrid,
   }) = _CanvasConfig;
 
   factory CanvasConfig.fromJson(Map<String, dynamic> json) =>

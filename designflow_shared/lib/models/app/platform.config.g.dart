@@ -9,12 +9,18 @@ part of 'platform.config.dart';
 _$PlatformsConfigImpl _$$PlatformsConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$PlatformsConfigImpl(
-      androidSettings: AdvancedAndroidSettings.fromJson(
-          json['androidSettings'] as Map<String, dynamic>),
-      iosSettings: AdvancediOSSettings.fromJson(
-          json['iosSettings'] as Map<String, dynamic>),
-      webSettings: AdvancedWebSettings.fromJson(
-          json['webSettings'] as Map<String, dynamic>),
+      androidSettings: json['androidSettings'] == null
+          ? const AdvancedAndroidSettings()
+          : AdvancedAndroidSettings.fromJson(
+              json['androidSettings'] as Map<String, dynamic>),
+      iosSettings: json['iosSettings'] == null
+          ? const AdvancediOSSettings()
+          : AdvancediOSSettings.fromJson(
+              json['iosSettings'] as Map<String, dynamic>),
+      webSettings: json['webSettings'] == null
+          ? const AdvancedWebSettings()
+          : AdvancedWebSettings.fromJson(
+              json['webSettings'] as Map<String, dynamic>),
       iosEnabled: json['iosEnabled'] as bool? ?? _kiOSEnabled,
       androidEnabled: json['androidEnabled'] as bool? ?? _kAndroidEnabled,
       webEnabled: json['webEnabled'] as bool? ?? _kWebEnabled,

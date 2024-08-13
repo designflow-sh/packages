@@ -26,8 +26,6 @@ mixin _$AppConfig {
   String get versionCode => throw _privateConstructorUsedError;
   int get versionNumber => throw _privateConstructorUsedError;
   bool get overrideDefaultTransition => throw _privateConstructorUsedError;
-  bool get enableDeepLink => throw _privateConstructorUsedError;
-  String get customKotlinVersion => throw _privateConstructorUsedError;
   DeepLinkConfig get deepLinkConfig => throw _privateConstructorUsedError;
   AppBarConfig get appBarConfig => throw _privateConstructorUsedError;
   BottomBarConfig get bottomBarConfig => throw _privateConstructorUsedError;
@@ -43,7 +41,7 @@ mixin _$AppConfig {
   RevenueCatConfig get revenueCatConfig => throw _privateConstructorUsedError;
   GlobalConstantsConfig get globalConstantsConfig =>
       throw _privateConstructorUsedError;
-  FirebaseAnalyticsConfig get firebaseConfig =>
+  FirebaseAnalyticsConfig get firebaseAnalyticsConfig =>
       throw _privateConstructorUsedError;
   CircularProgressIndicatorConfig get circularProgressIndicatorConfig =>
       throw _privateConstructorUsedError;
@@ -66,8 +64,6 @@ abstract class $AppConfigCopyWith<$Res> {
       String versionCode,
       int versionNumber,
       bool overrideDefaultTransition,
-      bool enableDeepLink,
-      String customKotlinVersion,
       DeepLinkConfig deepLinkConfig,
       AppBarConfig appBarConfig,
       BottomBarConfig bottomBarConfig,
@@ -80,7 +76,7 @@ abstract class $AppConfigCopyWith<$Res> {
       WebDeploymentConfig webDeploymentConfig,
       RevenueCatConfig revenueCatConfig,
       GlobalConstantsConfig globalConstantsConfig,
-      FirebaseAnalyticsConfig firebaseConfig,
+      FirebaseAnalyticsConfig firebaseAnalyticsConfig,
       CircularProgressIndicatorConfig circularProgressIndicatorConfig});
 
   $DeepLinkConfigCopyWith<$Res> get deepLinkConfig;
@@ -95,7 +91,7 @@ abstract class $AppConfigCopyWith<$Res> {
   $WebDeploymentConfigCopyWith<$Res> get webDeploymentConfig;
   $RevenueCatConfigCopyWith<$Res> get revenueCatConfig;
   $GlobalConstantsConfigCopyWith<$Res> get globalConstantsConfig;
-  $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseConfig;
+  $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseAnalyticsConfig;
   $CircularProgressIndicatorConfigCopyWith<$Res>
       get circularProgressIndicatorConfig;
 }
@@ -119,8 +115,6 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     Object? versionCode = null,
     Object? versionNumber = null,
     Object? overrideDefaultTransition = null,
-    Object? enableDeepLink = null,
-    Object? customKotlinVersion = null,
     Object? deepLinkConfig = null,
     Object? appBarConfig = null,
     Object? bottomBarConfig = null,
@@ -133,7 +127,7 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     Object? webDeploymentConfig = null,
     Object? revenueCatConfig = null,
     Object? globalConstantsConfig = null,
-    Object? firebaseConfig = null,
+    Object? firebaseAnalyticsConfig = null,
     Object? circularProgressIndicatorConfig = null,
   }) {
     return _then(_value.copyWith(
@@ -161,14 +155,6 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
           ? _value.overrideDefaultTransition
           : overrideDefaultTransition // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableDeepLink: null == enableDeepLink
-          ? _value.enableDeepLink
-          : enableDeepLink // ignore: cast_nullable_to_non_nullable
-              as bool,
-      customKotlinVersion: null == customKotlinVersion
-          ? _value.customKotlinVersion
-          : customKotlinVersion // ignore: cast_nullable_to_non_nullable
-              as String,
       deepLinkConfig: null == deepLinkConfig
           ? _value.deepLinkConfig
           : deepLinkConfig // ignore: cast_nullable_to_non_nullable
@@ -217,9 +203,9 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
           ? _value.globalConstantsConfig
           : globalConstantsConfig // ignore: cast_nullable_to_non_nullable
               as GlobalConstantsConfig,
-      firebaseConfig: null == firebaseConfig
-          ? _value.firebaseConfig
-          : firebaseConfig // ignore: cast_nullable_to_non_nullable
+      firebaseAnalyticsConfig: null == firebaseAnalyticsConfig
+          ? _value.firebaseAnalyticsConfig
+          : firebaseAnalyticsConfig // ignore: cast_nullable_to_non_nullable
               as FirebaseAnalyticsConfig,
       circularProgressIndicatorConfig: null == circularProgressIndicatorConfig
           ? _value.circularProgressIndicatorConfig
@@ -329,10 +315,10 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
 
   @override
   @pragma('vm:prefer-inline')
-  $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseConfig {
-    return $FirebaseAnalyticsConfigCopyWith<$Res>(_value.firebaseConfig,
-        (value) {
-      return _then(_value.copyWith(firebaseConfig: value) as $Val);
+  $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseAnalyticsConfig {
+    return $FirebaseAnalyticsConfigCopyWith<$Res>(
+        _value.firebaseAnalyticsConfig, (value) {
+      return _then(_value.copyWith(firebaseAnalyticsConfig: value) as $Val);
     });
   }
 
@@ -363,8 +349,6 @@ abstract class _$$AppConfigImplCopyWith<$Res>
       String versionCode,
       int versionNumber,
       bool overrideDefaultTransition,
-      bool enableDeepLink,
-      String customKotlinVersion,
       DeepLinkConfig deepLinkConfig,
       AppBarConfig appBarConfig,
       BottomBarConfig bottomBarConfig,
@@ -377,7 +361,7 @@ abstract class _$$AppConfigImplCopyWith<$Res>
       WebDeploymentConfig webDeploymentConfig,
       RevenueCatConfig revenueCatConfig,
       GlobalConstantsConfig globalConstantsConfig,
-      FirebaseAnalyticsConfig firebaseConfig,
+      FirebaseAnalyticsConfig firebaseAnalyticsConfig,
       CircularProgressIndicatorConfig circularProgressIndicatorConfig});
 
   @override
@@ -405,7 +389,7 @@ abstract class _$$AppConfigImplCopyWith<$Res>
   @override
   $GlobalConstantsConfigCopyWith<$Res> get globalConstantsConfig;
   @override
-  $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseConfig;
+  $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseAnalyticsConfig;
   @override
   $CircularProgressIndicatorConfigCopyWith<$Res>
       get circularProgressIndicatorConfig;
@@ -428,8 +412,6 @@ class __$$AppConfigImplCopyWithImpl<$Res>
     Object? versionCode = null,
     Object? versionNumber = null,
     Object? overrideDefaultTransition = null,
-    Object? enableDeepLink = null,
-    Object? customKotlinVersion = null,
     Object? deepLinkConfig = null,
     Object? appBarConfig = null,
     Object? bottomBarConfig = null,
@@ -442,7 +424,7 @@ class __$$AppConfigImplCopyWithImpl<$Res>
     Object? webDeploymentConfig = null,
     Object? revenueCatConfig = null,
     Object? globalConstantsConfig = null,
-    Object? firebaseConfig = null,
+    Object? firebaseAnalyticsConfig = null,
     Object? circularProgressIndicatorConfig = null,
   }) {
     return _then(_$AppConfigImpl(
@@ -470,14 +452,6 @@ class __$$AppConfigImplCopyWithImpl<$Res>
           ? _value.overrideDefaultTransition
           : overrideDefaultTransition // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableDeepLink: null == enableDeepLink
-          ? _value.enableDeepLink
-          : enableDeepLink // ignore: cast_nullable_to_non_nullable
-              as bool,
-      customKotlinVersion: null == customKotlinVersion
-          ? _value.customKotlinVersion
-          : customKotlinVersion // ignore: cast_nullable_to_non_nullable
-              as String,
       deepLinkConfig: null == deepLinkConfig
           ? _value.deepLinkConfig
           : deepLinkConfig // ignore: cast_nullable_to_non_nullable
@@ -526,9 +500,9 @@ class __$$AppConfigImplCopyWithImpl<$Res>
           ? _value.globalConstantsConfig
           : globalConstantsConfig // ignore: cast_nullable_to_non_nullable
               as GlobalConstantsConfig,
-      firebaseConfig: null == firebaseConfig
-          ? _value.firebaseConfig
-          : firebaseConfig // ignore: cast_nullable_to_non_nullable
+      firebaseAnalyticsConfig: null == firebaseAnalyticsConfig
+          ? _value.firebaseAnalyticsConfig
+          : firebaseAnalyticsConfig // ignore: cast_nullable_to_non_nullable
               as FirebaseAnalyticsConfig,
       circularProgressIndicatorConfig: null == circularProgressIndicatorConfig
           ? _value.circularProgressIndicatorConfig
@@ -543,27 +517,26 @@ class __$$AppConfigImplCopyWithImpl<$Res>
 class _$AppConfigImpl implements _AppConfig {
   const _$AppConfigImpl(
       {required this.id,
-      required this.displayName,
-      required this.packageName,
-      required this.versionCode,
-      required this.versionNumber,
-      required this.overrideDefaultTransition,
-      required this.enableDeepLink,
-      required this.customKotlinVersion,
-      required this.deepLinkConfig,
-      required this.appBarConfig,
-      required this.bottomBarConfig,
-      required this.drawerConfig,
-      required this.appAssets,
-      required this.authenticationConfig,
-      required this.languagesConfig,
-      required this.platformsConfig,
-      required this.permissionConfig,
-      required this.webDeploymentConfig,
-      required this.revenueCatConfig,
-      required this.globalConstantsConfig,
-      required this.firebaseConfig,
-      required this.circularProgressIndicatorConfig});
+      this.displayName = 'My App',
+      this.packageName = 'com.example.myapp',
+      this.versionCode = '0.0.1',
+      this.versionNumber = 1,
+      this.overrideDefaultTransition = false,
+      this.deepLinkConfig = const DeepLinkConfig.disabled(),
+      this.appBarConfig = const AppBarConfig(),
+      this.bottomBarConfig = const BottomBarConfig(),
+      this.drawerConfig = const DrawerConfig(),
+      this.appAssets = const AppAssets(),
+      this.authenticationConfig = const AuthenticationConfig(),
+      this.languagesConfig = const LanguagesConfig(),
+      this.platformsConfig = const PlatformsConfig(),
+      this.permissionConfig = const PermissionConfig(),
+      this.webDeploymentConfig = const WebDeploymentConfig.disabled(),
+      this.revenueCatConfig = const RevenueCatConfig(),
+      this.globalConstantsConfig = const GlobalConstantsConfig(),
+      this.firebaseAnalyticsConfig = const FirebaseAnalyticsConfig(),
+      this.circularProgressIndicatorConfig =
+          const CircularProgressIndicatorConfig()});
 
   factory _$AppConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppConfigImplFromJson(json);
@@ -571,51 +544,66 @@ class _$AppConfigImpl implements _AppConfig {
   @override
   final String id;
   @override
+  @JsonKey()
   final String displayName;
   @override
+  @JsonKey()
   final String packageName;
   @override
+  @JsonKey()
   final String versionCode;
   @override
+  @JsonKey()
   final int versionNumber;
   @override
+  @JsonKey()
   final bool overrideDefaultTransition;
   @override
-  final bool enableDeepLink;
-  @override
-  final String customKotlinVersion;
-  @override
+  @JsonKey()
   final DeepLinkConfig deepLinkConfig;
   @override
+  @JsonKey()
   final AppBarConfig appBarConfig;
   @override
+  @JsonKey()
   final BottomBarConfig bottomBarConfig;
   @override
+  @JsonKey()
   final DrawerConfig drawerConfig;
   @override
+  @JsonKey()
   final AppAssets appAssets;
   @override
+  @JsonKey()
   final AuthenticationConfig authenticationConfig;
   @override
+  @JsonKey()
   final LanguagesConfig languagesConfig;
   @override
+  @JsonKey()
   final PlatformsConfig platformsConfig;
   @override
+  @JsonKey()
   final PermissionConfig permissionConfig;
   @override
+  @JsonKey()
   final WebDeploymentConfig webDeploymentConfig;
   @override
+  @JsonKey()
   final RevenueCatConfig revenueCatConfig;
   @override
+  @JsonKey()
   final GlobalConstantsConfig globalConstantsConfig;
   @override
-  final FirebaseAnalyticsConfig firebaseConfig;
+  @JsonKey()
+  final FirebaseAnalyticsConfig firebaseAnalyticsConfig;
   @override
+  @JsonKey()
   final CircularProgressIndicatorConfig circularProgressIndicatorConfig;
 
   @override
   String toString() {
-    return 'AppConfig(id: $id, displayName: $displayName, packageName: $packageName, versionCode: $versionCode, versionNumber: $versionNumber, overrideDefaultTransition: $overrideDefaultTransition, enableDeepLink: $enableDeepLink, customKotlinVersion: $customKotlinVersion, deepLinkConfig: $deepLinkConfig, appBarConfig: $appBarConfig, bottomBarConfig: $bottomBarConfig, drawerConfig: $drawerConfig, appAssets: $appAssets, authenticationConfig: $authenticationConfig, languagesConfig: $languagesConfig, platformsConfig: $platformsConfig, permissionConfig: $permissionConfig, webDeploymentConfig: $webDeploymentConfig, revenueCatConfig: $revenueCatConfig, globalConstantsConfig: $globalConstantsConfig, firebaseConfig: $firebaseConfig, circularProgressIndicatorConfig: $circularProgressIndicatorConfig)';
+    return 'AppConfig(id: $id, displayName: $displayName, packageName: $packageName, versionCode: $versionCode, versionNumber: $versionNumber, overrideDefaultTransition: $overrideDefaultTransition, deepLinkConfig: $deepLinkConfig, appBarConfig: $appBarConfig, bottomBarConfig: $bottomBarConfig, drawerConfig: $drawerConfig, appAssets: $appAssets, authenticationConfig: $authenticationConfig, languagesConfig: $languagesConfig, platformsConfig: $platformsConfig, permissionConfig: $permissionConfig, webDeploymentConfig: $webDeploymentConfig, revenueCatConfig: $revenueCatConfig, globalConstantsConfig: $globalConstantsConfig, firebaseAnalyticsConfig: $firebaseAnalyticsConfig, circularProgressIndicatorConfig: $circularProgressIndicatorConfig)';
   }
 
   @override
@@ -635,10 +623,6 @@ class _$AppConfigImpl implements _AppConfig {
             (identical(other.overrideDefaultTransition,
                     overrideDefaultTransition) ||
                 other.overrideDefaultTransition == overrideDefaultTransition) &&
-            (identical(other.enableDeepLink, enableDeepLink) ||
-                other.enableDeepLink == enableDeepLink) &&
-            (identical(other.customKotlinVersion, customKotlinVersion) ||
-                other.customKotlinVersion == customKotlinVersion) &&
             (identical(other.deepLinkConfig, deepLinkConfig) ||
                 other.deepLinkConfig == deepLinkConfig) &&
             (identical(other.appBarConfig, appBarConfig) ||
@@ -663,8 +647,9 @@ class _$AppConfigImpl implements _AppConfig {
                 other.revenueCatConfig == revenueCatConfig) &&
             (identical(other.globalConstantsConfig, globalConstantsConfig) ||
                 other.globalConstantsConfig == globalConstantsConfig) &&
-            (identical(other.firebaseConfig, firebaseConfig) ||
-                other.firebaseConfig == firebaseConfig) &&
+            (identical(
+                    other.firebaseAnalyticsConfig, firebaseAnalyticsConfig) ||
+                other.firebaseAnalyticsConfig == firebaseAnalyticsConfig) &&
             (identical(other.circularProgressIndicatorConfig,
                     circularProgressIndicatorConfig) ||
                 other.circularProgressIndicatorConfig ==
@@ -681,8 +666,6 @@ class _$AppConfigImpl implements _AppConfig {
         versionCode,
         versionNumber,
         overrideDefaultTransition,
-        enableDeepLink,
-        customKotlinVersion,
         deepLinkConfig,
         appBarConfig,
         bottomBarConfig,
@@ -695,7 +678,7 @@ class _$AppConfigImpl implements _AppConfig {
         webDeploymentConfig,
         revenueCatConfig,
         globalConstantsConfig,
-        firebaseConfig,
+        firebaseAnalyticsConfig,
         circularProgressIndicatorConfig
       ]);
 
@@ -716,27 +699,25 @@ class _$AppConfigImpl implements _AppConfig {
 abstract class _AppConfig implements AppConfig {
   const factory _AppConfig(
       {required final String id,
-      required final String displayName,
-      required final String packageName,
-      required final String versionCode,
-      required final int versionNumber,
-      required final bool overrideDefaultTransition,
-      required final bool enableDeepLink,
-      required final String customKotlinVersion,
-      required final DeepLinkConfig deepLinkConfig,
-      required final AppBarConfig appBarConfig,
-      required final BottomBarConfig bottomBarConfig,
-      required final DrawerConfig drawerConfig,
-      required final AppAssets appAssets,
-      required final AuthenticationConfig authenticationConfig,
-      required final LanguagesConfig languagesConfig,
-      required final PlatformsConfig platformsConfig,
-      required final PermissionConfig permissionConfig,
-      required final WebDeploymentConfig webDeploymentConfig,
-      required final RevenueCatConfig revenueCatConfig,
-      required final GlobalConstantsConfig globalConstantsConfig,
-      required final FirebaseAnalyticsConfig firebaseConfig,
-      required final CircularProgressIndicatorConfig
+      final String displayName,
+      final String packageName,
+      final String versionCode,
+      final int versionNumber,
+      final bool overrideDefaultTransition,
+      final DeepLinkConfig deepLinkConfig,
+      final AppBarConfig appBarConfig,
+      final BottomBarConfig bottomBarConfig,
+      final DrawerConfig drawerConfig,
+      final AppAssets appAssets,
+      final AuthenticationConfig authenticationConfig,
+      final LanguagesConfig languagesConfig,
+      final PlatformsConfig platformsConfig,
+      final PermissionConfig permissionConfig,
+      final WebDeploymentConfig webDeploymentConfig,
+      final RevenueCatConfig revenueCatConfig,
+      final GlobalConstantsConfig globalConstantsConfig,
+      final FirebaseAnalyticsConfig firebaseAnalyticsConfig,
+      final CircularProgressIndicatorConfig
           circularProgressIndicatorConfig}) = _$AppConfigImpl;
 
   factory _AppConfig.fromJson(Map<String, dynamic> json) =
@@ -754,10 +735,6 @@ abstract class _AppConfig implements AppConfig {
   int get versionNumber;
   @override
   bool get overrideDefaultTransition;
-  @override
-  bool get enableDeepLink;
-  @override
-  String get customKotlinVersion;
   @override
   DeepLinkConfig get deepLinkConfig;
   @override
@@ -783,7 +760,7 @@ abstract class _AppConfig implements AppConfig {
   @override
   GlobalConstantsConfig get globalConstantsConfig;
   @override
-  FirebaseAnalyticsConfig get firebaseConfig;
+  FirebaseAnalyticsConfig get firebaseAnalyticsConfig;
   @override
   CircularProgressIndicatorConfig get circularProgressIndicatorConfig;
   @override
