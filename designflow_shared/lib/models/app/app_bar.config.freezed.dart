@@ -28,8 +28,12 @@ mixin _$AppBarConfig {
   CColor? get titleColor => throw _privateConstructorUsedError;
   CColor? get iconColor => throw _privateConstructorUsedError;
 
+  /// Serializes this AppBarConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppBarConfigCopyWith<AppBarConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$AppBarConfigCopyWithImpl<$Res, $Val extends AppBarConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +136,8 @@ class __$$AppBarConfigImplCopyWithImpl<$Res>
       _$AppBarConfigImpl _value, $Res Function(_$AppBarConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -233,7 +241,7 @@ class _$AppBarConfigImpl implements _AppBarConfig {
                 other.iconColor == iconColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -245,7 +253,9 @@ class _$AppBarConfigImpl implements _AppBarConfig {
       titleColor,
       iconColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppBarConfigImplCopyWith<_$AppBarConfigImpl> get copyWith =>
@@ -286,8 +296,11 @@ abstract class _AppBarConfig implements AppBarConfig {
   CColor? get titleColor;
   @override
   CColor? get iconColor;
+
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppBarConfigImplCopyWith<_$AppBarConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

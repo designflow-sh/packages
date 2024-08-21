@@ -24,8 +24,12 @@ mixin _$AppAssets {
   String? get splashID => throw _privateConstructorUsedError;
   String? get page404ID => throw _privateConstructorUsedError;
 
+  /// Serializes this AppAssets to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppAssets
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppAssetsCopyWith<AppAssets> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$AppAssetsCopyWithImpl<$Res, $Val extends AppAssets>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppAssets
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$AppAssetsImplCopyWithImpl<$Res>
       _$AppAssetsImpl _value, $Res Function(_$AppAssetsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppAssets
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,11 +155,13 @@ class _$AppAssetsImpl implements _AppAssets {
                 other.page404ID == page404ID));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, icon, splashID, page404ID);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppAssets
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppAssetsImplCopyWith<_$AppAssetsImpl> get copyWith =>
@@ -180,8 +190,11 @@ abstract class _AppAssets implements AppAssets {
   String? get splashID;
   @override
   String? get page404ID;
+
+  /// Create a copy of AppAssets
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppAssetsImplCopyWith<_$AppAssetsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

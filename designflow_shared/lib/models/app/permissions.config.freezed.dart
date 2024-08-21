@@ -23,8 +23,12 @@ mixin _$PermissionConfig {
   List<SinglePermissionConfig> get permissions =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this PermissionConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PermissionConfigCopyWith<PermissionConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$PermissionConfigCopyWithImpl<$Res, $Val extends PermissionConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$PermissionConfigImplCopyWithImpl<$Res>
       $Res Function(_$PermissionConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,12 +136,14 @@ class _$PermissionConfigImpl implements _PermissionConfig {
                 .equals(other._permissions, _permissions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_permissions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PermissionConfigImplCopyWith<_$PermissionConfigImpl> get copyWith =>
@@ -158,8 +168,11 @@ abstract class _PermissionConfig implements PermissionConfig {
 
   @override
   List<SinglePermissionConfig> get permissions;
+
+  /// Create a copy of PermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PermissionConfigImplCopyWith<_$PermissionConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

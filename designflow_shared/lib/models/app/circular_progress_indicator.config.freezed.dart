@@ -24,8 +24,12 @@ mixin _$CircularProgressIndicatorConfig {
   CColor? get color => throw _privateConstructorUsedError;
   CircularProgressIndicatorTypes get type => throw _privateConstructorUsedError;
 
+  /// Serializes this CircularProgressIndicatorConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircularProgressIndicatorConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CircularProgressIndicatorConfigCopyWith<CircularProgressIndicatorConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$CircularProgressIndicatorConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CircularProgressIndicatorConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$CircularProgressIndicatorConfigImplCopyWithImpl<$Res>
       $Res Function(_$CircularProgressIndicatorConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircularProgressIndicatorConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,11 +151,13 @@ class _$CircularProgressIndicatorConfigImpl
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, color, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircularProgressIndicatorConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CircularProgressIndicatorConfigImplCopyWith<
@@ -176,8 +186,11 @@ abstract class _CircularProgressIndicatorConfig
   CColor? get color;
   @override
   CircularProgressIndicatorTypes get type;
+
+  /// Create a copy of CircularProgressIndicatorConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CircularProgressIndicatorConfigImplCopyWith<
           _$CircularProgressIndicatorConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

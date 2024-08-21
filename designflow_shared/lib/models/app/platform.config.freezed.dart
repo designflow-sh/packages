@@ -31,8 +31,12 @@ mixin _$PlatformsConfig {
   bool get windowsEnabled => throw _privateConstructorUsedError;
   bool get linuxEnabled => throw _privateConstructorUsedError;
 
+  /// Serializes this PlatformsConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlatformsConfigCopyWith<PlatformsConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -69,6 +73,8 @@ class _$PlatformsConfigCopyWithImpl<$Res, $Val extends PlatformsConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class _$PlatformsConfigCopyWithImpl<$Res, $Val extends PlatformsConfig>
     ) as $Val);
   }
 
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdvancedAndroidSettingsCopyWith<$Res> get androidSettings {
@@ -131,6 +139,8 @@ class _$PlatformsConfigCopyWithImpl<$Res, $Val extends PlatformsConfig>
     });
   }
 
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdvancediOSSettingsCopyWith<$Res> get iosSettings {
@@ -139,6 +149,8 @@ class _$PlatformsConfigCopyWithImpl<$Res, $Val extends PlatformsConfig>
     });
   }
 
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdvancedWebSettingsCopyWith<$Res> get webSettings {
@@ -183,6 +195,8 @@ class __$$PlatformsConfigImplCopyWithImpl<$Res>
       _$PlatformsConfigImpl _value, $Res Function(_$PlatformsConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -312,7 +326,7 @@ class _$PlatformsConfigImpl implements _PlatformsConfig {
                 other.linuxEnabled == linuxEnabled));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -326,7 +340,9 @@ class _$PlatformsConfigImpl implements _PlatformsConfig {
       windowsEnabled,
       linuxEnabled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlatformsConfigImplCopyWith<_$PlatformsConfigImpl> get copyWith =>
@@ -374,8 +390,11 @@ abstract class _PlatformsConfig implements PlatformsConfig {
   bool get windowsEnabled;
   @override
   bool get linuxEnabled;
+
+  /// Create a copy of PlatformsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlatformsConfigImplCopyWith<_$PlatformsConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

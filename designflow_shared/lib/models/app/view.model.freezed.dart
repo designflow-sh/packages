@@ -27,8 +27,12 @@ mixin _$ViewModel {
   bool get isPage => throw _privateConstructorUsedError;
   String get initialUINode => throw _privateConstructorUsedError;
 
+  /// Serializes this ViewModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ViewModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ViewModelCopyWith<ViewModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$ViewModelCopyWithImpl<$Res, $Val extends ViewModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ViewModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,6 +127,8 @@ class __$$ViewModelImplCopyWithImpl<$Res>
       _$ViewModelImpl _value, $Res Function(_$ViewModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ViewModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,12 +215,14 @@ class _$ViewModelImpl implements _ViewModel {
                 other.initialUINode == initialUINode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, route, redirect, isPage, initialUINode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ViewModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ViewModelImplCopyWith<_$ViewModelImpl> get copyWith =>
@@ -250,8 +260,11 @@ abstract class _ViewModel implements ViewModel {
   bool get isPage;
   @override
   String get initialUINode;
+
+  /// Create a copy of ViewModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ViewModelImplCopyWith<_$ViewModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

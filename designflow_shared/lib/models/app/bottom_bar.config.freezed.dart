@@ -27,8 +27,12 @@ mixin _$BottomBarConfig {
   CColor? get selectedItemColor => throw _privateConstructorUsedError;
   CColor? get unselectedItemColor => throw _privateConstructorUsedError;
 
+  /// Serializes this BottomBarConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BottomBarConfigCopyWith<BottomBarConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$BottomBarConfigCopyWithImpl<$Res, $Val extends BottomBarConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$BottomBarConfigImplCopyWithImpl<$Res>
       _$BottomBarConfigImpl _value, $Res Function(_$BottomBarConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,7 +223,7 @@ class _$BottomBarConfigImpl implements _BottomBarConfig {
                 other.unselectedItemColor == unselectedItemColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -226,7 +234,9 @@ class _$BottomBarConfigImpl implements _BottomBarConfig {
       selectedItemColor,
       unselectedItemColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BottomBarConfigImplCopyWith<_$BottomBarConfigImpl> get copyWith =>
@@ -265,8 +275,11 @@ abstract class _BottomBarConfig implements BottomBarConfig {
   CColor? get selectedItemColor;
   @override
   CColor? get unselectedItemColor;
+
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BottomBarConfigImplCopyWith<_$BottomBarConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

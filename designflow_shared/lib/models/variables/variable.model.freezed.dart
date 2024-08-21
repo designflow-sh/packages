@@ -75,6 +75,8 @@ mixin _$Var {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this Var to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -92,6 +94,9 @@ class _$VarCopyWithImpl<$Res, $Val extends Var> implements $VarCopyWith<$Res> {
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -111,6 +116,8 @@ class __$$PrimitiveImplCopyWithImpl<$Res>
       _$PrimitiveImpl _value, $Res Function(_$PrimitiveImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,12 +158,14 @@ class _$PrimitiveImpl extends _Primitive {
             const DeepCollectionEquality().equals(other.value, value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrimitiveImplCopyWith<_$PrimitiveImpl> get copyWith =>
@@ -246,7 +255,10 @@ abstract class _Primitive extends Var {
       _$PrimitiveImpl.fromJson;
 
   Object? get value;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrimitiveImplCopyWith<_$PrimitiveImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -270,6 +282,8 @@ class __$$ObjectImplCopyWithImpl<$Res>
       _$ObjectImpl _value, $Res Function(_$ObjectImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -283,6 +297,8 @@ class __$$ObjectImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ClassModelCopyWith<$Res>? get value {
@@ -325,11 +341,13 @@ class _$ObjectImpl extends _Object {
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ObjectImplCopyWith<_$ObjectImpl> get copyWith =>
@@ -418,7 +436,10 @@ abstract class _Object extends Var {
   factory _Object.fromJson(Map<String, dynamic> json) = _$ObjectImpl.fromJson;
 
   ClassModel? get value;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ObjectImplCopyWith<_$ObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -440,6 +461,8 @@ class __$$ListImplCopyWithImpl<$Res> extends _$VarCopyWithImpl<$Res, _$ListImpl>
   __$$ListImplCopyWithImpl(_$ListImpl _value, $Res Function(_$ListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -453,6 +476,8 @@ class __$$ListImplCopyWithImpl<$Res> extends _$VarCopyWithImpl<$Res, _$ListImpl>
     ));
   }
 
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VarListValueCopyWith<$Res> get params {
@@ -492,11 +517,13 @@ class _$ListImpl extends _List {
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListImplCopyWith<_$ListImpl> get copyWith =>
@@ -585,7 +612,10 @@ abstract class _List extends Var {
   factory _List.fromJson(Map<String, dynamic> json) = _$ListImpl.fromJson;
 
   VarListValue get params;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Var
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListImplCopyWith<_$ListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

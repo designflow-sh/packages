@@ -22,8 +22,12 @@ AdvancedWebSettings _$AdvancedWebSettingsFromJson(Map<String, dynamic> json) {
 mixin _$AdvancedWebSettings {
   bool get useCanvasKit => throw _privateConstructorUsedError;
 
+  /// Serializes this AdvancedWebSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdvancedWebSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdvancedWebSettingsCopyWith<AdvancedWebSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$AdvancedWebSettingsCopyWithImpl<$Res, $Val extends AdvancedWebSettings>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdvancedWebSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$AdvancedWebSettingsImplCopyWithImpl<$Res>
       $Res Function(_$AdvancedWebSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdvancedWebSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,11 +128,13 @@ class _$AdvancedWebSettingsImpl implements _AdvancedWebSettings {
                 other.useCanvasKit == useCanvasKit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, useCanvasKit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdvancedWebSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdvancedWebSettingsImplCopyWith<_$AdvancedWebSettingsImpl> get copyWith =>
@@ -148,8 +158,11 @@ abstract class _AdvancedWebSettings implements AdvancedWebSettings {
 
   @override
   bool get useCanvasKit;
+
+  /// Create a copy of AdvancedWebSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdvancedWebSettingsImplCopyWith<_$AdvancedWebSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

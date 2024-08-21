@@ -23,8 +23,12 @@ mixin _$LanguagesConfig {
   String get defaultLanguage => throw _privateConstructorUsedError;
   List<String> get supportedLanguages => throw _privateConstructorUsedError;
 
+  /// Serializes this LanguagesConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LanguagesConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LanguagesConfigCopyWith<LanguagesConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$LanguagesConfigCopyWithImpl<$Res, $Val extends LanguagesConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LanguagesConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$LanguagesConfigImplCopyWithImpl<$Res>
       _$LanguagesConfigImpl _value, $Res Function(_$LanguagesConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LanguagesConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,12 +153,14 @@ class _$LanguagesConfigImpl implements _LanguagesConfig {
                 .equals(other._supportedLanguages, _supportedLanguages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, defaultLanguage,
       const DeepCollectionEquality().hash(_supportedLanguages));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LanguagesConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LanguagesConfigImplCopyWith<_$LanguagesConfigImpl> get copyWith =>
@@ -177,8 +187,11 @@ abstract class _LanguagesConfig implements LanguagesConfig {
   String get defaultLanguage;
   @override
   List<String> get supportedLanguages;
+
+  /// Create a copy of LanguagesConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LanguagesConfigImplCopyWith<_$LanguagesConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

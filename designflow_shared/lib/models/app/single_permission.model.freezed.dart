@@ -27,8 +27,12 @@ mixin _$SinglePermissionConfig {
   String get iOSPermissionKey => throw _privateConstructorUsedError;
   String get androidPermissionName => throw _privateConstructorUsedError;
 
+  /// Serializes this SinglePermissionConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SinglePermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SinglePermissionConfigCopyWith<SinglePermissionConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$SinglePermissionConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SinglePermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$SinglePermissionConfigImplCopyWithImpl<$Res>
       $Res Function(_$SinglePermissionConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SinglePermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$SinglePermissionConfigImpl implements _SinglePermissionConfig {
                 other.androidPermissionName == androidPermissionName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, message, enabled,
       iOSPermissionKey, androidPermissionName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SinglePermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SinglePermissionConfigImplCopyWith<_$SinglePermissionConfigImpl>
@@ -238,8 +248,11 @@ abstract class _SinglePermissionConfig implements SinglePermissionConfig {
   String get iOSPermissionKey;
   @override
   String get androidPermissionName;
+
+  /// Create a copy of SinglePermissionConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SinglePermissionConfigImplCopyWith<_$SinglePermissionConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

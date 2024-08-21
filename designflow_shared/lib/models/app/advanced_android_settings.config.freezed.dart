@@ -29,8 +29,12 @@ mixin _$AdvancedAndroidSettings {
   String? get versionCode => throw _privateConstructorUsedError;
   int? get buildNumber => throw _privateConstructorUsedError;
 
+  /// Serializes this AdvancedAndroidSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdvancedAndroidSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdvancedAndroidSettingsCopyWith<AdvancedAndroidSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$AdvancedAndroidSettingsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdvancedAndroidSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,6 +141,8 @@ class __$$AdvancedAndroidSettingsImplCopyWithImpl<$Res>
       $Res Function(_$AdvancedAndroidSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdvancedAndroidSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -240,12 +248,14 @@ class _$AdvancedAndroidSettingsImpl implements _AdvancedAndroidSettings {
                 other.buildNumber == buildNumber));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, kotlinVersion, compileSdkVersion,
       targetSdkVersion, packageName, overrideVersion, versionCode, buildNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdvancedAndroidSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdvancedAndroidSettingsImplCopyWith<_$AdvancedAndroidSettingsImpl>
@@ -287,8 +297,11 @@ abstract class _AdvancedAndroidSettings implements AdvancedAndroidSettings {
   String? get versionCode;
   @override
   int? get buildNumber;
+
+  /// Create a copy of AdvancedAndroidSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdvancedAndroidSettingsImplCopyWith<_$AdvancedAndroidSettingsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

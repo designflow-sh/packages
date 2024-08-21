@@ -24,8 +24,12 @@ mixin _$AuthenticationConfig {
   String? get initialPageID => throw _privateConstructorUsedError;
   String? get loggedInPageID => throw _privateConstructorUsedError;
 
+  /// Serializes this AuthenticationConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthenticationConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthenticationConfigCopyWith<AuthenticationConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$AuthenticationConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AuthenticationConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,6 +105,8 @@ class __$$AuthenticationConfigImplCopyWithImpl<$Res>
       $Res Function(_$AuthenticationConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthenticationConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,12 +167,14 @@ class _$AuthenticationConfigImpl implements _AuthenticationConfig {
                 other.loggedInPageID == loggedInPageID));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, service, initialPageID, loggedInPageID);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthenticationConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthenticationConfigImplCopyWith<_$AuthenticationConfigImpl>
@@ -195,8 +205,11 @@ abstract class _AuthenticationConfig implements AuthenticationConfig {
   String? get initialPageID;
   @override
   String? get loggedInPageID;
+
+  /// Create a copy of AuthenticationConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthenticationConfigImplCopyWith<_$AuthenticationConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

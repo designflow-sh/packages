@@ -23,8 +23,12 @@ GlobalConstantsConfig _$GlobalConstantsConfigFromJson(
 mixin _$GlobalConstantsConfig {
   Map<String, dynamic> get constants => throw _privateConstructorUsedError;
 
+  /// Serializes this GlobalConstantsConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GlobalConstantsConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GlobalConstantsConfigCopyWith<GlobalConstantsConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GlobalConstantsConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GlobalConstantsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$GlobalConstantsConfigImplCopyWithImpl<$Res>
       $Res Function(_$GlobalConstantsConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GlobalConstantsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,12 +139,14 @@ class _$GlobalConstantsConfigImpl implements _GlobalConstantsConfig {
                 .equals(other._constants, _constants));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_constants));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GlobalConstantsConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GlobalConstantsConfigImplCopyWith<_$GlobalConstantsConfigImpl>
@@ -160,8 +170,11 @@ abstract class _GlobalConstantsConfig implements GlobalConstantsConfig {
 
   @override
   Map<String, dynamic> get constants;
+
+  /// Create a copy of GlobalConstantsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GlobalConstantsConfigImplCopyWith<_$GlobalConstantsConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

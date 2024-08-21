@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @JsonEnum()
-enum ColorSource { style, variable }
+enum ColorSources { style, variable }
 
 class CColor {
   /// A 32 bit value representing this color.
@@ -95,12 +95,12 @@ class CColor {
 
 class CColorReference extends CColor {
   final String id;
-  final ColorSource source;
+  final ColorSources source;
 
   CColorReference(this.id, this.source) : super(0);
 
   factory CColorReference.fromJson(Map<String, dynamic> json) {
-    return CColorReference(json['id'], ColorSource.values[json['source']]);
+    return CColorReference(json['id'], ColorSources.values[json['source']]);
   }
 
   @override

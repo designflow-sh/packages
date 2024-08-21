@@ -112,6 +112,8 @@ mixin _$WebDeploymentConfig {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this WebDeploymentConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -131,6 +133,9 @@ class _$WebDeploymentConfigCopyWithImpl<$Res, $Val extends WebDeploymentConfig>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of WebDeploymentConfig
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -164,6 +169,8 @@ class __$$EnabledImplCopyWithImpl<$Res>
       _$EnabledImpl _value, $Res Function(_$EnabledImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WebDeploymentConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -339,7 +346,7 @@ class _$EnabledImpl implements _Enabled {
                 other.customDomain == customDomain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -358,7 +365,9 @@ class _$EnabledImpl implements _Enabled {
       customHeadCode,
       customDomain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WebDeploymentConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnabledImplCopyWith<_$EnabledImpl> get copyWith =>
@@ -554,7 +563,10 @@ abstract class _Enabled implements WebDeploymentConfig {
   bool get enablePWA;
   String get customHeadCode;
   String get customDomain;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WebDeploymentConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnabledImplCopyWith<_$EnabledImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -573,6 +585,9 @@ class __$$DisabledImplCopyWithImpl<$Res>
   __$$DisabledImplCopyWithImpl(
       _$DisabledImpl _value, $Res Function(_$DisabledImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of WebDeploymentConfig
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -597,7 +612,7 @@ class _$DisabledImpl implements _Disabled {
         (other.runtimeType == runtimeType && other is _$DisabledImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 

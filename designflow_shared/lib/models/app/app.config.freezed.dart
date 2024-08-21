@@ -46,8 +46,12 @@ mixin _$AppConfig {
   CircularProgressIndicatorConfig get circularProgressIndicatorConfig =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this AppConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppConfigCopyWith<AppConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -106,6 +110,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -214,6 +220,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     ) as $Val);
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DeepLinkConfigCopyWith<$Res> get deepLinkConfig {
@@ -222,6 +230,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppBarConfigCopyWith<$Res> get appBarConfig {
@@ -230,6 +240,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BottomBarConfigCopyWith<$Res> get bottomBarConfig {
@@ -238,6 +250,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DrawerConfigCopyWith<$Res> get drawerConfig {
@@ -246,6 +260,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppAssetsCopyWith<$Res> get appAssets {
@@ -254,6 +270,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AuthenticationConfigCopyWith<$Res> get authenticationConfig {
@@ -263,6 +281,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LanguagesConfigCopyWith<$Res> get languagesConfig {
@@ -271,6 +291,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlatformsConfigCopyWith<$Res> get platformsConfig {
@@ -279,6 +301,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PermissionConfigCopyWith<$Res> get permissionConfig {
@@ -287,6 +311,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $WebDeploymentConfigCopyWith<$Res> get webDeploymentConfig {
@@ -296,6 +322,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RevenueCatConfigCopyWith<$Res> get revenueCatConfig {
@@ -304,6 +332,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GlobalConstantsConfigCopyWith<$Res> get globalConstantsConfig {
@@ -313,6 +343,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FirebaseAnalyticsConfigCopyWith<$Res> get firebaseAnalyticsConfig {
@@ -322,6 +354,8 @@ class _$AppConfigCopyWithImpl<$Res, $Val extends AppConfig>
     });
   }
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CircularProgressIndicatorConfigCopyWith<$Res>
@@ -403,6 +437,8 @@ class __$$AppConfigImplCopyWithImpl<$Res>
       _$AppConfigImpl _value, $Res Function(_$AppConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -656,7 +692,7 @@ class _$AppConfigImpl implements _AppConfig {
                     circularProgressIndicatorConfig));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -682,7 +718,9 @@ class _$AppConfigImpl implements _AppConfig {
         circularProgressIndicatorConfig
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppConfigImplCopyWith<_$AppConfigImpl> get copyWith =>
@@ -763,8 +801,11 @@ abstract class _AppConfig implements AppConfig {
   FirebaseAnalyticsConfig get firebaseAnalyticsConfig;
   @override
   CircularProgressIndicatorConfig get circularProgressIndicatorConfig;
+
+  /// Create a copy of AppConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppConfigImplCopyWith<_$AppConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

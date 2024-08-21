@@ -26,8 +26,12 @@ mixin _$AdvancediOSSettings {
   String? get customVersion => throw _privateConstructorUsedError;
   int? get customBuildNumber => throw _privateConstructorUsedError;
 
+  /// Serializes this AdvancediOSSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdvancediOSSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdvancediOSSettingsCopyWith<AdvancediOSSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$AdvancediOSSettingsCopyWithImpl<$Res, $Val extends AdvancediOSSettings>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdvancediOSSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$AdvancediOSSettingsImplCopyWithImpl<$Res>
       $Res Function(_$AdvancediOSSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdvancediOSSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -197,12 +205,14 @@ class _$AdvancediOSSettingsImpl implements _AdvancediOSSettings {
                 other.customBuildNumber == customBuildNumber));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, iPadEnabled, iOSBundleID,
       overrideVersion, customVersion, customBuildNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdvancediOSSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdvancediOSSettingsImplCopyWith<_$AdvancediOSSettingsImpl> get copyWith =>
@@ -238,8 +248,11 @@ abstract class _AdvancediOSSettings implements AdvancediOSSettings {
   String? get customVersion;
   @override
   int? get customBuildNumber;
+
+  /// Create a copy of AdvancediOSSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdvancediOSSettingsImplCopyWith<_$AdvancediOSSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

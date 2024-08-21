@@ -24,8 +24,12 @@ mixin _$FirebaseAnalyticsConfig {
   bool get firebaseAnalyticsEnabled => throw _privateConstructorUsedError;
   bool get firebaseRouterObserverEnabled => throw _privateConstructorUsedError;
 
+  /// Serializes this FirebaseAnalyticsConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FirebaseAnalyticsConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FirebaseAnalyticsConfigCopyWith<FirebaseAnalyticsConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$FirebaseAnalyticsConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FirebaseAnalyticsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$FirebaseAnalyticsConfigImplCopyWithImpl<$Res>
       $Res Function(_$FirebaseAnalyticsConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FirebaseAnalyticsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,12 +156,14 @@ class _$FirebaseAnalyticsConfigImpl implements _FirebaseAnalyticsConfig {
                     firebaseRouterObserverEnabled));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, firebaseAnalyticsEnabled, firebaseRouterObserverEnabled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FirebaseAnalyticsConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FirebaseAnalyticsConfigImplCopyWith<_$FirebaseAnalyticsConfigImpl>
@@ -181,8 +191,11 @@ abstract class _FirebaseAnalyticsConfig implements FirebaseAnalyticsConfig {
   bool get firebaseAnalyticsEnabled;
   @override
   bool get firebaseRouterObserverEnabled;
+
+  /// Create a copy of FirebaseAnalyticsConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FirebaseAnalyticsConfigImplCopyWith<_$FirebaseAnalyticsConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

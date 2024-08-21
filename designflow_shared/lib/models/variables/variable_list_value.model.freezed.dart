@@ -22,8 +22,12 @@ VarListValue _$VarListValueFromJson(Map<String, dynamic> json) {
 mixin _$VarListValue {
   List<Var> get list => throw _privateConstructorUsedError;
 
+  /// Serializes this VarListValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VarListValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VarListValueCopyWith<VarListValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$VarListValueCopyWithImpl<$Res, $Val extends VarListValue>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VarListValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$VarListValueImplCopyWithImpl<$Res>
       _$VarListValueImpl _value, $Res Function(_$VarListValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VarListValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,12 +132,14 @@ class _$VarListValueImpl implements _VarListValue {
             const DeepCollectionEquality().equals(other._list, _list));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_list));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VarListValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VarListValueImplCopyWith<_$VarListValueImpl> get copyWith =>
@@ -151,8 +161,11 @@ abstract class _VarListValue implements VarListValue {
 
   @override
   List<Var> get list;
+
+  /// Create a copy of VarListValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VarListValueImplCopyWith<_$VarListValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

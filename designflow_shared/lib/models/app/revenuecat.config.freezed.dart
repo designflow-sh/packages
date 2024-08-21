@@ -26,8 +26,12 @@ mixin _$RevenueCatConfig {
   String? get androidKey => throw _privateConstructorUsedError;
   String? get defaultEntitlement => throw _privateConstructorUsedError;
 
+  /// Serializes this RevenueCatConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RevenueCatConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RevenueCatConfigCopyWith<RevenueCatConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$RevenueCatConfigCopyWithImpl<$Res, $Val extends RevenueCatConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RevenueCatConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$RevenueCatConfigImplCopyWithImpl<$Res>
       $Res Function(_$RevenueCatConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RevenueCatConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$RevenueCatConfigImpl implements _RevenueCatConfig {
                 other.defaultEntitlement == defaultEntitlement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, iOSEnabled, androidEnabled,
       appleKey, androidKey, defaultEntitlement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RevenueCatConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RevenueCatConfigImplCopyWith<_$RevenueCatConfigImpl> get copyWith =>
@@ -237,8 +247,11 @@ abstract class _RevenueCatConfig implements RevenueCatConfig {
   String? get androidKey;
   @override
   String? get defaultEntitlement;
+
+  /// Create a copy of RevenueCatConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RevenueCatConfigImplCopyWith<_$RevenueCatConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

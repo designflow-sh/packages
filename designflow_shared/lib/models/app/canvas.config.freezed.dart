@@ -23,8 +23,12 @@ mixin _$CanvasConfig {
   CColor? get backgroundColor => throw _privateConstructorUsedError;
   bool get showGrid => throw _privateConstructorUsedError;
 
+  /// Serializes this CanvasConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CanvasConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CanvasConfigCopyWith<CanvasConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$CanvasConfigCopyWithImpl<$Res, $Val extends CanvasConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CanvasConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$CanvasConfigImplCopyWithImpl<$Res>
       _$CanvasConfigImpl _value, $Res Function(_$CanvasConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CanvasConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,11 +143,13 @@ class _$CanvasConfigImpl implements _CanvasConfig {
                 other.showGrid == showGrid));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, backgroundColor, showGrid);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CanvasConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CanvasConfigImplCopyWith<_$CanvasConfigImpl> get copyWith =>
@@ -165,8 +175,11 @@ abstract class _CanvasConfig implements CanvasConfig {
   CColor? get backgroundColor;
   @override
   bool get showGrid;
+
+  /// Create a copy of CanvasConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CanvasConfigImplCopyWith<_$CanvasConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

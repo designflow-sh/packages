@@ -25,8 +25,12 @@ mixin _$ClassModelField {
   Var? get defaultValue => throw _privateConstructorUsedError;
   String? get customJsonKey => throw _privateConstructorUsedError;
 
+  /// Serializes this ClassModelField to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClassModelFieldCopyWith<ClassModelField> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$ClassModelFieldCopyWithImpl<$Res, $Val extends ClassModelField>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +88,8 @@ class _$ClassModelFieldCopyWithImpl<$Res, $Val extends ClassModelField>
     ) as $Val);
   }
 
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VarCopyWith<$Res>? get value {
@@ -94,6 +102,8 @@ class _$ClassModelFieldCopyWithImpl<$Res, $Val extends ClassModelField>
     });
   }
 
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VarCopyWith<$Res>? get defaultValue {
@@ -132,6 +142,8 @@ class __$$ClassModelFieldImplCopyWithImpl<$Res>
       _$ClassModelFieldImpl _value, $Res Function(_$ClassModelFieldImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -204,12 +216,14 @@ class _$ClassModelFieldImpl extends _ClassModelField {
                 other.customJsonKey == customJsonKey));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, value, defaultValue, customJsonKey);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClassModelFieldImplCopyWith<_$ClassModelFieldImpl> get copyWith =>
@@ -243,8 +257,11 @@ abstract class _ClassModelField extends ClassModelField {
   Var? get defaultValue;
   @override
   String? get customJsonKey;
+
+  /// Create a copy of ClassModelField
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClassModelFieldImplCopyWith<_$ClassModelFieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -23,8 +23,12 @@ mixin _$DrawerConfig {
   bool get drawerEnabled => throw _privateConstructorUsedError;
   CColor? get backgroundColor => throw _privateConstructorUsedError;
 
+  /// Serializes this DrawerConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DrawerConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DrawerConfigCopyWith<DrawerConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$DrawerConfigCopyWithImpl<$Res, $Val extends DrawerConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DrawerConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$DrawerConfigImplCopyWithImpl<$Res>
       _$DrawerConfigImpl _value, $Res Function(_$DrawerConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DrawerConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,11 +143,13 @@ class _$DrawerConfigImpl implements _DrawerConfig {
                 other.backgroundColor == backgroundColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, drawerEnabled, backgroundColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DrawerConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DrawerConfigImplCopyWith<_$DrawerConfigImpl> get copyWith =>
@@ -165,8 +175,11 @@ abstract class _DrawerConfig implements DrawerConfig {
   bool get drawerEnabled;
   @override
   CColor? get backgroundColor;
+
+  /// Create a copy of DrawerConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DrawerConfigImplCopyWith<_$DrawerConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -24,8 +24,12 @@ mixin _$CubitModel {
   String get name => throw _privateConstructorUsedError;
   Map<String, CubitStateModel> get states => throw _privateConstructorUsedError;
 
+  /// Serializes this CubitModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CubitModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CubitModelCopyWith<CubitModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$CubitModelCopyWithImpl<$Res, $Val extends CubitModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CubitModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$CubitModelImplCopyWithImpl<$Res>
       _$CubitModelImpl _value, $Res Function(_$CubitModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CubitModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,12 +163,14 @@ class _$CubitModelImpl implements _CubitModel {
             const DeepCollectionEquality().equals(other._states, _states));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, const DeepCollectionEquality().hash(_states));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CubitModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CubitModelImplCopyWith<_$CubitModelImpl> get copyWith =>
@@ -189,8 +199,11 @@ abstract class _CubitModel implements CubitModel {
   String get name;
   @override
   Map<String, CubitStateModel> get states;
+
+  /// Create a copy of CubitModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CubitModelImplCopyWith<_$CubitModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -204,8 +217,12 @@ mixin _$CubitStateModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this CubitStateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CubitStateModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CubitStateModelCopyWith<CubitStateModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -229,6 +246,8 @@ class _$CubitStateModelCopyWithImpl<$Res, $Val extends CubitStateModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CubitStateModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -267,6 +286,8 @@ class __$$CubitStateModelImplCopyWithImpl<$Res>
       _$CubitStateModelImpl _value, $Res Function(_$CubitStateModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CubitStateModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -313,11 +334,13 @@ class _$CubitStateModelImpl implements _CubitStateModel {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CubitStateModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CubitStateModelImplCopyWith<_$CubitStateModelImpl> get copyWith =>
@@ -344,8 +367,11 @@ abstract class _CubitStateModel implements CubitStateModel {
   String get id;
   @override
   String get name;
+
+  /// Create a copy of CubitStateModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CubitStateModelImplCopyWith<_$CubitStateModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
