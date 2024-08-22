@@ -62,23 +62,23 @@ const _$ColorStylesEnumMap = {
 };
 
 _$LightImpl _$$LightImplFromJson(Map<String, dynamic> json) => _$LightImpl(
-      const CColorConverter().fromJson(json['value'] as Map<String, dynamic>),
+      CColor.fromJson(json['value'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$LightImplToJson(_$LightImpl instance) =>
     <String, dynamic>{
-      'value': const CColorConverter().toJson(instance.value),
+      'value': instance.value,
       'runtimeType': instance.$type,
     };
 
 _$DarkImpl _$$DarkImplFromJson(Map<String, dynamic> json) => _$DarkImpl(
-      const CColorConverter().fromJson(json['value'] as Map<String, dynamic>),
+      CColor.fromJson(json['value'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$DarkImplToJson(_$DarkImpl instance) =>
     <String, dynamic>{
-      'value': const CColorConverter().toJson(instance.value),
+      'value': instance.value,
       'runtimeType': instance.$type,
     };

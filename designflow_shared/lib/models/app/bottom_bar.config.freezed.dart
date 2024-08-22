@@ -50,6 +50,10 @@ abstract class $BottomBarConfigCopyWith<$Res> {
       CColor? backgroundColor,
       CColor? selectedItemColor,
       CColor? unselectedItemColor});
+
+  $CColorCopyWith<$Res>? get backgroundColor;
+  $CColorCopyWith<$Res>? get selectedItemColor;
+  $CColorCopyWith<$Res>? get unselectedItemColor;
 }
 
 /// @nodoc
@@ -101,6 +105,48 @@ class _$BottomBarConfigCopyWithImpl<$Res, $Val extends BottomBarConfig>
               as CColor?,
     ) as $Val);
   }
+
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value) as $Val);
+    });
+  }
+
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get selectedItemColor {
+    if (_value.selectedItemColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.selectedItemColor!, (value) {
+      return _then(_value.copyWith(selectedItemColor: value) as $Val);
+    });
+  }
+
+  /// Create a copy of BottomBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get unselectedItemColor {
+    if (_value.unselectedItemColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.unselectedItemColor!, (value) {
+      return _then(_value.copyWith(unselectedItemColor: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -118,6 +164,13 @@ abstract class _$$BottomBarConfigImplCopyWith<$Res>
       CColor? backgroundColor,
       CColor? selectedItemColor,
       CColor? unselectedItemColor});
+
+  @override
+  $CColorCopyWith<$Res>? get backgroundColor;
+  @override
+  $CColorCopyWith<$Res>? get selectedItemColor;
+  @override
+  $CColorCopyWith<$Res>? get unselectedItemColor;
 }
 
 /// @nodoc

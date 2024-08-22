@@ -1,4 +1,4 @@
-import 'package:designflow_shared/core/list_vars.ext.dart';
+import 'package:designflow_shared/extensions/list_vars.ext.dart';
 import 'package:designflow_shared/models/variables/class.model.dart';
 import 'package:designflow_shared/models/variables/variable_list_value.model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

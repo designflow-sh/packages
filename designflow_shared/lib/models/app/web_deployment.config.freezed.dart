@@ -159,6 +159,8 @@ abstract class _$$EnabledImplCopyWith<$Res> {
       bool enablePWA,
       String customHeadCode,
       String customDomain});
+
+  $CColorCopyWith<$Res> get statusBarColor;
 }
 
 /// @nodoc
@@ -247,6 +249,16 @@ class __$$EnabledImplCopyWithImpl<$Res>
           : customDomain // ignore: cast_nullable_to_non_nullable
               as String,
     ));
+  }
+
+  /// Create a copy of WebDeploymentConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res> get statusBarColor {
+    return $CColorCopyWith<$Res>(_value.statusBarColor, (value) {
+      return _then(_value.copyWith(statusBarColor: value));
+    });
   }
 }
 

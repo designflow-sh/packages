@@ -40,6 +40,8 @@ abstract class $CanvasConfigCopyWith<$Res> {
       _$CanvasConfigCopyWithImpl<$Res, CanvasConfig>;
   @useResult
   $Res call({CColor? backgroundColor, bool showGrid});
+
+  $CColorCopyWith<$Res>? get backgroundColor;
 }
 
 /// @nodoc
@@ -71,6 +73,20 @@ class _$CanvasConfigCopyWithImpl<$Res, $Val extends CanvasConfig>
               as bool,
     ) as $Val);
   }
+
+  /// Create a copy of CanvasConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -82,6 +98,9 @@ abstract class _$$CanvasConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call({CColor? backgroundColor, bool showGrid});
+
+  @override
+  $CColorCopyWith<$Res>? get backgroundColor;
 }
 
 /// @nodoc

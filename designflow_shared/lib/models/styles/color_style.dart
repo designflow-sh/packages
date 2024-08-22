@@ -1,4 +1,3 @@
-import 'package:designflow_shared/models/ui/color.converter.dart';
 import 'package:designflow_shared/models/ui/color.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -60,10 +59,10 @@ class ColorStyle with _$ColorStyle {
 @freezed
 class ColorStyleValue with _$ColorStyleValue {
   const factory ColorStyleValue.light(
-    @CColorConverter() CColor value,
+    CColor value,
   ) = _Light;
   const factory ColorStyleValue.dark(
-    @CColorConverter() CColor value,
+    CColor value,
   ) = _Dark;
 
   factory ColorStyleValue.fromJson(Map<String, dynamic> json) =>

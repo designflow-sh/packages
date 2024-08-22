@@ -2,7 +2,7 @@ import 'package:designflow_shared/models/variables/class.model.dart';
 import 'package:designflow_shared/models/variables/class_field.model.dart';
 import 'package:designflow_shared/models/variables/variable.model.dart';
 import 'package:designflow_shared/models/variables/variable_list_value.model.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   test('serialization', () {

@@ -279,24 +279,23 @@ ColorStyleValue _$ColorStyleValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ColorStyleValue {
-  @CColorConverter()
   CColor get value => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(@CColorConverter() CColor value) light,
-    required TResult Function(@CColorConverter() CColor value) dark,
+    required TResult Function(CColor value) light,
+    required TResult Function(CColor value) dark,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(@CColorConverter() CColor value)? light,
-    TResult? Function(@CColorConverter() CColor value)? dark,
+    TResult? Function(CColor value)? light,
+    TResult? Function(CColor value)? dark,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@CColorConverter() CColor value)? light,
-    TResult Function(@CColorConverter() CColor value)? dark,
+    TResult Function(CColor value)? light,
+    TResult Function(CColor value)? dark,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -336,7 +335,9 @@ abstract class $ColorStyleValueCopyWith<$Res> {
           ColorStyleValue value, $Res Function(ColorStyleValue) then) =
       _$ColorStyleValueCopyWithImpl<$Res, ColorStyleValue>;
   @useResult
-  $Res call({@CColorConverter() CColor value});
+  $Res call({CColor value});
+
+  $CColorCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -363,6 +364,16 @@ class _$ColorStyleValueCopyWithImpl<$Res, $Val extends ColorStyleValue>
               as CColor,
     ) as $Val);
   }
+
+  /// Create a copy of ColorStyleValue
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res> get value {
+    return $CColorCopyWith<$Res>(_value.value, (value) {
+      return _then(_value.copyWith(value: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -373,7 +384,10 @@ abstract class _$$LightImplCopyWith<$Res>
       __$$LightImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@CColorConverter() CColor value});
+  $Res call({CColor value});
+
+  @override
+  $CColorCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -403,14 +417,13 @@ class __$$LightImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$LightImpl implements _Light {
-  const _$LightImpl(@CColorConverter() this.value, {final String? $type})
+  const _$LightImpl(this.value, {final String? $type})
       : $type = $type ?? 'light';
 
   factory _$LightImpl.fromJson(Map<String, dynamic> json) =>
       _$$LightImplFromJson(json);
 
   @override
-  @CColorConverter()
   final CColor value;
 
   @JsonKey(name: 'runtimeType')
@@ -444,8 +457,8 @@ class _$LightImpl implements _Light {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(@CColorConverter() CColor value) light,
-    required TResult Function(@CColorConverter() CColor value) dark,
+    required TResult Function(CColor value) light,
+    required TResult Function(CColor value) dark,
   }) {
     return light(value);
   }
@@ -453,8 +466,8 @@ class _$LightImpl implements _Light {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(@CColorConverter() CColor value)? light,
-    TResult? Function(@CColorConverter() CColor value)? dark,
+    TResult? Function(CColor value)? light,
+    TResult? Function(CColor value)? dark,
   }) {
     return light?.call(value);
   }
@@ -462,8 +475,8 @@ class _$LightImpl implements _Light {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@CColorConverter() CColor value)? light,
-    TResult Function(@CColorConverter() CColor value)? dark,
+    TResult Function(CColor value)? light,
+    TResult Function(CColor value)? dark,
     required TResult orElse(),
   }) {
     if (light != null) {
@@ -512,12 +525,11 @@ class _$LightImpl implements _Light {
 }
 
 abstract class _Light implements ColorStyleValue {
-  const factory _Light(@CColorConverter() final CColor value) = _$LightImpl;
+  const factory _Light(final CColor value) = _$LightImpl;
 
   factory _Light.fromJson(Map<String, dynamic> json) = _$LightImpl.fromJson;
 
   @override
-  @CColorConverter()
   CColor get value;
 
   /// Create a copy of ColorStyleValue
@@ -536,7 +548,10 @@ abstract class _$$DarkImplCopyWith<$Res>
       __$$DarkImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@CColorConverter() CColor value});
+  $Res call({CColor value});
+
+  @override
+  $CColorCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -565,14 +580,12 @@ class __$$DarkImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$DarkImpl implements _Dark {
-  const _$DarkImpl(@CColorConverter() this.value, {final String? $type})
-      : $type = $type ?? 'dark';
+  const _$DarkImpl(this.value, {final String? $type}) : $type = $type ?? 'dark';
 
   factory _$DarkImpl.fromJson(Map<String, dynamic> json) =>
       _$$DarkImplFromJson(json);
 
   @override
-  @CColorConverter()
   final CColor value;
 
   @JsonKey(name: 'runtimeType')
@@ -606,8 +619,8 @@ class _$DarkImpl implements _Dark {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(@CColorConverter() CColor value) light,
-    required TResult Function(@CColorConverter() CColor value) dark,
+    required TResult Function(CColor value) light,
+    required TResult Function(CColor value) dark,
   }) {
     return dark(value);
   }
@@ -615,8 +628,8 @@ class _$DarkImpl implements _Dark {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(@CColorConverter() CColor value)? light,
-    TResult? Function(@CColorConverter() CColor value)? dark,
+    TResult? Function(CColor value)? light,
+    TResult? Function(CColor value)? dark,
   }) {
     return dark?.call(value);
   }
@@ -624,8 +637,8 @@ class _$DarkImpl implements _Dark {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@CColorConverter() CColor value)? light,
-    TResult Function(@CColorConverter() CColor value)? dark,
+    TResult Function(CColor value)? light,
+    TResult Function(CColor value)? dark,
     required TResult orElse(),
   }) {
     if (dark != null) {
@@ -674,12 +687,11 @@ class _$DarkImpl implements _Dark {
 }
 
 abstract class _Dark implements ColorStyleValue {
-  const factory _Dark(@CColorConverter() final CColor value) = _$DarkImpl;
+  const factory _Dark(final CColor value) = _$DarkImpl;
 
   factory _Dark.fromJson(Map<String, dynamic> json) = _$DarkImpl.fromJson;
 
   @override
-  @CColorConverter()
   CColor get value;
 
   /// Create a copy of ColorStyleValue

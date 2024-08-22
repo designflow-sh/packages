@@ -52,6 +52,10 @@ abstract class $AppBarConfigCopyWith<$Res> {
       CColor? backgroundColor,
       CColor? titleColor,
       CColor? iconColor});
+
+  $CColorCopyWith<$Res>? get backgroundColor;
+  $CColorCopyWith<$Res>? get titleColor;
+  $CColorCopyWith<$Res>? get iconColor;
 }
 
 /// @nodoc
@@ -108,6 +112,48 @@ class _$AppBarConfigCopyWithImpl<$Res, $Val extends AppBarConfig>
               as CColor?,
     ) as $Val);
   }
+
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get titleColor {
+    if (_value.titleColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.titleColor!, (value) {
+      return _then(_value.copyWith(titleColor: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AppBarConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get iconColor {
+    if (_value.iconColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.iconColor!, (value) {
+      return _then(_value.copyWith(iconColor: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -126,6 +172,13 @@ abstract class _$$AppBarConfigImplCopyWith<$Res>
       CColor? backgroundColor,
       CColor? titleColor,
       CColor? iconColor});
+
+  @override
+  $CColorCopyWith<$Res>? get backgroundColor;
+  @override
+  $CColorCopyWith<$Res>? get titleColor;
+  @override
+  $CColorCopyWith<$Res>? get iconColor;
 }
 
 /// @nodoc

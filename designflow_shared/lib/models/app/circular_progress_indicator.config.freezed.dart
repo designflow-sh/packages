@@ -43,6 +43,8 @@ abstract class $CircularProgressIndicatorConfigCopyWith<$Res> {
           CircularProgressIndicatorConfig>;
   @useResult
   $Res call({CColor? color, CircularProgressIndicatorTypes type});
+
+  $CColorCopyWith<$Res>? get color;
 }
 
 /// @nodoc
@@ -75,6 +77,20 @@ class _$CircularProgressIndicatorConfigCopyWithImpl<$Res,
               as CircularProgressIndicatorTypes,
     ) as $Val);
   }
+
+  /// Create a copy of CircularProgressIndicatorConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -87,6 +103,9 @@ abstract class _$$CircularProgressIndicatorConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call({CColor? color, CircularProgressIndicatorTypes type});
+
+  @override
+  $CColorCopyWith<$Res>? get color;
 }
 
 /// @nodoc

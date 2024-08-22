@@ -40,6 +40,8 @@ abstract class $DrawerConfigCopyWith<$Res> {
       _$DrawerConfigCopyWithImpl<$Res, DrawerConfig>;
   @useResult
   $Res call({bool drawerEnabled, CColor? backgroundColor});
+
+  $CColorCopyWith<$Res>? get backgroundColor;
 }
 
 /// @nodoc
@@ -71,6 +73,20 @@ class _$DrawerConfigCopyWithImpl<$Res, $Val extends DrawerConfig>
               as CColor?,
     ) as $Val);
   }
+
+  /// Create a copy of DrawerConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $CColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -82,6 +98,9 @@ abstract class _$$DrawerConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call({bool drawerEnabled, CColor? backgroundColor});
+
+  @override
+  $CColorCopyWith<$Res>? get backgroundColor;
 }
 
 /// @nodoc
