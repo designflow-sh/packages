@@ -29,7 +29,6 @@ class CTextStyle with _$CTextStyle {
     required String id,
     required String name,
     String? description,
-    required TextStyles style,
     required AdvancedTextStyle value,
   }) = _CTextStyle;
 

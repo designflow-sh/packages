@@ -1,4 +1,4 @@
-import 'package:designflow_shared/models/ui/color.dart';
+import 'package:designflow_shared/models/sources/color.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_bar.config.freezed.dart';

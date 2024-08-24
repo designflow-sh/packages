@@ -216,6 +216,7 @@ CubitStateModel _$CubitStateModelFromJson(Map<String, dynamic> json) {
 mixin _$CubitStateModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  Map<String, Var> get fields => throw _privateConstructorUsedError;
 
   /// Serializes this CubitStateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -233,7 +234,7 @@ abstract class $CubitStateModelCopyWith<$Res> {
           CubitStateModel value, $Res Function(CubitStateModel) then) =
       _$CubitStateModelCopyWithImpl<$Res, CubitStateModel>;
   @useResult
-  $Res call({String id, String name});
+  $Res call({String id, String name, Map<String, Var> fields});
 }
 
 /// @nodoc
@@ -253,6 +254,7 @@ class _$CubitStateModelCopyWithImpl<$Res, $Val extends CubitStateModel>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? fields = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -263,6 +265,10 @@ class _$CubitStateModelCopyWithImpl<$Res, $Val extends CubitStateModel>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as Map<String, Var>,
     ) as $Val);
   }
 }
@@ -275,7 +281,7 @@ abstract class _$$CubitStateModelImplCopyWith<$Res>
       __$$CubitStateModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name});
+  $Res call({String id, String name, Map<String, Var> fields});
 }
 
 /// @nodoc
@@ -293,6 +299,7 @@ class __$$CubitStateModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? fields = null,
   }) {
     return _then(_$CubitStateModelImpl(
       id: null == id
@@ -303,6 +310,10 @@ class __$$CubitStateModelImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value._fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as Map<String, Var>,
     ));
   }
 }
@@ -310,7 +321,11 @@ class __$$CubitStateModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CubitStateModelImpl implements _CubitStateModel {
-  const _$CubitStateModelImpl({required this.id, required this.name});
+  const _$CubitStateModelImpl(
+      {required this.id,
+      required this.name,
+      required final Map<String, Var> fields})
+      : _fields = fields;
 
   factory _$CubitStateModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CubitStateModelImplFromJson(json);
@@ -319,10 +334,17 @@ class _$CubitStateModelImpl implements _CubitStateModel {
   final String id;
   @override
   final String name;
+  final Map<String, Var> _fields;
+  @override
+  Map<String, Var> get fields {
+    if (_fields is EqualUnmodifiableMapView) return _fields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_fields);
+  }
 
   @override
   String toString() {
-    return 'CubitStateModel(id: $id, name: $name)';
+    return 'CubitStateModel(id: $id, name: $name, fields: $fields)';
   }
 
   @override
@@ -331,12 +353,14 @@ class _$CubitStateModelImpl implements _CubitStateModel {
         (other.runtimeType == runtimeType &&
             other is _$CubitStateModelImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other._fields, _fields));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, const DeepCollectionEquality().hash(_fields));
 
   /// Create a copy of CubitStateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -358,7 +382,8 @@ class _$CubitStateModelImpl implements _CubitStateModel {
 abstract class _CubitStateModel implements CubitStateModel {
   const factory _CubitStateModel(
       {required final String id,
-      required final String name}) = _$CubitStateModelImpl;
+      required final String name,
+      required final Map<String, Var> fields}) = _$CubitStateModelImpl;
 
   factory _CubitStateModel.fromJson(Map<String, dynamic> json) =
       _$CubitStateModelImpl.fromJson;
@@ -367,6 +392,8 @@ abstract class _CubitStateModel implements CubitStateModel {
   String get id;
   @override
   String get name;
+  @override
+  Map<String, Var> get fields;
 
   /// Create a copy of CubitStateModel
   /// with the given fields replaced by the non-null parameter values.

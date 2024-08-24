@@ -1,5 +1,5 @@
 import 'package:designflow_shared/models/responsive_value.model.dart';
-import 'package:designflow_shared/models/ui/color.dart';
+import 'package:designflow_shared/models/sources/color.dart';
 import 'package:designflow_shared/models/ui/font_style.model.dart';
 import 'package:designflow_shared/models/ui/font_weight.model.dart';
 import 'package:designflow_shared/models/ui/text_decoration.model.dart';

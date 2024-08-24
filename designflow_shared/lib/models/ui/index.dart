@@ -4,7 +4,7 @@ export 'border.model.dart';
 export 'box_decoration.model.dart';
 export 'box_shadow.model.dart';
 export 'boxfit.model.dart';
-export 'color.dart';
+export '../sources/color.dart';
 export 'cross_axis_alignment.model.dart';
 export 'cursor.model.dart';
 export 'floating_action_button_location.model.dart';

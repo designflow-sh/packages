@@ -1,3 +1,4 @@
+import 'package:designflow_shared/designflow_shared.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'cubit.model.freezed.dart';
@@ -20,6 +21,7 @@ class CubitStateModel with _$CubitStateModel {
   const factory CubitStateModel({
     required String id,
     required String name,
+    required Map<String, Var> fields,
   }) = _CubitStateModel;
 
   factory CubitStateModel.fromJson(Map<String, dynamic> json) =>

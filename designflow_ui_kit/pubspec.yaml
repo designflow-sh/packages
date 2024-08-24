@@ -11,8 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  designflow_extensions:
-    path: ../designflow_extensions
+  designflow_shared:
+    path: ../designflow_shared
   flutter_bloc: ^8.1.6
 
 dev_dependencies:

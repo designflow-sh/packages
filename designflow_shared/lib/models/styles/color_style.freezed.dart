@@ -23,7 +23,6 @@ mixin _$ColorStyle {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  ColorStyles get style => throw _privateConstructorUsedError;
   ColorStyleValue get color => throw _privateConstructorUsedError;
 
   /// Serializes this ColorStyle to a JSON map.
@@ -43,11 +42,7 @@ abstract class $ColorStyleCopyWith<$Res> {
       _$ColorStyleCopyWithImpl<$Res, ColorStyle>;
   @useResult
   $Res call(
-      {String id,
-      String name,
-      String? description,
-      ColorStyles style,
-      ColorStyleValue color});
+      {String id, String name, String? description, ColorStyleValue color});
 
   $ColorStyleValueCopyWith<$Res> get color;
 }
@@ -70,7 +65,6 @@ class _$ColorStyleCopyWithImpl<$Res, $Val extends ColorStyle>
     Object? id = null,
     Object? name = null,
     Object? description = freezed,
-    Object? style = null,
     Object? color = null,
   }) {
     return _then(_value.copyWith(
@@ -86,10 +80,6 @@ class _$ColorStyleCopyWithImpl<$Res, $Val extends ColorStyle>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      style: null == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as ColorStyles,
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -117,11 +107,7 @@ abstract class _$$ColorStyleImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id,
-      String name,
-      String? description,
-      ColorStyles style,
-      ColorStyleValue color});
+      {String id, String name, String? description, ColorStyleValue color});
 
   @override
   $ColorStyleValueCopyWith<$Res> get color;
@@ -143,7 +129,6 @@ class __$$ColorStyleImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? description = freezed,
-    Object? style = null,
     Object? color = null,
   }) {
     return _then(_$ColorStyleImpl(
@@ -159,10 +144,6 @@ class __$$ColorStyleImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      style: null == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as ColorStyles,
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -178,7 +159,6 @@ class _$ColorStyleImpl implements _ColorStyle {
       {required this.id,
       required this.name,
       this.description,
-      required this.style,
       required this.color});
 
   factory _$ColorStyleImpl.fromJson(Map<String, dynamic> json) =>
@@ -191,13 +171,11 @@ class _$ColorStyleImpl implements _ColorStyle {
   @override
   final String? description;
   @override
-  final ColorStyles style;
-  @override
   final ColorStyleValue color;
 
   @override
   String toString() {
-    return 'ColorStyle(id: $id, name: $name, description: $description, style: $style, color: $color)';
+    return 'ColorStyle(id: $id, name: $name, description: $description, color: $color)';
   }
 
   @override
@@ -209,14 +187,12 @@ class _$ColorStyleImpl implements _ColorStyle {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.style, style) || other.style == style) &&
             (identical(other.color, color) || other.color == color));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, description, style, color);
+  int get hashCode => Object.hash(runtimeType, id, name, description, color);
 
   /// Create a copy of ColorStyle
   /// with the given fields replaced by the non-null parameter values.
@@ -239,7 +215,6 @@ abstract class _ColorStyle implements ColorStyle {
       {required final String id,
       required final String name,
       final String? description,
-      required final ColorStyles style,
       required final ColorStyleValue color}) = _$ColorStyleImpl;
 
   factory _ColorStyle.fromJson(Map<String, dynamic> json) =
@@ -252,8 +227,6 @@ abstract class _ColorStyle implements ColorStyle {
   @override
   String? get description;
   @override
-  ColorStyles get style;
-  @override
   ColorStyleValue get color;
 
   /// Create a copy of ColorStyle
@@ -265,59 +238,13 @@ abstract class _ColorStyle implements ColorStyle {
 }
 
 ColorStyleValue _$ColorStyleValueFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'light':
-      return _Light.fromJson(json);
-    case 'dark':
-      return _Dark.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'ColorStyleValue',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+  return _ColorStyleValue.fromJson(json);
 }
 
 /// @nodoc
 mixin _$ColorStyleValue {
-  CColor get value => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(CColor value) light,
-    required TResult Function(CColor value) dark,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CColor value)? light,
-    TResult? Function(CColor value)? dark,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CColor value)? light,
-    TResult Function(CColor value)? dark,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Light value) light,
-    required TResult Function(_Dark value) dark,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Light value)? light,
-    TResult? Function(_Dark value)? dark,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Light value)? light,
-    TResult Function(_Dark value)? dark,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  CColor get light => throw _privateConstructorUsedError;
+  CColor get dark => throw _privateConstructorUsedError;
 
   /// Serializes this ColorStyleValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -335,9 +262,10 @@ abstract class $ColorStyleValueCopyWith<$Res> {
           ColorStyleValue value, $Res Function(ColorStyleValue) then) =
       _$ColorStyleValueCopyWithImpl<$Res, ColorStyleValue>;
   @useResult
-  $Res call({CColor value});
+  $Res call({CColor light, CColor dark});
 
-  $CColorCopyWith<$Res> get value;
+  $CColorCopyWith<$Res> get light;
+  $CColorCopyWith<$Res> get dark;
 }
 
 /// @nodoc
@@ -355,12 +283,17 @@ class _$ColorStyleValueCopyWithImpl<$Res, $Val extends ColorStyleValue>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = null,
+    Object? light = null,
+    Object? dark = null,
   }) {
     return _then(_value.copyWith(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      light: null == light
+          ? _value.light
+          : light // ignore: cast_nullable_to_non_nullable
+              as CColor,
+      dark: null == dark
+          ? _value.dark
+          : dark // ignore: cast_nullable_to_non_nullable
               as CColor,
     ) as $Val);
   }
@@ -369,33 +302,45 @@ class _$ColorStyleValueCopyWithImpl<$Res, $Val extends ColorStyleValue>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $CColorCopyWith<$Res> get value {
-    return $CColorCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value) as $Val);
+  $CColorCopyWith<$Res> get light {
+    return $CColorCopyWith<$Res>(_value.light, (value) {
+      return _then(_value.copyWith(light: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ColorStyleValue
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CColorCopyWith<$Res> get dark {
+    return $CColorCopyWith<$Res>(_value.dark, (value) {
+      return _then(_value.copyWith(dark: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$LightImplCopyWith<$Res>
+abstract class _$$ColorStyleValueImplCopyWith<$Res>
     implements $ColorStyleValueCopyWith<$Res> {
-  factory _$$LightImplCopyWith(
-          _$LightImpl value, $Res Function(_$LightImpl) then) =
-      __$$LightImplCopyWithImpl<$Res>;
+  factory _$$ColorStyleValueImplCopyWith(_$ColorStyleValueImpl value,
+          $Res Function(_$ColorStyleValueImpl) then) =
+      __$$ColorStyleValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({CColor value});
+  $Res call({CColor light, CColor dark});
 
   @override
-  $CColorCopyWith<$Res> get value;
+  $CColorCopyWith<$Res> get light;
+  @override
+  $CColorCopyWith<$Res> get dark;
 }
 
 /// @nodoc
-class __$$LightImplCopyWithImpl<$Res>
-    extends _$ColorStyleValueCopyWithImpl<$Res, _$LightImpl>
-    implements _$$LightImplCopyWith<$Res> {
-  __$$LightImplCopyWithImpl(
-      _$LightImpl _value, $Res Function(_$LightImpl) _then)
+class __$$ColorStyleValueImplCopyWithImpl<$Res>
+    extends _$ColorStyleValueCopyWithImpl<$Res, _$ColorStyleValueImpl>
+    implements _$$ColorStyleValueImplCopyWith<$Res> {
+  __$$ColorStyleValueImplCopyWithImpl(
+      _$ColorStyleValueImpl _value, $Res Function(_$ColorStyleValueImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ColorStyleValue
@@ -403,12 +348,17 @@ class __$$LightImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = null,
+    Object? light = null,
+    Object? dark = null,
   }) {
-    return _then(_$LightImpl(
-      null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+    return _then(_$ColorStyleValueImpl(
+      null == light
+          ? _value.light
+          : light // ignore: cast_nullable_to_non_nullable
+              as CColor,
+      null == dark
+          ? _value.dark
+          : dark // ignore: cast_nullable_to_non_nullable
               as CColor,
     ));
   }
@@ -416,288 +366,68 @@ class __$$LightImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$LightImpl implements _Light {
-  const _$LightImpl(this.value, {final String? $type})
-      : $type = $type ?? 'light';
+class _$ColorStyleValueImpl implements _ColorStyleValue {
+  const _$ColorStyleValueImpl(this.light, this.dark);
 
-  factory _$LightImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LightImplFromJson(json);
+  factory _$ColorStyleValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ColorStyleValueImplFromJson(json);
 
   @override
-  final CColor value;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
+  final CColor light;
+  @override
+  final CColor dark;
 
   @override
   String toString() {
-    return 'ColorStyleValue.light(value: $value)';
+    return 'ColorStyleValue(light: $light, dark: $dark)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LightImpl &&
-            (identical(other.value, value) || other.value == value));
+            other is _$ColorStyleValueImpl &&
+            (identical(other.light, light) || other.light == light) &&
+            (identical(other.dark, dark) || other.dark == dark));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, value);
+  int get hashCode => Object.hash(runtimeType, light, dark);
 
   /// Create a copy of ColorStyleValue
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LightImplCopyWith<_$LightImpl> get copyWith =>
-      __$$LightImplCopyWithImpl<_$LightImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(CColor value) light,
-    required TResult Function(CColor value) dark,
-  }) {
-    return light(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CColor value)? light,
-    TResult? Function(CColor value)? dark,
-  }) {
-    return light?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CColor value)? light,
-    TResult Function(CColor value)? dark,
-    required TResult orElse(),
-  }) {
-    if (light != null) {
-      return light(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Light value) light,
-    required TResult Function(_Dark value) dark,
-  }) {
-    return light(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Light value)? light,
-    TResult? Function(_Dark value)? dark,
-  }) {
-    return light?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Light value)? light,
-    TResult Function(_Dark value)? dark,
-    required TResult orElse(),
-  }) {
-    if (light != null) {
-      return light(this);
-    }
-    return orElse();
-  }
+  _$$ColorStyleValueImplCopyWith<_$ColorStyleValueImpl> get copyWith =>
+      __$$ColorStyleValueImplCopyWithImpl<_$ColorStyleValueImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LightImplToJson(
+    return _$$ColorStyleValueImplToJson(
       this,
     );
   }
 }
 
-abstract class _Light implements ColorStyleValue {
-  const factory _Light(final CColor value) = _$LightImpl;
+abstract class _ColorStyleValue implements ColorStyleValue {
+  const factory _ColorStyleValue(final CColor light, final CColor dark) =
+      _$ColorStyleValueImpl;
 
-  factory _Light.fromJson(Map<String, dynamic> json) = _$LightImpl.fromJson;
+  factory _ColorStyleValue.fromJson(Map<String, dynamic> json) =
+      _$ColorStyleValueImpl.fromJson;
 
   @override
-  CColor get value;
+  CColor get light;
+  @override
+  CColor get dark;
 
   /// Create a copy of ColorStyleValue
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LightImplCopyWith<_$LightImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DarkImplCopyWith<$Res>
-    implements $ColorStyleValueCopyWith<$Res> {
-  factory _$$DarkImplCopyWith(
-          _$DarkImpl value, $Res Function(_$DarkImpl) then) =
-      __$$DarkImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({CColor value});
-
-  @override
-  $CColorCopyWith<$Res> get value;
-}
-
-/// @nodoc
-class __$$DarkImplCopyWithImpl<$Res>
-    extends _$ColorStyleValueCopyWithImpl<$Res, _$DarkImpl>
-    implements _$$DarkImplCopyWith<$Res> {
-  __$$DarkImplCopyWithImpl(_$DarkImpl _value, $Res Function(_$DarkImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ColorStyleValue
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-  }) {
-    return _then(_$DarkImpl(
-      null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as CColor,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$DarkImpl implements _Dark {
-  const _$DarkImpl(this.value, {final String? $type}) : $type = $type ?? 'dark';
-
-  factory _$DarkImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DarkImplFromJson(json);
-
-  @override
-  final CColor value;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'ColorStyleValue.dark(value: $value)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DarkImpl &&
-            (identical(other.value, value) || other.value == value));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, value);
-
-  /// Create a copy of ColorStyleValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DarkImplCopyWith<_$DarkImpl> get copyWith =>
-      __$$DarkImplCopyWithImpl<_$DarkImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(CColor value) light,
-    required TResult Function(CColor value) dark,
-  }) {
-    return dark(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CColor value)? light,
-    TResult? Function(CColor value)? dark,
-  }) {
-    return dark?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CColor value)? light,
-    TResult Function(CColor value)? dark,
-    required TResult orElse(),
-  }) {
-    if (dark != null) {
-      return dark(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Light value) light,
-    required TResult Function(_Dark value) dark,
-  }) {
-    return dark(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Light value)? light,
-    TResult? Function(_Dark value)? dark,
-  }) {
-    return dark?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Light value)? light,
-    TResult Function(_Dark value)? dark,
-    required TResult orElse(),
-  }) {
-    if (dark != null) {
-      return dark(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DarkImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Dark implements ColorStyleValue {
-  const factory _Dark(final CColor value) = _$DarkImpl;
-
-  factory _Dark.fromJson(Map<String, dynamic> json) = _$DarkImpl.fromJson;
-
-  @override
-  CColor get value;
-
-  /// Create a copy of ColorStyleValue
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DarkImplCopyWith<_$DarkImpl> get copyWith =>
+  _$$ColorStyleValueImplCopyWith<_$ColorStyleValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

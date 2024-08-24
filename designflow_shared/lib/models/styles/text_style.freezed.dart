@@ -23,7 +23,6 @@ mixin _$CTextStyle {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  TextStyles get style => throw _privateConstructorUsedError;
   AdvancedTextStyle get value => throw _privateConstructorUsedError;
 
   /// Serializes this CTextStyle to a JSON map.
@@ -43,11 +42,7 @@ abstract class $CTextStyleCopyWith<$Res> {
       _$CTextStyleCopyWithImpl<$Res, CTextStyle>;
   @useResult
   $Res call(
-      {String id,
-      String name,
-      String? description,
-      TextStyles style,
-      AdvancedTextStyle value});
+      {String id, String name, String? description, AdvancedTextStyle value});
 
   $AdvancedTextStyleCopyWith<$Res> get value;
 }
@@ -70,7 +65,6 @@ class _$CTextStyleCopyWithImpl<$Res, $Val extends CTextStyle>
     Object? id = null,
     Object? name = null,
     Object? description = freezed,
-    Object? style = null,
     Object? value = null,
   }) {
     return _then(_value.copyWith(
@@ -86,10 +80,6 @@ class _$CTextStyleCopyWithImpl<$Res, $Val extends CTextStyle>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      style: null == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as TextStyles,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -117,11 +107,7 @@ abstract class _$$CTextStyleImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id,
-      String name,
-      String? description,
-      TextStyles style,
-      AdvancedTextStyle value});
+      {String id, String name, String? description, AdvancedTextStyle value});
 
   @override
   $AdvancedTextStyleCopyWith<$Res> get value;
@@ -143,7 +129,6 @@ class __$$CTextStyleImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? description = freezed,
-    Object? style = null,
     Object? value = null,
   }) {
     return _then(_$CTextStyleImpl(
@@ -159,10 +144,6 @@ class __$$CTextStyleImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      style: null == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as TextStyles,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -178,7 +159,6 @@ class _$CTextStyleImpl implements _CTextStyle {
       {required this.id,
       required this.name,
       this.description,
-      required this.style,
       required this.value});
 
   factory _$CTextStyleImpl.fromJson(Map<String, dynamic> json) =>
@@ -191,13 +171,11 @@ class _$CTextStyleImpl implements _CTextStyle {
   @override
   final String? description;
   @override
-  final TextStyles style;
-  @override
   final AdvancedTextStyle value;
 
   @override
   String toString() {
-    return 'CTextStyle(id: $id, name: $name, description: $description, style: $style, value: $value)';
+    return 'CTextStyle(id: $id, name: $name, description: $description, value: $value)';
   }
 
   @override
@@ -209,14 +187,12 @@ class _$CTextStyleImpl implements _CTextStyle {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.style, style) || other.style == style) &&
             (identical(other.value, value) || other.value == value));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, description, style, value);
+  int get hashCode => Object.hash(runtimeType, id, name, description, value);
 
   /// Create a copy of CTextStyle
   /// with the given fields replaced by the non-null parameter values.
@@ -239,7 +215,6 @@ abstract class _CTextStyle implements CTextStyle {
       {required final String id,
       required final String name,
       final String? description,
-      required final TextStyles style,
       required final AdvancedTextStyle value}) = _$CTextStyleImpl;
 
   factory _CTextStyle.fromJson(Map<String, dynamic> json) =
@@ -251,8 +226,6 @@ abstract class _CTextStyle implements CTextStyle {
   String get name;
   @override
   String? get description;
-  @override
-  TextStyles get style;
   @override
   AdvancedTextStyle get value;
 

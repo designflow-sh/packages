@@ -28,6 +28,9 @@ _$CubitStateModelImpl _$$CubitStateModelImplFromJson(
     _$CubitStateModelImpl(
       id: json['id'] as String,
       name: json['name'] as String,
+      fields: (json['fields'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Var.fromJson(e as Map<String, dynamic>)),
+      ),
     );
 
 Map<String, dynamic> _$$CubitStateModelImplToJson(
@@ -35,4 +38,5 @@ Map<String, dynamic> _$$CubitStateModelImplToJson(
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'fields': instance.fields,
     };
