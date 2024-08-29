@@ -1,3 +1,4 @@
+import 'package:designflow_shared/designflow_shared.dart';
 import 'package:designflow_shared/models/responsive_value.model.dart';
 import 'package:designflow_shared/models/sources/color.dart';
 import 'package:designflow_shared/models/ui/font_style.model.dart';
@@ -27,7 +28,7 @@ class AdvancedTextStyle with _$AdvancedTextStyle {
   const factory AdvancedTextStyle({
     String? fontFamily,
     ResponsiveDouble? fontSize,
-    CColor? color,
+    ColorStyleValue? color,
     CFontWeight? weight,
     ResponsiveDouble? letterSpacing,
     ResponsiveDouble? wordSpacing,

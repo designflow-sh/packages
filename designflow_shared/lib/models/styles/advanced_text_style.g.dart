@@ -15,7 +15,7 @@ _$AdvancedTextStyleImpl _$$AdvancedTextStyleImplFromJson(
           : ResponsiveDouble.fromJson(json['fontSize'] as Map<String, dynamic>),
       color: json['color'] == null
           ? null
-          : CColor.fromJson(json['color'] as Map<String, dynamic>),
+          : ColorStyleValue.fromJson(json['color'] as Map<String, dynamic>),
       weight: json['weight'] == null
           ? null
           : CFontWeight.fromJson(json['weight'] as Map<String, dynamic>),

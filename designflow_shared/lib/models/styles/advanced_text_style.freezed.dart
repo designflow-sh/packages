@@ -22,7 +22,7 @@ AdvancedTextStyle _$AdvancedTextStyleFromJson(Map<String, dynamic> json) {
 mixin _$AdvancedTextStyle {
   String? get fontFamily => throw _privateConstructorUsedError;
   ResponsiveDouble? get fontSize => throw _privateConstructorUsedError;
-  CColor? get color => throw _privateConstructorUsedError;
+  ColorStyleValue? get color => throw _privateConstructorUsedError;
   CFontWeight? get weight => throw _privateConstructorUsedError;
   ResponsiveDouble? get letterSpacing => throw _privateConstructorUsedError;
   ResponsiveDouble? get wordSpacing => throw _privateConstructorUsedError;
@@ -51,7 +51,7 @@ abstract class $AdvancedTextStyleCopyWith<$Res> {
   $Res call(
       {String? fontFamily,
       ResponsiveDouble? fontSize,
-      CColor? color,
+      ColorStyleValue? color,
       CFontWeight? weight,
       ResponsiveDouble? letterSpacing,
       ResponsiveDouble? wordSpacing,
@@ -62,7 +62,7 @@ abstract class $AdvancedTextStyleCopyWith<$Res> {
       CTextDecoration? decoration});
 
   $ResponsiveDoubleCopyWith<$Res>? get fontSize;
-  $CColorCopyWith<$Res>? get color;
+  $ColorStyleValueCopyWith<$Res>? get color;
   $CFontWeightCopyWith<$Res>? get weight;
   $ResponsiveDoubleCopyWith<$Res>? get letterSpacing;
   $ResponsiveDoubleCopyWith<$Res>? get wordSpacing;
@@ -111,7 +111,7 @@ class _$AdvancedTextStyleCopyWithImpl<$Res, $Val extends AdvancedTextStyle>
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as CColor?,
+              as ColorStyleValue?,
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
@@ -165,12 +165,12 @@ class _$AdvancedTextStyleCopyWithImpl<$Res, $Val extends AdvancedTextStyle>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $CColorCopyWith<$Res>? get color {
+  $ColorStyleValueCopyWith<$Res>? get color {
     if (_value.color == null) {
       return null;
     }
 
-    return $CColorCopyWith<$Res>(_value.color!, (value) {
+    return $ColorStyleValueCopyWith<$Res>(_value.color!, (value) {
       return _then(_value.copyWith(color: value) as $Val);
     });
   }
@@ -285,7 +285,7 @@ abstract class _$$AdvancedTextStyleImplCopyWith<$Res>
   $Res call(
       {String? fontFamily,
       ResponsiveDouble? fontSize,
-      CColor? color,
+      ColorStyleValue? color,
       CFontWeight? weight,
       ResponsiveDouble? letterSpacing,
       ResponsiveDouble? wordSpacing,
@@ -298,7 +298,7 @@ abstract class _$$AdvancedTextStyleImplCopyWith<$Res>
   @override
   $ResponsiveDoubleCopyWith<$Res>? get fontSize;
   @override
-  $CColorCopyWith<$Res>? get color;
+  $ColorStyleValueCopyWith<$Res>? get color;
   @override
   $CFontWeightCopyWith<$Res>? get weight;
   @override
@@ -352,7 +352,7 @@ class __$$AdvancedTextStyleImplCopyWithImpl<$Res>
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as CColor?,
+              as ColorStyleValue?,
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
@@ -413,7 +413,7 @@ class _$AdvancedTextStyleImpl implements _AdvancedTextStyle {
   @override
   final ResponsiveDouble? fontSize;
   @override
-  final CColor? color;
+  final ColorStyleValue? color;
   @override
   final CFontWeight? weight;
   @override
@@ -498,7 +498,7 @@ abstract class _AdvancedTextStyle implements AdvancedTextStyle {
   const factory _AdvancedTextStyle(
       {final String? fontFamily,
       final ResponsiveDouble? fontSize,
-      final CColor? color,
+      final ColorStyleValue? color,
       final CFontWeight? weight,
       final ResponsiveDouble? letterSpacing,
       final ResponsiveDouble? wordSpacing,
@@ -516,7 +516,7 @@ abstract class _AdvancedTextStyle implements AdvancedTextStyle {
   @override
   ResponsiveDouble? get fontSize;
   @override
-  CColor? get color;
+  ColorStyleValue? get color;
   @override
   CFontWeight? get weight;
   @override
