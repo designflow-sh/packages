@@ -1,0 +1,16 @@
+name: designflow_di_dart
+description: "A new Flutter package project."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  get_it: ^7.7.0
+  logger: ^2.4.0
+
+dev_dependencies:
+  test:
+  flutter_lints: ^3.0.0
+
