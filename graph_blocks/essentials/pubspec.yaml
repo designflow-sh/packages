@@ -1,4 +1,4 @@
-name: designflow_blocks_basics
+name: designflow_blocks_essentials
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
@@ -21,11 +21,8 @@ dependencies:
     path: ../../ds/flutter
   designflow_di_flutter:
     path: ../../di/flutter
-  designflow_blocks_essentials:
-    path: ../essentials
-  designflow_graph:
-    path: ../graph
   flutter_bloc: ^8.1.6
+  widget_arrows: ^0.6.0
 
 dev_dependencies:
   flutter_test:

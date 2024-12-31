@@ -98,7 +98,7 @@ extension UtilsContext on BuildContext {
               checkConstraints: checkConstraints,
             ) as T?;
 
-  Parser2WidgetMap get parser2WidgetMap => GetIt.I<Parser2WidgetMap>();
+  ParserMap get parserMap => GetIt.I<ParserMap>();
 
   SelectableAreaFuncParams get selectableAreaBuilder =>
       GetIt.I<SelectableAreaFuncParams>();

@@ -1,8 +1,10 @@
 export 'card.dart';
 export 'constraints_aware.widget.dart';
 export 'controller_builder.dart';
+export 'dot_matrix_paper.dart';
 export 'hover_builder.dart';
 export 'measure_size.widget.dart';
 export 'page_view_scrollable_child.widget.dart';
+export 'popup_menu_button.widget.dart';
 export 'responsive_values.dart';
 export 'responsive_wrapper.dart';

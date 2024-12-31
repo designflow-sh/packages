@@ -40,6 +40,8 @@ class CommonParserProps with _$CommonParserProps {
     @Default(BackgroundBlurProp()) BackgroundBlurProp backgroundBlur,
     @Default(ResponsiveBool(orElse: false)) ResponsiveBool mask,
     @Default([]) Iterable<CBoxDecoration> overlays,
+    @Default(true) bool selectable,
+    @Default(true) bool visible,
   }) = _CommonParserProps;
 
   factory CommonParserProps.fromJson(Map<String, dynamic> json) =>

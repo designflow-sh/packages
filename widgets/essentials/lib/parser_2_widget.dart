@@ -8,7 +8,7 @@ Widget commonBuild<T extends Widget>(
   BuildContext context,
   BuildParserParams params,
 ) {
-  final func = context.parser2WidgetMap.map[params.parser.runtimeType];
+  final func = context.parserMap.toWidget[params.parser.runtimeType];
   if (func == null) {
     throw Exception(
         'Parser2WidgetMap does not contain ${params.parser.runtimeType}');

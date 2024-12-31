@@ -49,6 +49,8 @@ mixin _$CommonParserProps {
   BackgroundBlurProp get backgroundBlur => throw _privateConstructorUsedError;
   ResponsiveBool get mask => throw _privateConstructorUsedError;
   Iterable<CBoxDecoration> get overlays => throw _privateConstructorUsedError;
+  bool get selectable => throw _privateConstructorUsedError;
+  bool get visible => throw _privateConstructorUsedError;
 
   /// Serializes this CommonParserProps to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -95,7 +97,9 @@ abstract class $CommonParserPropsCopyWith<$Res> {
       LayerBlurProp layerBlur,
       BackgroundBlurProp backgroundBlur,
       ResponsiveBool mask,
-      Iterable<CBoxDecoration> overlays});
+      Iterable<CBoxDecoration> overlays,
+      bool selectable,
+      bool visible});
 
   $FlexiblePropCopyWith<$Res> get flexible;
   $ExpandedPropCopyWith<$Res> get expanded;
@@ -162,6 +166,8 @@ class _$CommonParserPropsCopyWithImpl<$Res, $Val extends CommonParserProps>
     Object? backgroundBlur = null,
     Object? mask = null,
     Object? overlays = null,
+    Object? selectable = null,
+    Object? visible = null,
   }) {
     return _then(_value.copyWith(
       flexible: null == flexible
@@ -280,6 +286,14 @@ class _$CommonParserPropsCopyWithImpl<$Res, $Val extends CommonParserProps>
           ? _value.overlays
           : overlays // ignore: cast_nullable_to_non_nullable
               as Iterable<CBoxDecoration>,
+      selectable: null == selectable
+          ? _value.selectable
+          : selectable // ignore: cast_nullable_to_non_nullable
+              as bool,
+      visible: null == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -551,7 +565,9 @@ abstract class _$$CommonParserPropsImplCopyWith<$Res>
       LayerBlurProp layerBlur,
       BackgroundBlurProp backgroundBlur,
       ResponsiveBool mask,
-      Iterable<CBoxDecoration> overlays});
+      Iterable<CBoxDecoration> overlays,
+      bool selectable,
+      bool visible});
 
   @override
   $FlexiblePropCopyWith<$Res> get flexible;
@@ -635,6 +651,8 @@ class __$$CommonParserPropsImplCopyWithImpl<$Res>
     Object? backgroundBlur = null,
     Object? mask = null,
     Object? overlays = null,
+    Object? selectable = null,
+    Object? visible = null,
   }) {
     return _then(_$CommonParserPropsImpl(
       flexible: null == flexible
@@ -753,6 +771,14 @@ class __$$CommonParserPropsImplCopyWithImpl<$Res>
           ? _value.overlays
           : overlays // ignore: cast_nullable_to_non_nullable
               as Iterable<CBoxDecoration>,
+      selectable: null == selectable
+          ? _value.selectable
+          : selectable // ignore: cast_nullable_to_non_nullable
+              as bool,
+      visible: null == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -789,7 +815,9 @@ class _$CommonParserPropsImpl extends _CommonParserProps {
       this.layerBlur = const LayerBlurProp(),
       this.backgroundBlur = const BackgroundBlurProp(),
       this.mask = const ResponsiveBool(orElse: false),
-      this.overlays = const []})
+      this.overlays = const [],
+      this.selectable = true,
+      this.visible = true})
       : super._();
 
   factory _$CommonParserPropsImpl.fromJson(Map<String, dynamic> json) =>
@@ -872,10 +900,16 @@ class _$CommonParserPropsImpl extends _CommonParserProps {
   @override
   @JsonKey()
   final Iterable<CBoxDecoration> overlays;
+  @override
+  @JsonKey()
+  final bool selectable;
+  @override
+  @JsonKey()
+  final bool visible;
 
   @override
   String toString() {
-    return 'CommonParserProps(flexible: $flexible, expanded: $expanded, fittedBoxFit: $fittedBoxFit, alignment: $alignment, aspectRatio: $aspectRatio, clipBorderRadius: $clipBorderRadius, clippedOval: $clippedOval, clippedRRect: $clippedRRect, clippedRect: $clippedRect, onTapEnabled: $onTapEnabled, onLongPressEnabled: $onLongPressEnabled, onDoubleTapEnabled: $onDoubleTapEnabled, onHoverEnabled: $onHoverEnabled, onEnterEnabled: $onEnterEnabled, onExitEnabled: $onExitEnabled, constrains: $constrains, padding: $padding, margin: $margin, rotation: $rotation, scale: $scale, translationX: $translationX, translationY: $translationY, bounce: $bounce, motion: $motion, cursor: $cursor, layerBlur: $layerBlur, backgroundBlur: $backgroundBlur, mask: $mask, overlays: $overlays)';
+    return 'CommonParserProps(flexible: $flexible, expanded: $expanded, fittedBoxFit: $fittedBoxFit, alignment: $alignment, aspectRatio: $aspectRatio, clipBorderRadius: $clipBorderRadius, clippedOval: $clippedOval, clippedRRect: $clippedRRect, clippedRect: $clippedRect, onTapEnabled: $onTapEnabled, onLongPressEnabled: $onLongPressEnabled, onDoubleTapEnabled: $onDoubleTapEnabled, onHoverEnabled: $onHoverEnabled, onEnterEnabled: $onEnterEnabled, onExitEnabled: $onExitEnabled, constrains: $constrains, padding: $padding, margin: $margin, rotation: $rotation, scale: $scale, translationX: $translationX, translationY: $translationY, bounce: $bounce, motion: $motion, cursor: $cursor, layerBlur: $layerBlur, backgroundBlur: $backgroundBlur, mask: $mask, overlays: $overlays, selectable: $selectable, visible: $visible)';
   }
 
   @override
@@ -932,7 +966,10 @@ class _$CommonParserPropsImpl extends _CommonParserProps {
             (identical(other.backgroundBlur, backgroundBlur) ||
                 other.backgroundBlur == backgroundBlur) &&
             (identical(other.mask, mask) || other.mask == mask) &&
-            const DeepCollectionEquality().equals(other.overlays, overlays));
+            const DeepCollectionEquality().equals(other.overlays, overlays) &&
+            (identical(other.selectable, selectable) ||
+                other.selectable == selectable) &&
+            (identical(other.visible, visible) || other.visible == visible));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -967,7 +1004,9 @@ class _$CommonParserPropsImpl extends _CommonParserProps {
         layerBlur,
         backgroundBlur,
         mask,
-        const DeepCollectionEquality().hash(overlays)
+        const DeepCollectionEquality().hash(overlays),
+        selectable,
+        visible
       ]);
 
   /// Create a copy of CommonParserProps
@@ -1017,7 +1056,9 @@ abstract class _CommonParserProps extends CommonParserProps {
       final LayerBlurProp layerBlur,
       final BackgroundBlurProp backgroundBlur,
       final ResponsiveBool mask,
-      final Iterable<CBoxDecoration> overlays}) = _$CommonParserPropsImpl;
+      final Iterable<CBoxDecoration> overlays,
+      final bool selectable,
+      final bool visible}) = _$CommonParserPropsImpl;
   const _CommonParserProps._() : super._();
 
   factory _CommonParserProps.fromJson(Map<String, dynamic> json) =
@@ -1081,6 +1122,10 @@ abstract class _CommonParserProps extends CommonParserProps {
   ResponsiveBool get mask;
   @override
   Iterable<CBoxDecoration> get overlays;
+  @override
+  bool get selectable;
+  @override
+  bool get visible;
 
   /// Create a copy of CommonParserProps
   /// with the given fields replaced by the non-null parameter values.

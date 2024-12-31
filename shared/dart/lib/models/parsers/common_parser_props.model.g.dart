@@ -86,6 +86,8 @@ _$CommonParserPropsImpl _$$CommonParserPropsImplFromJson(
       overlays: (json['overlays'] as List<dynamic>?)?.map(
               (e) => CBoxDecoration.fromJson(e as Map<String, dynamic>)) ??
           const [],
+      selectable: json['selectable'] as bool? ?? true,
+      visible: json['visible'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$$CommonParserPropsImplToJson(
@@ -120,6 +122,8 @@ Map<String, dynamic> _$$CommonParserPropsImplToJson(
       'backgroundBlur': instance.backgroundBlur,
       'mask': instance.mask,
       'overlays': instance.overlays.toList(),
+      'selectable': instance.selectable,
+      'visible': instance.visible,
     };
 
 _$LayerBlurImpl _$$LayerBlurImplFromJson(Map<String, dynamic> json) =>
